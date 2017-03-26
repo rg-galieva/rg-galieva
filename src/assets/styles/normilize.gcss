@@ -93,9 +93,11 @@ a {
   cursor: pointer;
   transition: .3s;
   outline: none;
+  color: var(--c_txt);
 
   &:hover, &:focus {
     outline: none;
+    color: var(--c_emph);
   }
 }
 
@@ -111,8 +113,9 @@ img {
 }
 
 ol, ul {
-  margin-left: 45px;
+  margin-left: calc(20rem / var(--f_size));
   list-style-position: inside;
+  font-size: calc(14rem/var(--f_size));
 }
 
 ul {
