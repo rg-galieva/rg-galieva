@@ -196,7 +196,7 @@ export default function () {
 
             <section className="row">
                 <header className="col_4"><h2>Education</h2></header>
-                <div className="col_9">
+                <div className="col_10">
                     <div className={s.edu_row}>
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5>Ufa State Aviation Technical University</h5>
