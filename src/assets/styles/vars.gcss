@@ -8,13 +8,11 @@
   --c_thead: #0e0e0e;
   --c_sub: #efeaea;
   --c_like: #fe536d;
+  --c_obj: #b88b58;
   
   /*  TYPOGRAPHY */
   --f_size: 16;
-  --f_light: 300;
   --f_regular: 400;
-  --f_medium: 500;
-  --f_semi_bold: 600;
   --f_bold: 700;
 
   /* GRID */

@@ -2,7 +2,7 @@
 
 :global(html) {
   background-color: var(--c_bg);
-  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
 }
 
 .wrap {
@@ -13,11 +13,12 @@
 
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 
   & > header {
     position: relative;
     margin-bottom: calc(50rem / var(--f_size));
+    z-index: 10;
   }
 
   & > main {
@@ -26,6 +27,7 @@
 
   & > footer {
     flex: 0 0 auto;
+    z-index: 10;
 
     & a {
       margin-right: 20px;
@@ -54,37 +56,4 @@
   color: var(--c_txt);
   font-size: calc(26rem / var(--f_size));
   text-decoration: none;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background: var(--c_txt);
-  }
-
-  &:hover {
-    &::before {
-      height: 2px;
-      width: calc(54rem/var(--f_size));
-      transition: width .3s, background-color .13s linear .25s;
-    }
-
-    &::after {
-      width: 2px;
-      height: calc(54rem/var(--f_size));
-      transition: all .2s;
-      transition-delay: .25s;
-      /*height: calc(34rem/var(--f_size));*/
-    }
-  }
-
-  & mark {
-    display: block;
-    font-size: calc(18rem / var(--f_size));
-    background: none;
-    color: var(--c_txt);
-    white-space: nowrap;
-  }
 }
