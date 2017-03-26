@@ -3,7 +3,8 @@
 :root {
   --nav: {
     margin-bottom: calc(30rem / var(--f_size));
-    font-size: 1rem;
+    font-size: calc(12rem/var(--f_size));
+    font-weight: var(--f_medium);
 
     & a {
       position: relative;

@@ -29,6 +29,10 @@ module.exports = function (env) {
             }),
             new CopyWebpackPlugin([
                 {
+                    from: resolve(__dirname, './../../_redirects'),
+                    to: './'
+                },
+                {
                     from: resolve(__dirname, './../../CNAME'),
                     to: './'
                 }

@@ -13,6 +13,7 @@
 
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 
   & > header {
     position: relative;
@@ -35,6 +36,10 @@
     & a:hover {
       text-decoration: underline;
     }
+
+    & :global(nav) {
+      text-align: right;
+    }
   }
 }
 
@@ -43,8 +48,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: calc(54rem/var(--f_size)); height: calc(54rem/var(--f_size));
-  padding: calc(7rem/var(--f_size)) 0 0 calc(8rem/var(--f_size));
   font-family: 'Voltaire', sans-serif;
   text-transform: uppercase;
   margin-right: 2rem;
@@ -61,27 +64,18 @@
     background: var(--c_txt);
   }
 
-  &::before {
-    height: 2px;
-    width: calc(54rem/var(--f_size));
-    transition: width .3s, background-color .13s linear .25s;
-  }
-
-  &::after {
-    width: 2px;
-    height: calc(54rem/var(--f_size));
-    transition: all .2s;
-    transition-delay: .25s;
-  }
-
   &:hover {
     &::before {
-      background: var(--c_emph);
-      width: calc(34rem/var(--f_size));
+      height: 2px;
+      width: calc(54rem/var(--f_size));
+      transition: width .3s, background-color .13s linear .25s;
     }
 
     &::after {
-      background: var(--c_emph);
+      width: 2px;
+      height: calc(54rem/var(--f_size));
+      transition: all .2s;
+      transition-delay: .25s;
       /*height: calc(34rem/var(--f_size));*/
     }
   }

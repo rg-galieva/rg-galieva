@@ -1,0 +1,49 @@
+@import "../../assets/styles/vars.gcss";
+
+.page {
+  position: relative;
+}
+
+.photo {
+  position: relative;
+  margin: 0 auto;
+  max-width: calc(600rem/var(--f_size));
+
+  & > :global(h1) {
+    position: absolute;
+    left: 0;
+    margin-left: 85%;
+    font-weight: var(--f_bold);
+    top: calc(120rem/var(--f_size));
+    text-transform: uppercase;
+    font-size: calc(63rem/var(--f_size));
+    text-shadow: 3px 4px 1px #a8ba9a;
+  }
+}
+.reactive path {
+  fill: none;
+  stroke: var(--c_txt);
+  stroke-width: 0.5;
+  animation: draw 2s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slider_numb {
+  & :global(svg) {
+    display: inline-block;
+    fill: var(--c_txt);
+    height: calc(165rem/var(--f_size));
+    margin-right: calc(15rem/var(--f_size));
+  }
+}

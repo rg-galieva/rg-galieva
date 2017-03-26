@@ -8,7 +8,7 @@ export default function (props) {
     return (
         <div className={s.wrap}>
             <header>
-                <Link to="/" className={s.logo}>RG <mark>Portfolio</mark></Link>
+                <Link to="/" className={s.logo}>Regina Galieva</Link>
                 <Menu />
             </header>
 
@@ -18,9 +18,10 @@ export default function (props) {
 
             <footer>
                 <nav>
-                    <a href="">Links</a>
-                    <a href="">Links</a>
-                    <a href="">Links</a>
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Github</a>
+                    <a href="">LinkedIn</a>
                 </nav>
             </footer>
         </div>
