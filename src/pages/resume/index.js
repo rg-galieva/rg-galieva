@@ -145,7 +145,7 @@ export default function () {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5>Web Developer</h5>
 
-                            <p className="is-emph">[2011 - 2013] SAINT PETERSBURG, RUSSIA</p>
+                            <p className="is-emph">[2011 - 2013] Saint Petersburg, Russia</p>
                             <ul>
                                 <li>Made dozens sites, landings, email newsletters, mobile portals using PHP</li>
                                 <li>Developed admin web applications for managing advertisement campaigns using Ruby on
@@ -174,7 +174,7 @@ export default function () {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5>HTML developer</h5>
 
-                            <p className="is-emph">[2008 - 2011] UFA, RUSSIA</p>
+                            <p className="is-emph">[2008 - 2011] Ufa, Russia</p>
                             <ul>
                                 <li>Worked on corporate portals for public administrations</li>
                                 <li>TML/CSS/JS coding of web pages, improvement and optimization of existing interfaces,
@@ -201,7 +201,7 @@ export default function () {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5>Ufa State Aviation Technical University</h5>
 
-                            <p className="is-emph">[2005 - 2010] UFA, RUSSIA</p>
+                            <p className="is-emph">[2005 - 2010] Ufa, Russia</p>
 
                             <ul>
                                 <li>Engineer / Master of telecommunication systems</li>
@@ -223,7 +223,7 @@ export default function () {
                     <div className={s.edu}>
                         <h5>CISco networking academy</h5>
 
-                        <p className="is-emph">[2009 - 2010] UFA, RUSSIA</p>
+                        <p className="is-emph">[2009 - 2010] Ufa, Russia</p>
                         <ul>
                             <li>Networking for home and small businesses</li>
                             <li>Working at a small-to-medium business or ISP</li>
@@ -233,7 +233,7 @@ export default function () {
                     <div className={s.edu}>
                         <h5>ifree TEchnical academy</h5>
 
-                        <p className="is-emph">[2013] SAINT PETERSBURG, RUSSIA</p>
+                        <p className="is-emph">[2013] Saint Petersburg, Russia</p>
                         <ul>
                             <li>Developing products from scratch</li>
                             <li>Won the place education among 150 others participants</li>
@@ -244,7 +244,7 @@ export default function () {
                     <div className={s.edu}>
                         <h5>Graphic Design BOOTCAMP</h5>
 
-                        <p className="is-emph">[2015] MOSCOW, RUSSIA</p>
+                        <p className="is-emph">[2015] Moscow, Russia</p>
                         <ul>
                             <li>10 weeks course: graphic design in web</li>
                             <li>Effective designs principles, theory and practice</li>

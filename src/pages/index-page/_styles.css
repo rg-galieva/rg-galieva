@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.photo {
+.photo_wrap {
   position: relative;
   margin: 0 auto;
   max-width: calc(600rem/var(--f_size));
@@ -20,6 +20,13 @@
     text-shadow: 3px 4px 1px #a8ba9a;
   }
 }
+
+.photo {
+  width: calc(600rem/var(--f_size));
+  height: calc(560rem/var(--f_size));
+  background-color: var(--c_bg);
+}
+
 .reactive path {
   fill: none;
   stroke: var(--c_txt);

@@ -37,8 +37,11 @@ class MainPage extends Component {
             <div className={s.page}>
                 <div ref="main_page" id="d3_bg" className={s.d3_bg}></div>
 
-                <div className={s.photo}>
-                    <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/main`}/>
+                <div className={s.photo_wrap}>
+                    <div className={s.photo}>
+                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/main`}/>
+                    </div>
+
 
                     <h1>reactive<br /> frontend<br /> engineer</h1>
                 </div>

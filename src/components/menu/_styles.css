@@ -27,7 +27,7 @@
         transform: translateY(-1rem);
       }
 
-      &:matches(.is_act),
+      &:global(.is_act),
       &:hover,
       &:focus{
         color: var(--c_txt);
