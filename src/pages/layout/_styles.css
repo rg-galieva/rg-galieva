@@ -15,13 +15,8 @@
   flex-direction: column;
   font-family: 'PT Sans', sans-serif;
 
-  & > header {
-    position: relative;
-    margin-bottom: calc(50rem / var(--f_size));
-    z-index: 10;
-  }
-
   & > main {
+    padding-top: calc(100rem/var(--f_size));;
     flex: 1 0 auto;
   }
 
@@ -45,15 +40,41 @@
   }
 }
 
+.wrap > header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background-color: var(--c_bg);
+  height: calc(60rem/var(--f_size));
+  transition: all .2s ease-out;
+
+  & > section {
+    position: relative;
+    max-width: 1600px;
+    margin: calc(20rem/var(--f_size)) auto;
+    padding: 0 calc(100%/var(--f_size));
+  }
+
+  &:global(.is_sticky) {
+    background-color: var(--c_thead);
+  }
+}
+
 .logo {
-  @import url('https://fonts.googleapis.com/css?family=Voltaire');
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-family: 'Voltaire', sans-serif;
-  text-transform: uppercase;
+  float: left;
   margin-right: 2rem;
-  color: var(--c_txt);
-  font-size: calc(26rem / var(--f_size));
   text-decoration: none;
+
+  & svg {
+    fill: var(--c_txt);
+    height: calc(26rem / var(--f_size));
+    transition: all .2s ease-out;
+  }
+
+  &:hover {
+    & svg {
+      fill: var(--c_emph);
+    }
+  }
+
 }
