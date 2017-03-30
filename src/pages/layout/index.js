@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import {findDOMNode} from 'react-dom'
-import {IndexLink} from 'react-router'
+import {Link} from 'react-router-dom'
 import Menu from '../../components/menu'
 
 require('../../assets/styles/common.gcss')
@@ -31,7 +30,7 @@ class Layout extends Component {
             <div className={s.wrap}>
                 <header ref="header">
                     <section className="clearfix">
-                        <IndexLink to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
+                        <Link to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
                         <Menu />
                     </section>
                 </header>
