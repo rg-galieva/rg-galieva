@@ -5,7 +5,7 @@ import s from './_styles.css'
 const Menu = () => {
     return (
         <nav className={s.nav}>
-            <NavLink to="/" activeClassName="is_act" exact='/'>Home</NavLink>
+            <NavLink to="/" activeClassName="is_act" exact={true}>Home</NavLink>
             <NavLink to="/about" activeClassName="is_act">About</NavLink>
             <NavLink to="/resume" activeClassName="is_act">Resume</NavLink>
             <NavLink to="/projects" activeClassName="is_act">Projects</NavLink>

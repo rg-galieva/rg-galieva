@@ -25,8 +25,8 @@ module.exports = function () {
                 {
                     test: /\.css$/,
                     use: ExtractTextPlugin.extract({
-                            fallbackLoader: 'style-loader',
-                            loader: [
+                            fallback: 'style-loader',
+                            use: [
                                 {
                                     loader: 'css-loader',
                                     options: {
@@ -57,8 +57,8 @@ module.exports = function () {
                 {
                     test: /\.gcss$/,
                     use: ExtractTextPlugin.extract({
-                        fallbackLoader: 'style-loader',
-                        loader: [
+                        fallback: 'style-loader',
+                        use: [
                             {
                                 loader: 'css-loader'
                             },
