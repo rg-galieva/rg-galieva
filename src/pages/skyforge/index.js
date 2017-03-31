@@ -5,10 +5,9 @@ function Skyforge(props) {
 
     return (
         <div>
-
+            <p>Projects</p>
         </div>
     );
 }
 
 export default Skyforge;
-

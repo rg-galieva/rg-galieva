@@ -9,13 +9,13 @@ import Skyforge from './pages/skyforge'
 import NoMatch from './pages/no-match'
 
 export default (
-    <Layout>
-        <Switch>
-            <Route exact path="/" component={IndexPage}/>
-            <Route path='/about' component={About}/>
-            <Route path='/resume' component={Resume}/>
-            <Route path='/projects' component={Skyforge}/>
+    <Switch>
+        <Layout>
+            <Route path="/" exact component={IndexPage}/>
+            <Route path='/about' exact component={About}/>
+            <Route path='/resume' exact component={Resume}/>
+            <Route path='/projects' exact component={Skyforge}/>
             <Route component={NoMatch}/>
-        </Switch>
-    </Layout>
+        </Layout>
+    </Switch>
 )

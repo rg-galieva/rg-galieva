@@ -3,7 +3,7 @@ THIS DOCUMENT IS IN PROGRESS. THIS PARAGRAPH SHALL BE REMOVED WHEN THIS DOCUMENT
 ### Tech Stack
 - react
 - redux
-- react-router v4
+- react-router-dom (v4)
 - webpack v2: separate sets for development & production
 - postcss/cssnext, css modules
 - source maps

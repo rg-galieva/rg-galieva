@@ -47,6 +47,7 @@
   background-color: var(--c_bg);
   height: calc(60rem/var(--f_size));
   transition: all .5s ease-in;
+  z-index: 10;
 
   & > section {
     position: relative;

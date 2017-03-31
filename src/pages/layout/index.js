@@ -1,16 +1,19 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Menu from '../../components/menu'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 require('../../assets/styles/common.gcss')
 import s from './_styles.css'
 
 const logo = require('./svg/logo.svg');
 
 class Layout extends Component {
+    constructor(props) {
+        super(props)
+    }
 
     componentDidMount() {
-         window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
@@ -26,6 +29,8 @@ class Layout extends Component {
     }
 
     render() {
+        const path = this.props.location.pathname.split('/')[1] || 'root';
+        console.log("---", this.props.children);
         return (
             <div className={s.wrap}>
                 <header ref="header">
@@ -36,7 +41,13 @@ class Layout extends Component {
                 </header>
 
                 <main>
-                    {this.props.children}
+                    <ReactCSSTransitionGroup
+                        transitionName="example"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={300}>
+
+                        {React.Children.map(this.props.children, (child => React.cloneElement(child, { key: path}))) }
+                    </ReactCSSTransitionGroup>
                 </main>
 
                 <footer>
