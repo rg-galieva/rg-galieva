@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import s from './_styles.css'
+import s from './_styles.pcss'
 
 const Menu = () => {
     return (

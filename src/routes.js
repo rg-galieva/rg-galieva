@@ -5,7 +5,7 @@ import Layout from "./pages/layout"
 import IndexPage from "./pages/index-page"
 import About from "./pages/about"
 import Resume from "./pages/resume"
-import Skyforge from "./pages/skyforge"
+import ProjectList from "./pages/prj-list"
 import NoMatch from "./pages/no-match"
 
 export default (
@@ -15,7 +15,7 @@ export default (
                 <Route path="/" component={IndexPage} exact/>
                 <Route path="/about" component={About}/>
                 <Route path="/resume" component={Resume}/>
-                <Route path="/projects" component={Skyforge}/>
+                <Route path="/projects" component={ProjectList}/>
                 <Route component={NoMatch}/>
             </Switch>
         </Layout>

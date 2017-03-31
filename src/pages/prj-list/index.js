@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
+import Project from '../../components/prj'
 
-function Skyforge(props) {
+function ProjectList(props) {
     let {} = props;
 
     return (
@@ -10,4 +11,4 @@ function Skyforge(props) {
     );
 }
 
-export default Skyforge;
+export default ProjectList;

@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import s from './_styles.css'
+import s from './_styles.pcss'
 
 const alx_logo = require('./svg/adluxe.svg'),
     mail_logo = require('./svg/mail.svg'),

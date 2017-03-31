@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import Menu from '../../components/menu'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 require('../../assets/styles/common.gcss')
-import s from './_styles.css'
+import s from './_styles.pcss'
 
 const logo = require('./svg/logo.svg');
 

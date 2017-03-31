@@ -23,7 +23,7 @@ module.exports = function () {
 
 
                 {
-                    test: /\.css$/,
+                    test: /\.pcss$/,
                     use: ExtractTextPlugin.extract({
                             fallback: 'style-loader',
                             use: [
