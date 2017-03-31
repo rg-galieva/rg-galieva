@@ -29,8 +29,6 @@ class Layout extends Component {
     }
 
     render() {
-        const path = this.props.location.pathname.split('/')[1] || 'root';
-        console.log("---", this.props.children);
         return (
             <div className={s.wrap}>
                 <header ref="header">
@@ -46,7 +44,7 @@ class Layout extends Component {
                         transitionEnterTimeout={500}
                         transitionLeaveTimeout={300}>
 
-                        {React.Children.map(this.props.children, (child => React.cloneElement(child, { key: path}))) }
+                        {this.props.children}
                     </ReactCSSTransitionGroup>
                 </main>
 
