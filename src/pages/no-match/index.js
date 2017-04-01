@@ -1,11 +1,12 @@
 import React from 'react'
 import history from '../../history'
+import {FormattedMessage, injectIntl} from 'react-intl';
 
 const NoMatch = ({ location }) => (
     <div>
-        <h3>Sorry, No match for <code>{location.pathname}</code></h3>
-        <a className="is-emph" onClick={history.goBack}>Go Back</a>
+        <h3><FormattedMessage id="nomatch.head"/><code>{location.pathname}</code></h3>
+        <a className="is-emph" onClick={history.goBack}><FormattedMessage id="nomatch.link_back"/></a>
     </div>
 );
 
-export default NoMatch
+export default injectIntl(NoMatch)

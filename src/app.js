@@ -6,7 +6,7 @@ import {getIntl} from './utils/intl';
 
 import {createStore, combineReducers, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
-import {ConnectedRouter, routerReducer, routerMiddleware, push} from 'react-router-redux'
+import {ConnectedRouter, routerReducer, routerMiddleware} from 'react-router-redux'
 
 import reducers from './reducers';
 import history from './history'
@@ -24,11 +24,11 @@ const store = createStore(
 
 render(
     <Provider store={store}>
-        <ConnectedRouter history={history}>
-            <IntlProvider {...getIntl}>
+        <IntlProvider {...getIntl}>
+            <ConnectedRouter history={history}>
                 {routes}
-            </IntlProvider>
-        </ConnectedRouter>
+            </ConnectedRouter>
+        </IntlProvider>
     </Provider>,
     document.getElementById('app')
 );

@@ -1,12 +1,17 @@
-import React from 'react'
-import {NavLink} from 'react-router-dom'
+import React, {Component} from 'react'
+import LangLink from '../lang-link'
 import s from './_styles.pcss'
 
+
 const LangMenu = () => {
+    const handleClick = (ev) => {
+        if (ev) ev.preventDefault();
+
+    }
+
     return (
-        <nav className={s.nav}>
-            <NavLink to="/" activeClassName="is_act" exact={true}>En</NavLink>
-            <NavLink to="/ru" activeClassName="is_act">Ru</NavLink>
+        <nav className={s.nav} onClick={handleClick}>
+            <LangLink/>
         </nav>
     )
 }

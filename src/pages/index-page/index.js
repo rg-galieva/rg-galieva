@@ -2,17 +2,13 @@ import React, {Component} from 'react'
 import {TweenLite, TweenMax, TimelineLite} from 'gsap'
 import {Link} from 'react-router-dom'
 import {Image} from 'cloudinary-react';
-import {intlShape, FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage, injectIntl} from 'react-intl';
 
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
 
 const numb_0 = require('../../assets/svg/numbers/0.svg');
 const numb_1 = require('../../assets/svg/numbers/1.svg');
-
-const propTypes = {
-    intl: intlShape.isRequired,
-};
 
 class MainPage extends Component {
     componentDidMount() {
@@ -58,7 +54,5 @@ class MainPage extends Component {
         )
     }
 }
-
-MainPage.propTypes = propTypes;
 
 export default injectIntl(MainPage);
