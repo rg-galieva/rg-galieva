@@ -3,8 +3,8 @@ import * as fs from 'fs';
 import { sync as globSync } from 'glob';
 import { sync as mkdirpSync } from 'mkdirp';
 
-const MESSAGES_PATTERN = './dist/text/**/*.json';
-const LANG_DIR         = './dist/i18n/';
+const MESSAGES_PATTERN = './i18n/text/**/*.json';
+const LANG_DIR         = './i18n/lang/';
 
 const ESCAPED_CHARS = {
     '\\' : '\\\\',
@@ -97,3 +97,4 @@ const defaultMessages = globSync(MESSAGES_PATTERN)
 
 mkdirpSync(LANG_DIR);
 fs.writeFileSync(LANG_DIR + 'en.json', JSON.stringify(defaultMessages, null, 2));
+// fs.writeFileSync(LANG_DIR + 'en.json', `{ "en": ${JSON.stringify(defaultMessages, null, 2)} }`);

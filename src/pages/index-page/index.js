@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {TweenLite, TweenMax, TimelineLite} from 'gsap'
 import {Link} from 'react-router-dom'
 import {Image} from 'cloudinary-react';
-import {intlShape, defineMessages, injectIntl} from 'react-intl';
+import {intlShape, FormattedMessage, injectIntl} from 'react-intl';
 
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
@@ -13,13 +13,6 @@ const numb_1 = require('../../assets/svg/numbers/1.svg');
 const propTypes = {
     intl: intlShape.isRequired,
 };
-
-const messages = defineMessages({
-    test: {
-        id: 'app.test',
-        defaultMessage: 'reactive frontend engineer',
-    },
-});
 
 class MainPage extends Component {
     componentDidMount() {
@@ -52,10 +45,7 @@ class MainPage extends Component {
                     <div className={s.photo}>
                         <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/main`}/>
                     </div>
-
-
-                    {/*<h1><FormattedMessage id="app.test" defaultMessage="reactive<br /> frontend<br /> engineer"/></h1>*/}
-                    <h1>{this.props.intl.formatMessage(messages.test)}</h1>
+                    <h1><FormattedMessage id="index.title"/></h1>
                 </div>
 
                 <div className={s.slider}>

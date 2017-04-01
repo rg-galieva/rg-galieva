@@ -12,10 +12,6 @@ class Layout extends Component {
         super(props)
     }
 
-    componentWillMount() {
-        const lang = navigator.language || navigator.browserLanguage;
-        console.log("---lang", lang);
-    }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
     }
