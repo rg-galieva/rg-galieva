@@ -5,4 +5,4 @@ node_modules
 npm-debug.log
 .DS_Store
 #CNAME
-i18n
+/i18n/
