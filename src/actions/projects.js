@@ -7,10 +7,10 @@ const findProjectById = (id, projects) => {
     })[0]
 }
 
-export const getProjectById = (id) => {
+export const getProjectById = (id, projects = projectsDB) => {
     return {
         type: GET_PROJECT_BY_ID,
-        project: findProjectById(id, projectsDB)
+        project: findProjectById(id, projects)
     }
 };
 

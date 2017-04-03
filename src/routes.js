@@ -6,6 +6,7 @@ import IndexPage from "./pages/index-page"
 import About from "./pages/about"
 import Resume from "./pages/resume"
 import ProjectList from "./pages/prj-list"
+import Project from './components/prj'
 import NoMatch from "./pages/no-match"
 
 export default (
@@ -15,7 +16,8 @@ export default (
                 <Route path="/" component={IndexPage} exact/>
                 <Route path="/about" component={About}/>
                 <Route path="/resume" component={Resume}/>
-                <Route path="/projects" component={ProjectList}/>
+                <Route path="/projects" component={ProjectList} exact/>
+                <Route path="/projects/:id" component={Project}/>
                 <Route component={NoMatch}/>
             </Switch>
         </Layout>
