@@ -5,7 +5,7 @@ const initialState = {
     lang: userLocale
 }
 
-export const switchLang = (state = initialState, action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
         case SWITCH_LANG:
             return {

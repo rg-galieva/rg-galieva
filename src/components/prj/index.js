@@ -3,6 +3,7 @@ import {FormattedMessage, injectIntl} from 'react-intl';
 import s from './_styles.pcss'
 import projectsDB from '../../assets/db/projects.json'
 
+
 const Project = (props) => {
     const {id} = props;
 
