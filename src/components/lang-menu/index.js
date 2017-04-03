@@ -3,7 +3,6 @@ import {FormattedMessage} from 'react-intl'
 import LangLink from '../lang-link'
 import s from './_styles.pcss'
 
-
 const LangMenu = (props) => {
     return (
         <nav className={['nav', props.css].join(' ')}>

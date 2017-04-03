@@ -8,16 +8,6 @@ const LangLink = (props) => {
 
     let activeClass = (is_act) ? "is_act" : "";
 
-    // const handleClick = (ev) => {
-    //     if (ev) ev.preventDefault();
-    //
-    //     if (is_act) {
-    //         return null
-    //     } else {
-    //
-    //     }
-    // }
-
     return (
         <a onClick={() => handleClick(locale, is_act)} className={activeClass}>{title}</a>
     )

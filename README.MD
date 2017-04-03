@@ -4,10 +4,12 @@ THIS DOCUMENT IS IN PROGRESS. THIS PARAGRAPH SHALL BE REMOVED WHEN THIS DOCUMENT
 - react
 - redux
 - react-router-dom (v4)
+- react-intl (internationalization)
 - webpack v2: separate sets for development & production
 - postcss/cssnext, css modules
 - source maps
 - surge deploy
+- continuous deployment (with Netlify)
 - yarn (package manager) as alternative to npm 
 
 
@@ -21,36 +23,27 @@ $ yarn dev
 // start development with webpack-dev-server
 ```
 ```
-$ yarn build:prod
-// production build
-```
-```
 $ yarn deploy:surge
 // make production build and deploy to the surge.sh
 ```
-
-###Before deployment
-Edit CNAME file: write subdomain name for surge.sh service, for example 
 ```
-surge-static.surge.sh
+$ yarn translate
+// combine separate translation-jsons into one (en.json) - for translators
 ```
 
 ###Syntax
 ES-2015 (without modules, because webpack2 supports them by default), features >= stage2 (for example, arrow func in react components)
 
 ###Styles
-[.css] - local styles
+[.pcss] - local styles. With css-modules option for incapsulate component's styles
 [.gcss] - global styles. Have special rule in webpack config. No need to use :global identifier in gcss files.
 
-css-loader
-[.css] - with css-modules option for incapsulate component's styles
-[.gcss] - global styles
+- css-next features
+- separate file with vars
+- no px! only rem units
 
-post-css: postprocessor
-postcss-import: Pay attention to how postcss-import comes first in postcss config. Plugin allows to work with dependencies in different CSS-files. Resolve @import statements first, and then take all CSS in as one file and run all of it with cssnext
-css-next: future css syntax & features (vars, colors). Goes with autoprefixer by default.
-extract-text-webpack-plugin: allows to concat all separate css files. Don't forget to add the link to the final css in html file.
-
- 
-
-
+###Before deployment to the Surge
+Edit CNAME file: write subdomain name for surge.sh service, for example 
+```
+surge-static.surge.sh
+``
