@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Menu from '../../components/menu'
+import LangMenu from '../../components/lang-menu'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 require('../../assets/styles/common.gcss')
 import s from './_styles.pcss'
@@ -33,6 +34,7 @@ class Layout extends Component {
             <div className={s.wrap}>
                 <header ref="header">
                     <section className="clearfix">
+                        <LangMenu css={s.lang_nav}/>
                         <Link to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
                         <Menu />
                     </section>

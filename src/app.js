@@ -1,34 +1,28 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-import {IntlProvider} from 'react-intl';
-import {getIntl} from './utils/intl';
+import ReduxIntlProvider from './components/redux-intl-provider'
 
-import {createStore, combineReducers, applyMiddleware} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
-import {ConnectedRouter, routerReducer, routerMiddleware} from 'react-router-redux'
+import {ConnectedRouter, routerMiddleware} from 'react-router-redux'
 
 import reducers from './reducers';
 import history from './history'
 import routes from './routes'
 
 const middleware = routerMiddleware(history);
-
-const store = createStore(
-    combineReducers({
-        ...reducers,
-        router: routerReducer
-    }),
-    applyMiddleware(middleware)
-)
+const store = createStore(reducers, applyMiddleware(middleware));
 
 render(
     <Provider store={store}>
-        <IntlProvider {...getIntl}>
+        <ReduxIntlProvider>
             <ConnectedRouter history={history}>
                 {routes}
             </ConnectedRouter>
-        </IntlProvider>
+        </ReduxIntlProvider>
     </Provider>,
     document.getElementById('app')
 );
+
+window.store = store;

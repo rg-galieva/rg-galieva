@@ -1,8 +1,11 @@
 import {SWITCH_LANG} from '../constants'
 
-export default switchLang = (lang) => {
+const switchLang = (lang) => {
+    console.log("---AC switchLang lang", lang);
     return {
         type: SWITCH_LANG,
-        lang
+        lang: lang
     }
-}
+};
+
+export default switchLang

@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import {routerReducer} from 'react-router-redux'
+import { switchLang } from './switch-lang'
 
-const rootReducer = combineReducers({
-    state: (state = {}) => state
+export default combineReducers({
+    switchLang,
+    router: routerReducer
 });
-
-export default rootReducer;
