@@ -62,8 +62,10 @@
 
 .arrow_right,
 .arrow_left {
-  fill: var(--c_txt);
-  width: calc(35rem/var(--f_size));
+  & svg {
+    fill: var(--c_txt);
+    width: calc(35rem/var(--f_size));
+  }
 }
 
 .arrow_left {

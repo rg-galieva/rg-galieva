@@ -1,5 +1,5 @@
 import React from 'react'
-import {FormattedHTMLMessage, FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedHTMLMessage, FormattedMessage} from 'react-intl';
 import s from './_styles.pcss'
 
 const sf = require('./svg/sf.svg');
@@ -34,4 +34,4 @@ const About = () => {
     )
 }
 
-export default injectIntl(About)
+export default About

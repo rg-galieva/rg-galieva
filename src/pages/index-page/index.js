@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {Image} from 'cloudinary-react';
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
@@ -32,4 +32,4 @@ class MainPage extends Component {
     }
 }
 
-export default injectIntl(MainPage);
+export default MainPage

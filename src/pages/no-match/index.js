@@ -1,6 +1,6 @@
 import React from 'react'
 import history from '../../history'
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 
 const NoMatch = ({ location }) => (
     <div>
@@ -9,4 +9,4 @@ const NoMatch = ({ location }) => (
     </div>
 );
 
-export default injectIntl(NoMatch)
+export default NoMatch

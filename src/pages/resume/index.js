@@ -1,5 +1,5 @@
 import React from 'react'
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import s from './_styles.pcss'
 
 const alx_logo = require('./svg/adluxe.svg'),
@@ -241,4 +241,4 @@ const Resume = () => {
     )
 }
 
-export default injectIntl(Resume)
+export default Resume

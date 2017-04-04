@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 import {Link} from 'react-router-dom'
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
@@ -34,4 +34,4 @@ ProjectPrev.PropTypes = {
     url: PropTypes.string.isRequired
 }
 
-export default injectIntl(ProjectPrev);
+export default ProjectPrev

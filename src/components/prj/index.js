@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux'
 import {getProjectById} from '../../actions/projects'
 import {Image} from 'cloudinary-react';
@@ -35,4 +35,4 @@ const mapDispatchToProps = (dispatch, props) => {
     return dispatch(getProjectById(id))
 };
 
-export default injectIntl(connect(null, mapDispatchToProps)(Project));
+export default connect(null, mapDispatchToProps)(Project)

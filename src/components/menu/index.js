@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import {FormattedMessage, injectIntl} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import s from './_styles.pcss'
 
 const Menu = () => {
@@ -15,4 +15,4 @@ const Menu = () => {
     )
 }
 
-export default injectIntl(Menu);
+export default Menu;
