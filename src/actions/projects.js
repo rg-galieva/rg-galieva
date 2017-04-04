@@ -10,13 +10,13 @@ const findProjectById = (id, projects) => {
 export const getProjectById = (id, projects = projectsDB) => {
     return {
         type: GET_PROJECT_BY_ID,
-        project: findProjectById(id, projects)
+        active_project: findProjectById(id, projects)
     }
 };
 
 export const getProjects = () => {
     return {
         type: GET_PROJECTS,
-        projects: projectsDB
+        all: projectsDB
     }
 }

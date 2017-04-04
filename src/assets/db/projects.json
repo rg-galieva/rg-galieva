@@ -3,12 +3,20 @@
     "id": "1",
     "title": "skyforge.title",
     "pic": "skyforge",
-    "url": "1"
+    "url": "1",
+    "prj_link": "https://sf.my.com/",
+    "year": "2013 - 2016",
+    "pic_full": "skyforge_full",
+    "pic_mobile": "skyforge_mobile"
   },
   {
     "id": "2",
     "title": "korsa.title",
-    "pic": "",
-    "url": "2"
+    "pic": "korsa",
+    "url": "2",
+    "prj_link": "http://www.korsamedia.ru/",
+    "year": "2015",
+    "pic_full": "korsa_full",
+    "pic_mobile": "korsa_mobile"
   }
 ]

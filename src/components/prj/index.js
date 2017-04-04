@@ -7,7 +7,7 @@ import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
 
 const Project = (props) => {
-    const {title, pic} = props.project;
+    const {title, pic, prj_link, year, pic_full, pic_mobile} = props.active_project;
 
     return (
         <div className={s.page}>
@@ -23,7 +23,11 @@ const Project = (props) => {
 
 Project.PropTypes = {
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
-    pic: PropTypes.string.isRequired
+    pic: PropTypes.string.isRequired,
+    prj_link: PropTypes.string,
+    year: PropTypes.string,
+    pic_full: PropTypes.string,
+    pic_mobile: PropTypes.string
 }
 
 const mapDispatchToProps = (dispatch, props) => {

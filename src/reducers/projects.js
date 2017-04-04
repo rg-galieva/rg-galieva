@@ -2,7 +2,7 @@ import {GET_PROJECTS, GET_PROJECT_BY_ID} from '../constants'
 import projectsDB from '../assets/db/projects.json'
 
 const initialState = {
-    projects: projectsDB
+    all: projectsDB
 }
 
 export default (state = initialState, action) => {
@@ -10,13 +10,13 @@ export default (state = initialState, action) => {
         case GET_PROJECTS:
             return {
                 ...state,
-                projects: action.projects
+                all: action.projects
             }
 
         case GET_PROJECT_BY_ID:
             return {
                 ...state,
-                project: action.project
+                active_project: action.project
             }
 
         default:
