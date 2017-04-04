@@ -20,9 +20,9 @@ const ProjectPrev = (props) => {
                 <h1><Link to={`/projects/${url}`}><FormattedMessage id={title}/></Link></h1>
             </div>
 
-            {/*<div className={s.slider}>*/}
-                {/*<div dangerouslySetInnerHTML={{__html: `${numb_0} ${numb}`}} className={s.slider_numb}></div>*/}
-            {/*</div>*/}
+            <div className={s.slider}>
+                <div dangerouslySetInnerHTML={{__html: `${numb_0} ${numb}`}} className={s.slider_numb}></div>
+            </div>
         </div>
     )
 }
