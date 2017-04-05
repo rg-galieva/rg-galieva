@@ -107,33 +107,12 @@ q {
   }
 }
 
-.example-enter {
-  opacity: 0.01;
-
-  &.example-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-  }
-}
+.sliding-enter {
+  transform: translate3d(0, 1rem, 0);
 
 
-
-.example-leave {
-  opacity: 1;
-
-  &.example-leave-active {
-    opacity: 0.01;
-    transition: opacity 300ms ease-in;
-  }
-}
-
-
-
-.example-appear {
-  opacity: 0.01;
-
-  .example-appear-active {
-    opacity: 1;
-    transition: opacity .5s ease-in;
+  &.sliding-enter-active {
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease-in;
   }
 }

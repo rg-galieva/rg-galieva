@@ -40,11 +40,12 @@ class Layout extends Component {
                     </section>
                 </header>
 
-                <main>
+                <main className={s.cont}>
                     <ReactCSSTransitionGroup
-                        transitionName="example"
-                        transitionEnterTimeout={500}
-                        transitionLeaveTimeout={300}>
+                        transitionName="sliding"
+                        transitionEnterTimeout={350}
+                        transitionLeave={false}
+                        component="section">
 
                         {this.props.children}
                     </ReactCSSTransitionGroup>
