@@ -17,4 +17,8 @@
 
   /* GRID */
   --w_max: 1600;
+
+  /* Z-INDEX */
+  --z-layout: 100;
+  --z-cont: 10;
 }
