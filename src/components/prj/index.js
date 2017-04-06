@@ -1,12 +1,15 @@
 import React, {PropTypes, Component} from 'react'
 import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux'
+import history from '../../history'
 import {getProjectById} from '../../actions/projects'
 import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
 import Slider from 'react-slick'
 import config from '../slider/config_alt'
 import s from './_styles.pcss'
+
+const close_svg = require('../../assets/svg/close.svg');
 
 class Project extends Component {
     componentWillMount() {
@@ -27,10 +30,13 @@ class Project extends Component {
 
     render() {
         const {title, pic, bg, prj_link, year, pic_full, pic_mobile} = this.props.active_project;
+        const back_txt = <FormattedMessage id="back"/>;
 
         return (
             <div className={s.page} >
                 <div className={s.head} style={this.getBgImg(pic_full)}>
+                    <div dangerouslySetInnerHTML={{__html: close_svg}} className={s.back_btn} title={back_txt} onClick={history.goBack}></div>
+
                     <h1><FormattedMessage id={title}/></h1>
                 </div>
 

@@ -18,7 +18,6 @@
 
 .cont {
   position: relative;
-//background-color: #202020; z-index: var(--z-cont);
   padding: 1rem;
 }
 
@@ -28,11 +27,26 @@
   background-size: cover;
   width: 100%;
   padding: 0 1rem;
-//margin-bottom: 2rem; text-align: center;
 
   & h1 {
     line-height: calc(200rem / var(--f_size));
     margin: 0;
+  }
+}
+
+.back_btn {
+  position: absolute;
+  right: -1rem; top: -1rem;
+  cursor: pointer;
+
+  & svg {
+    fill: var(--c_emph);
+    width: 2rem;
+    transition: all .2s;
+  }
+
+  &:hover svg {
+    fill: var(--c_txt);
   }
 }
 
