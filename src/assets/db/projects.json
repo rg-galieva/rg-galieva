@@ -8,7 +8,8 @@
     "year": "2013 - 2016",
     "pic_full": "skyforge/sf_bg.jpg",
     "bg": "skyforge/bg_body.jpg",
-    "pic_mobile": "skyforge_mobile"
+    "pic_mobile": "skyforge_mobile",
+    "bg_color": "rgb(40, 59, 86)"
   },
   {
     "id": "2",

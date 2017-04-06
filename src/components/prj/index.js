@@ -9,23 +9,13 @@ import config from '../slider/config_alt'
 import s from './_styles.pcss'
 
 class Project extends Component {
-    // componentWillMount() {
-    //     document.getElementById('body').className += 'is_alt';
-    // }
-    //
-    // componentWillUnmount() {
-    //     document.getElementById('body').className = '';
-    // }
+    componentWillMount() {
+        document.getElementById('body').style.backgroundColor = this.props.active_project.bg_color;
+    }
 
-
-    // componentWillMount() {
-    //     console.log("---this.props", this.props.active_project);
-    //     document.getElementById('body').style.backgroundImage = this.getBg(this.props.active_project.bg);
-    // }
-    //
-    // componentWillUnmount() {
-    //     document.getElementById('body').style.backgroundImage = '';
-    // }
+    componentWillUnmount() {
+        document.getElementById('body').style.backgroundColor = "";
+    }
 
     getImage = (src) => {
         return require("../../assets/img/projects/" + src);
@@ -35,17 +25,11 @@ class Project extends Component {
         return {backgroundImage: 'url(' + this.getImage(src) + ')'}
     };
 
-    getBg = (src) => {
-        return 'url(' + this.getImage(src) + ')'
-    };
-
     render() {
         const {title, pic, bg, prj_link, year, pic_full, pic_mobile} = this.props.active_project;
 
         return (
             <div className={s.page} >
-
-                {/*<div className={s.bg} style={this.getBgImg(bg)}></div>*/}
                 <div className={s.head} style={this.getBgImg(pic_full)}>
                     <h1><FormattedMessage id={title}/></h1>
                 </div>
@@ -74,12 +58,6 @@ class Project extends Component {
                     </Slider>
                     <p>Description</p>
                 </div>
-                {/*<div className={s.pic_wrap}>*/}
-                    {/*<div className={s.pic}>*/}
-                        {/*<Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${pic}`}/>*/}
-                    {/*</div>*/}
-                    {/**/}
-                {/*</div>*/}
             </div>
         )
     }
