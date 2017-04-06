@@ -5,7 +5,6 @@
 @import "grid.gcss";
 
 html {
-  background-color: var(--c_bg);
   color: var(--c_txt);
 
   font-family: sans-serif;

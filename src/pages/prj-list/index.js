@@ -2,8 +2,7 @@ import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
 import ProjectPrev from '../../components/prj-prev'
 import Slider from 'react-slick'
-import config from '../../components/slider'
-import s from './_styles.pcss'
+import config from '../../components/slider/config_main'
 
 const ProjectList = (props) => {
     const projects = props.projects.map((project) => <div key={project.id}><ProjectPrev {...project}/></div>)

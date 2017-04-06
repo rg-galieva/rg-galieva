@@ -6,7 +6,8 @@
     "url": "1",
     "prj_link": "https://sf.my.com/",
     "year": "2013 - 2016",
-    "pic_full": "skyforge_full",
+    "pic_full": "skyforge/sf_bg.jpg",
+    "bg": "skyforge/bg_body.jpg",
     "pic_mobile": "skyforge_mobile"
   },
   {

@@ -1,22 +1,35 @@
 @import "../../assets/styles/vars.gcss";
 
 :global(html) {
-  background-color: var(--c_bg);
   @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');
+}
+
+:global(body) {
+  background-color: var(--c_bg);
+  transition: all .5s ease;
+  background-attachment: fixed;
+
+  &:global(.is_alt) {
+    background-color: var(--c_alt);
+  }
+}
+
+:global(body.is_alt) {
+
 }
 
 .wrap {
   max-width: 1600px;
-  margin: calc(20rem/var(--f_size)) auto;
-  padding: 0 calc(100%/var(--f_size));
-  min-height: calc(100% - 40rem/var(--f_size));
+  margin: calc(20rem / var(--f_size)) auto;
+  padding: 0 calc(100% / var(--f_size));
+  min-height: calc(100% - 40rem / var(--f_size));
 
   display: flex;
   flex-direction: column;
   font-family: 'PT Sans', sans-serif;
 
   & > main {
-    padding-top: calc(100rem/var(--f_size));
+    padding-top: calc(100rem / var(--f_size));
     flex: 1 0 auto;
   }
 
@@ -42,18 +55,19 @@
 
 .wrap > header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: var(--c_bg);
-  height: calc(60rem/var(--f_size));
+  background-color: transparent;
+  height: calc(60rem / var(--f_size));
   transition: all .5s ease-in;
   z-index: var(--z-layout);
 
   & > section {
     position: relative;
     max-width: 1600px;
-    margin: calc(20rem/var(--f_size)) auto;
-    padding: 0 calc(100%/var(--f_size));
+    margin: calc(20rem / var(--f_size)) auto;
+    padding: 0 calc(100% / var(--f_size));
   }
 
   &:global(.is_sticky) {
@@ -86,5 +100,6 @@
 
 .cont {
   position: relative;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
 }

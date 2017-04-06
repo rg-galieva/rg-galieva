@@ -30,8 +30,8 @@
   }
 }
 
-.next,
-.prev {
+:global(.next),
+:global(.prev) {
   position: absolute;
   top: 0;
   z-index: 10;
@@ -51,13 +51,31 @@
   }
 }
 
-.next {
+:global(.next) {
   right: 0;
   text-align: right;
 }
 
-.prev {
+:global(.prev) {
   left: 0;
+}
+
+:global(.slick-dots) {
+  position: absolute;
+  left: 0; bottom: calc(-60rem/var(--f_size));
+  list-style: none;
+  margin: 0;
+
+  & li {
+    display: inline-block;
+    margin-right: calc(15rem/var(--f_size));
+  }
+}
+
+:global(.slick-active) {
+  & .pager {
+    background-color: var(--c_txt);
+  }
 }
 
 .arrow_right,
