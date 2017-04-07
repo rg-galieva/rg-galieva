@@ -8,7 +8,7 @@ const settings = {
     speed: 1200,
     slidesToShow: 1,
     autoplay: true,
-    pauseOnHover: false,
+    pauseOnHover: true,
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>
 }

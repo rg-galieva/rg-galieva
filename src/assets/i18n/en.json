@@ -64,5 +64,8 @@
   "skyforge.title": "Skyforge MMORPG",
   "korsa.title": "Korsa Media",
   "sf.about": "Skyforge is a free-to-play MMORPG set in a universe where fantasy and Sci-Fi collide. Players start as immortals trying to become mighty gods while protecting their planet, Aelion.",
-  "korsa.about": "Korsa Media is a leading event management agency with a portfolio of own brand events (Moscow City Racing, Kazan City Racing) as well as licensed events (Top Gear Live, Nitro Circus, FIA Formula E etc.)"
+  "korsa.about": "Korsa Media is a leading event management agency with a portfolio of own brand events (Moscow City Racing, Kazan City Racing) as well as licensed events (Top Gear Live, Nitro Circus, FIA Formula E etc.)",
+  "desktop": "Desktop version",
+  "mobile": "Mobile version"
+
 }

@@ -30,7 +30,7 @@ class Project extends Component {
     };
 
     render() {
-        const {title, about_prj, pic, prj_link, year, pic_full, slider_desktop, slider_mobile} = this.props.active_project;
+        const {title, about_prj, prj_link, year, pic_full, slider_desktop, slider_mobile} = this.props.active_project;
 
         return (
             <div className={s.page} >
@@ -41,24 +41,37 @@ class Project extends Component {
                 </div>
 
                 <div className={s.cont}>
-                    <p><FormattedMessage id={about_prj}/></p>
-                    <br />
-                    <h5><FormattedMessage id="frontend_developer"/></h5>
+                    <div className="row">
+                        <div className="col_8">
+                            <div className={s.about}>
+                                <p><FormattedMessage id={about_prj}/></p>
+                            </div>
 
-                    <p className="is-emph">[2013 - 2016] <FormattedMessage id="moscow"/></p>
-                    <ul>
-                        <li><FormattedMessage id="mail_1"/></li>
-                        <li><FormattedMessage id="mail_2"/></li>
-                        <li><FormattedMessage id="mail_3"/></li>
-                        <li><FormattedMessage id="mail_4"/></li>
-                        <li><FormattedMessage id="mail_5"/></li>
-                        <li><FormattedMessage id="mail_6"/></li>
-                    </ul>
+                            <ul>
+                                <li><FormattedMessage id="mail_1"/></li>
+                                <li><FormattedMessage id="mail_2"/></li>
+                                <li><FormattedMessage id="mail_3"/></li>
+                                <li><FormattedMessage id="mail_4"/></li>
+                                <li><FormattedMessage id="mail_5"/></li>
+                                <li><FormattedMessage id="mail_6"/></li>
+                            </ul>
+                        </div>
+                        <div className="col_4">
+                            <h5><FormattedMessage id="frontend_developer"/></h5>
+                            <p className="is-emph">{year} <FormattedMessage id="moscow"/></p>
+                            <a href={prj_link} target="_blank">{prj_link}</a>
+                        </div>
+                    </div>
                 </div>
 
+                <h2><FormattedMessage id="desktop"/></h2>
                 <div className={s.screens}>
-                        <ImageListSlider images={slider_desktop} config={config}/>
-                    <p>Description</p>
+                    <ImageListSlider images={slider_desktop} config={config}/>
+                </div>
+
+                <h2><FormattedMessage id="mobile"/></h2>
+                <div className={s.screens}>
+                    <ImageListSlider images={slider_desktop} config={config}/>
                 </div>
             </div>
         )
@@ -67,7 +80,6 @@ class Project extends Component {
 
 Project.PropTypes = {
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
-    pic: PropTypes.string.isRequired,
     prj_link: PropTypes.string,
     year: PropTypes.string,
     pic_full: PropTypes.string,

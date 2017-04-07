@@ -5,23 +5,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 30rem;
-}
 
-.bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow:inset 0 0 0 2000px rgba(40, 59, 86, .5);
-}
-
-.cont {
-  position: relative;
-  padding: 1rem;
+  & h2 {
+    margin-top: 3rem;
+  }
 }
 
 .head {
@@ -44,15 +31,39 @@
   cursor: pointer;
 
   & svg {
-    fill: var(--c_emph);
+    fill: var(--c_txt);
     width: 2rem;
     transition: all .2s;
   }
 
   &:hover svg {
-    fill: var(--c_txt);
+    fill: var(--c_emph);
   }
 }
+
+.cont {
+  position: relative;
+  margin-top: 3rem;
+
+  & :global(.row) {
+    margin-bottom: 2rem;
+  }
+
+  & :global(.col_4) {
+    text-align: right;
+  }
+
+  & a {
+    display: block;
+    margin-top: .5rem;
+    text-decoration: none;
+  }
+}
+
+.about {
+  margin-bottom: 2rem;
+}
+
 
 .screens {
   text-align: center;
