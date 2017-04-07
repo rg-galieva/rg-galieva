@@ -3,22 +3,23 @@ import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux'
 import history from '../../history'
 import {getProjectById} from '../../actions/projects'
+import config from '../slider/config_alt'
+import ImageListSlider from '../image-list-slider'
 import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
-import Slider from 'react-slick'
-import config from '../slider/config_alt'
 import s from './_styles.pcss'
 
 const close_svg = require('../../assets/svg/close.svg');
 
-class Project extends Component {
-    componentWillMount() {
-        document.getElementById('body').style.backgroundColor = this.props.active_project.bg_color;
-    }
 
-    componentWillUnmount() {
-        document.getElementById('body').style.backgroundColor = "";
-    }
+class Project extends Component {
+    // componentWillMount() {
+    //     document.getElementById('body').style.backgroundColor = this.props.active_project.bg_color;
+    // }
+    //
+    // componentWillUnmount() {
+    //     document.getElementById('body').style.backgroundColor = "";
+    // }
 
     getImage = (src) => {
         return require("../../assets/img/projects/" + src);
@@ -29,19 +30,18 @@ class Project extends Component {
     };
 
     render() {
-        const {title, pic, bg, prj_link, year, pic_full, pic_mobile} = this.props.active_project;
-        const back_txt = <FormattedMessage id="back"/>;
+        const {title, about_prj, pic, prj_link, year, pic_full, slider_desktop, slider_mobile} = this.props.active_project;
 
         return (
             <div className={s.page} >
                 <div className={s.head} style={this.getBgImg(pic_full)}>
-                    <div dangerouslySetInnerHTML={{__html: close_svg}} className={s.back_btn} title={back_txt} onClick={history.goBack}></div>
+                    <div dangerouslySetInnerHTML={{__html: close_svg}} className={s.back_btn} onClick={history.goBack}></div>
 
                     <h1><FormattedMessage id={title}/></h1>
                 </div>
 
                 <div className={s.cont}>
-                    <p>Skyforge is a free-to-play MMORPG set in a universe where fantasy and Sci-Fi collide. Players start as immortals trying to become mighty gods while protecting their planet, Aelion.</p>
+                    <p><FormattedMessage id={about_prj}/></p>
                     <br />
                     <h5><FormattedMessage id="frontend_developer"/></h5>
 
@@ -54,20 +54,15 @@ class Project extends Component {
                         <li><FormattedMessage id="mail_5"/></li>
                         <li><FormattedMessage id="mail_6"/></li>
                     </ul>
-
                 </div>
 
                 <div className={s.screens}>
-                    <Slider {...config}>
-                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/sf_screen_1`}/>
-                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/sf_screen_2`}/>
-                    </Slider>
+                        <ImageListSlider images={slider_desktop} config={config}/>
                     <p>Description</p>
                 </div>
             </div>
         )
     }
-
 }
 
 Project.PropTypes = {
@@ -76,7 +71,8 @@ Project.PropTypes = {
     prj_link: PropTypes.string,
     year: PropTypes.string,
     pic_full: PropTypes.string,
-    pic_mobile: PropTypes.string
+    slider_desktop: PropTypes.array,
+    slider_mobile: PropTypes.array
 }
 
 const mapDispatchToProps = (dispatch, props) => {

@@ -10,7 +10,7 @@ const settings = {
     fade: true,
     slidesToShow: 1,
     autoplay: true,
-    pauseOnHover: false,
+    pauseOnHover: true,
     customPaging: (i) => <div className={s.pager}/>,
     nextArrow: <NextArrow/>,
     prevArrow: <PrevArrow/>

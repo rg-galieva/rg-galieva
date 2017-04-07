@@ -1,5 +1,5 @@
 import {GET_PROJECTS, GET_PROJECT_BY_ID} from '../constants'
-import projectsDB from '../assets/db/projects.json'
+import projectsDB from '../assets/db/projects'
 
 const initialState = {
     all: projectsDB

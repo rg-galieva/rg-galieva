@@ -13,7 +13,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: var(--z-bg);
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(40, 59, 86, .5);
 }
 
 .cont {
@@ -27,6 +30,7 @@
   background-size: cover;
   width: 100%;
   padding: 0 1rem;
+  text-align: center;
 
   & h1 {
     line-height: calc(200rem / var(--f_size));
