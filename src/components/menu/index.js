@@ -10,6 +10,7 @@ const Menu = () => {
             <NavLink to="/about" activeClassName="is_act"><FormattedMessage id="about"/></NavLink>
             <NavLink to="/resume" activeClassName="is_act"><FormattedMessage id="resume"/></NavLink>
             <NavLink to="/projects" activeClassName="is_act"><FormattedMessage id="projects"/></NavLink>
+            <NavLink to="/experiments" activeClassName="is_act"><FormattedMessage id="experiments"/></NavLink>
             <NavLink to="/contact" activeClassName="is_act"><FormattedMessage id="contact"/></NavLink>
         </nav>
     )

@@ -6,6 +6,7 @@
   "about": "About",
   "resume": "Resume",
   "projects": "Projects",
+  "experiments": "Experiments",
   "contact": "Contact",
   "next": "Next",
   "prev": "Previous",
@@ -66,6 +67,11 @@
   "sf.about": "Skyforge is a free-to-play MMORPG set in a universe where fantasy and Sci-Fi collide. Players start as immortals trying to become mighty gods while protecting their planet, Aelion.",
   "korsa.about": "Korsa Media is a leading event management agency with a portfolio of own brand events (Moscow City Racing, Kazan City Racing) as well as licensed events (Top Gear Live, Nitro Circus, FIA Formula E etc.)",
   "desktop": "Desktop version",
-  "mobile": "Mobile version"
+  "mobile": "Mobile version",
+  "live_preview": "Check out live preview",
+  "rg-weather.title": "Forecast app",
+  "rg-weather.about": "Forecast for the next 7 days. Any city around the world. Build with Yahoo Weather. Flat design for city cards with background picture from Google Places or Flickr.",
+  "rg-youtube.title": "Video search",
+  "rg-youtube.about": "React-only static page with youtube-search"
 
 }

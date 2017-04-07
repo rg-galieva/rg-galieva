@@ -20,7 +20,6 @@ html {
 body {
   margin: 0;
   line-height: calc(24rem / var(--f_size));
-  font-size: calc(12rem / var(--f_size));
   font-family: sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -94,6 +93,7 @@ a {
   transition: .3s;
   outline: none;
   color: var(--c_txt);
+  text-decoration: none;
 
   &:hover, &:focus {
     outline: none;

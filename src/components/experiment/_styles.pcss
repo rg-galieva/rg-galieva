@@ -1,0 +1,64 @@
+@import "../../assets/styles/vars.gcss";
+
+.experiment {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: stretch;
+  margin-bottom: calc(80rem/16);
+}
+
+.experiment_info {
+  flex: 5;
+  padding-right: calc(100%/14);
+
+  & > a {
+    color: var(--c_txt);
+    text-decoration: none;
+  }
+
+  & > a:hover {
+    color: var(--c_link);
+  }
+
+  & > h4 {
+    font-weight: var(--f_bold);
+  }
+}
+
+.experiment_image {
+  flex: 5;
+}
+
+@media (max-width: 800px) {
+  .experiment {
+    flex-direction: column;
+  }
+
+  .experiment_info {
+    flex: 1 100%;
+    order: 2;
+  }
+
+  .experiment_image {
+    flex: 1 100%;
+    order: 1;
+    margin-bottom: 1rem;
+  }
+}
+
+.experiment_image_bg {
+  position: relative;
+  width: 100%;
+  height: calc(300rem/16);
+}
+
+.desc {
+  margin: calc(20rem/16) 0 calc(40rem/16);
+  & > p {
+    margin-bottom: 1rem;
+  }
+}
+
+.link_full_experiment {
+}

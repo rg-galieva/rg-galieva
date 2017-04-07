@@ -6,6 +6,7 @@
   "about": "Обо мне",
   "resume": "Резюме",
   "projects": "Проекты",
+  "experiments": "Эксперименты",
   "contact": "Контакты",
   "next": "Следующий",
   "prev": "Предыдущий",
@@ -66,5 +67,11 @@
   "sf.about": "Skyforge is a free-to-play MMORPG set in a universe where fantasy and Sci-Fi collide. Players start as immortals trying to become mighty gods while protecting their planet, Aelion.",
   "korsa.about": "Korsa Media - организатор массовых спортивно-развлекательных мероприятий",
   "desktop": "Широкоформатная версия",
-  "mobile": "Мобильная версия"
+  "mobile": "Мобильная версия",
+  "live_preview": "Превью проекта",
+  "rg-weather.title": "Прогноз погоды",
+  "rg-weather.about": "",
+  "rg-youtube.title": "Forecast app",
+  "rg-youtube.about": "Forecast for the next 7 days. Any city around the world. Build with Yahoo Weather. Flat design for city cards with background picture from Google Places or Flickr."
+
 }
