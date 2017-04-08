@@ -6,8 +6,7 @@ import {FormattedMessage} from 'react-intl';
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
 
-const numb_0 = require('../../assets/svg/numbers/0.svg');
-const numb_1 = require('../../assets/svg/numbers/1.svg');
+const waves = require('../../assets/svg/waves.svg');
 
 class MainPage extends Component {
     render() {
@@ -15,18 +14,13 @@ class MainPage extends Component {
             <div className={s.page}>
 
                 <div className={s.photo_wrap}>
-                    <div className={s.photo}>
-                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/main`}/>
-                    </div>
+                    {/*<div className={s.photo}>*/}
+                        {/*<Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/main`}/>*/}
+                    {/*</div>*/}
                     <h1><FormattedMessage id="index.title"/></h1>
                 </div>
 
-                <div className={s.slider}>
-
-                    <div dangerouslySetInnerHTML={{__html: `${numb_0} ${numb_1}`}} className={s.slider_numb}></div>
-
-                    <Link to="/projects"/>
-                </div>
+                <div dangerouslySetInnerHTML={{__html: waves}} className={s.bg}></div>
             </div>
         )
     }

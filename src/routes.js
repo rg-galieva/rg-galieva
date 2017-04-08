@@ -8,6 +8,7 @@ import Resume from "./pages/resume"
 import ProjectList from "./pages/prj-list"
 import Experiments from './pages/experiments'
 import Project from './components/prj'
+import Contact from './pages/contact'
 import NoMatch from "./pages/no-match"
 
 export default (
@@ -20,6 +21,7 @@ export default (
                 <Route path="/projects" component={ProjectList} exact/>
                 <Route path="/projects/:id" component={Project}/>
                 <Route path="/experiments" component={Experiments}/>
+                <Route path="/contact" component={Contact}/>
                 <Route component={NoMatch}/>
             </Switch>
         </Layout>
