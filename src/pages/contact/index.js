@@ -35,7 +35,7 @@ class Contact extends Component {
                         <div className={s.desc}>
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: phone}}
-                                     className={[s.github, s.logo].join(" ")}></div>
+                                     className={[s.phone, s.logo].join(" ")}></div>
                                 <p>917-302-87-14</p>
                             </div>
 
@@ -47,31 +47,31 @@ class Contact extends Component {
 
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: fb}}
-                                     className={[s.github, s.logo].join(" ")}></div>
+                                     className={[s.fb, s.logo].join(" ")}></div>
                                 <a href="https://www.facebook.com/rg.galieva">facebook.com/rg.galieva</a>
                             </div>
 
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: inst}}
-                                     className={[s.github, s.logo].join(" ")}></div>
+                                     className={[s.inst, s.logo].join(" ")}></div>
                                 <a href="https://www.instagram.com/rg.galieva">instagram.com/rg.galieva</a>
                             </div>
 
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: inbox}}
-                                     className={[s.github, s.logo].join(" ")}></div>
+                                     className={[s.mail, s.logo].join(" ")}></div>
                                 <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%67%2E%67%61%6C%69%65%76%61%40%67%6D%61%69%6C%2E%63%6F%6D">rg.galieva@gmail.com</a>
                             </div>
 
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: linkedin}}
-                                     className={[s.github, s.logo].join(" ")}></div>
+                                     className={[s.linkedin, s.logo].join(" ")}></div>
                                 <a href="https://www.linkedin.com/in/rg-galieva">linkedin.com/in/rg-galieva</a>
                             </div>
 
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: vk}}
-                                     className={[s.github, s.logo].join(" ")}></div>
+                                     className={[s.vk, s.logo].join(" ")}></div>
                                 <a href="https://vk.com/rg.galieva">vk.com/rg.galieva</a>
                             </div>
                         </div>
