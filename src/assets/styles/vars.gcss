@@ -10,7 +10,9 @@
   --c_like: #fe536d;
   --c_obj: #b88b58;
   --c_alt: #abc470;
-  
+  --c_pulse_1: #be8057;
+  --c_pulse_2: #f7d849;
+
   /*  TYPOGRAPHY */
   --f_size: 16;
   --f_regular: 400;

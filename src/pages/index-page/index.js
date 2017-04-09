@@ -14,6 +14,7 @@ class MainPage extends Component {
     componentDidMount() {
         setTimeout(() => {
                 findDOMNode(this.refs.bg_svg).className += " is_act";
+                findDOMNode(this.refs.bg_svg).style = {backgroundImage: main_img};
             }, 350
         )
     }
@@ -21,14 +22,11 @@ class MainPage extends Component {
     render() {
         return (
             <div className={s.page}>
-                <div className={s.photo} style={{backgroundImage: main_img}}>
+                <div className={s.photo} ref="bg_img">
                     {/*<Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/index_bg`}/>*/}
                 </div>
 
-                <div className={s.photo_wrap}>
-
-                    <h1><FormattedMessage id="index.title"/></h1>
-                </div>
+                <h1 className={s.title}><FormattedMessage id="index.title"/></h1>
 
                 <div dangerouslySetInnerHTML={{__html: bg}} className={s.bg} ref="bg_svg"></div>
             </div>

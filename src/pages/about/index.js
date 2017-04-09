@@ -24,7 +24,7 @@ class About extends Component {
 
                 <section className={['row', s.cont].join(' ')}>
                     <header className="col_4">
-                        <h2><FormattedMessage id="about"/></h2>
+                        <h2><FormattedMessage id="welcome"/></h2>
                     </header>
 
                     <div className="col_10">
