@@ -6,12 +6,36 @@
 
 .bg {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; bottom: 0;
+  top: 0; left: -10rem;
+  width: 80%; bottom: 0;
   z-index: var(--z-bg);
+  opacity: 0;
+
+  &:global(.is_act) {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
 
   & svg {
-    fill: color(var(--c_alt) alpha(40%));
+    fill: #333;
+    animation: pulse 10s alternate infinite;
+
+    & :global(.a) {
+      opacity: 0.2;
+    }
+
+  }
+}
+
+@keyframes pulse {
+  0% {
+    fill: color(var(--c_obj) alpha(-60%));
+  }
+  50% {
+    fill: rgba(207, 236, 109, .4);
+  }
+  100% {
+    fill: rgba(236, 166, 109, .4);
   }
 }
 
