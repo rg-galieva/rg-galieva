@@ -8,6 +8,7 @@ import s from './_styles.pcss'
 
 const waves = require('../../assets/svg/waves.svg');
 const bg = require('./svg/bg.svg');
+const main_img = require('./img/index_bg.png');
 
 class MainPage extends Component {
     componentDidMount() {
@@ -20,11 +21,12 @@ class MainPage extends Component {
     render() {
         return (
             <div className={s.page}>
+                <div className={s.photo} style={{backgroundImage: main_img}}>
+                    {/*<Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/index_bg`}/>*/}
+                </div>
 
                 <div className={s.photo_wrap}>
-                    <div className={s.photo}>
-                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/main`}/>
-                    </div>
+
                     <h1><FormattedMessage id="index.title"/></h1>
                 </div>
 

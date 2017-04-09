@@ -48,9 +48,9 @@
   & > :global(h1) {
     position: absolute;
     left: 0;
-    margin-left: 85%;
+    margin-left: 50%;
     font-weight: var(--f_bold);
-    top: calc(120rem/var(--f_size));
+    top: calc(60rem/var(--f_size));
     text-transform: uppercase;
     font-size: calc(63rem/var(--f_size));
     text-shadow: 3px 4px 1px #a8ba9a;
@@ -58,10 +58,16 @@
 }
 
 .photo {
+  position: fixed;
+  right: 3rem; bottom: -6rem;
+  background-image: url("./img/index_bg.png");
   width: calc(600rem/var(--f_size));
-  height: calc(560rem/var(--f_size));
-  background-color: var(--c_bg);
-}
+  height: calc(600rem/var(--f_size));
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: var(--z-cont);
+  //background-color: var(--c_bg);
+}§
 
 .reactive path {
   fill: none;
