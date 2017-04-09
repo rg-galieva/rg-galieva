@@ -28,7 +28,7 @@ class Contact extends Component {
 
                 <section className={['row', s.cont].join(' ')}>
                     <header className="col_5">
-                        <h2><FormattedMessage id="contact"/></h2>
+                        <h2><FormattedMessage id="contact_work"/></h2>
                     </header>
 
                     <div className="col_9">
@@ -56,7 +56,17 @@ class Contact extends Component {
                                      className={[s.github, s.logo].join(" ")}></div>
                                 <a href="https://github.com/rg-galieva/rg-galieva" target="_blank">github.com/rg-galieva/rg-galieva</a>
                             </div>
+                        </div>
+                    </div>
+                </section>
 
+                <section className={['row', s.cont].join(' ')}>
+                    <header className="col_5">
+                        <h2><FormattedMessage id="contact_friends"/></h2>
+                    </header>
+
+                    <div className="col_9">
+                        <div className={s.desc}>
                             <div className="row">
                                 <div dangerouslySetInnerHTML={{__html: fb}}
                                      className={[s.fb, s.logo].join(" ")}></div>
