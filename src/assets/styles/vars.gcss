@@ -20,6 +20,12 @@
 
   /* GRID */
   --w_max: 1600;
+  @custom-media --w_phone (max-width:599px);
+  @custom-media --w_phone_only (min-width:599px);
+  @custom-media --w_tablet_portrait_up (min-width:600px);
+  @custom-media --w_tablet_landscape_up (min-width:900px);
+  @custom-media --w_desktop_up (min-width:1200px);
+  @custom-media --w_big_desktop_up (min-width:1800px);
 
   /* Z-INDEX */
   --z-layout: 100;

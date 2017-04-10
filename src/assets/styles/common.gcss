@@ -6,7 +6,6 @@
 
 html {
   color: var(--c_txt);
-
   font-family: sans-serif;
   font-weight: var(--f_regular);
 }
@@ -114,3 +113,27 @@ q {
     transition: all .2s ease-out;
   }
 }
+
+/*
+@media (max-width: var(--w_phone_only)) {
+
+}
+
+@media (min-width: var(--w_tablet_portrait_up)) {
+
+}
+
+@media (min-width: var(--w_tablet_landscape_up)) {
+
+}
+
+
+@media (min-width: var(--w_desktop_up)) {
+
+}
+
+
+@media (min-width: var(--w_big_desktop_up)) {
+
+}
+*/
