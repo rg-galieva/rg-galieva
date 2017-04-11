@@ -180,3 +180,45 @@ audio:not([controls]) {
 svg:not(:root) {
   overflow: hidden;
 }
+
+@media (--w_phone_only) {
+  h1 {
+    font-size: calc(53rem / var(--f_size));
+    line-height: calc(50rem / var(--f_size));
+  }
+
+  h2 {
+    font-size: calc(40rem / var(--f_size));
+    line-height: calc(40rem / var(--f_size));
+  }
+
+  h3 {
+    font-size: calc(30rem / var(--f_size));
+    line-height: calc(30rem / var(--f_size));
+  }
+
+  h4 {
+    font-size: calc(28rem / var(--f_size));
+    line-height: calc(30rem / var(--f_size));
+  }
+}
+
+/*
+@media (min-width: var(--w_tablet_portrait_up)) {
+
+}
+
+@media (min-width: var(--w_tablet_landscape_up)) {
+
+}
+
+
+@media (min-width: var(--w_desktop_up)) {
+
+}
+
+
+@media (min-width: var(--w_big_desktop_up)) {
+
+}
+*/

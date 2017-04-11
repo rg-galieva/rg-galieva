@@ -10,6 +10,19 @@
   /*align-items: center; !* Центр по вспомогательной оси *!*/
 }
 
+@media (max-width: 1180px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (--w_phone_only) {
+  .row {
+    margin-bottom: 2rem;
+  }
+}
+
+
 .col_1 {
   flex: 1;
 }

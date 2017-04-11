@@ -129,16 +129,19 @@
     }
   }
 
+  .company {
+    flex-direction: column;
+
+    & :global(.col_3) {
+      display: none;
+    }
+  }
+
   .edu_row {
     flex-direction: column;
 
     & :global(.col_4) {
-      order: 1;
-      margin-bottom: 1rem;
-    }
-
-    & :global(.col_10) {
-      order: 2;
+      display: none;
     }
   }
 }
@@ -147,19 +150,6 @@
   .skills {
     & > div {
       flex-basis: 50%;
-    }
-  }
-
-  .company {
-    flex-direction: column;
-
-    & :global(.col_3) {
-      order: 1;
-      margin-bottom: 1rem;
-    }
-
-    & :global(.col_10) {
-      order: 2;
     }
   }
 }

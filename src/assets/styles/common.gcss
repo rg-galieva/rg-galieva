@@ -92,19 +92,6 @@ q {
   height: 100%;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  align-content: space-between;
-  align-items: stretch;
-}
-
-@media (max-width: 1180px) {
-  .row {
-    flex-direction: column;
-  }
-}
-
 .sliding-enter {
   transform: translate3d(0, 1rem, 0);
 
@@ -113,27 +100,3 @@ q {
     transition: all .2s ease-out;
   }
 }
-
-/*
-@media (max-width: var(--w_phone_only)) {
-
-}
-
-@media (min-width: var(--w_tablet_portrait_up)) {
-
-}
-
-@media (min-width: var(--w_tablet_landscape_up)) {
-
-}
-
-
-@media (min-width: var(--w_desktop_up)) {
-
-}
-
-
-@media (min-width: var(--w_big_desktop_up)) {
-
-}
-*/
