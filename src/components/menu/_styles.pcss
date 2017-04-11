@@ -51,6 +51,7 @@
 
 @media (max-width: 810px) {
   .nav {
+    opacity: 0;
     position: fixed;
     top:0; left: 0;
     padding: 20% 6.25% 10%;
@@ -81,6 +82,7 @@
 
   :global(header.is_act) {
     & .nav {
+      opacity: 1;
       transform: translateX(0);
     }
   }

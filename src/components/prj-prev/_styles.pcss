@@ -7,7 +7,7 @@
 .pic_wrap {
   position: relative;
   margin: 0 auto;
-  max-width: calc(800rem/var(--f_size));
+  max-width: 50vw;
 
   & > :global(h1) {
     position: absolute;
@@ -25,8 +25,8 @@
 }
 
 .pic {
-  width: calc(800rem/var(--f_size));
-  height: calc(560rem/var(--f_size));
+  //width: 80vw;
+  //height: calc(560rem/var(--f_size));
   background-color: var(--c_bg);
 }
 
@@ -55,5 +55,11 @@
     fill: var(--c_txt);
     height: calc(130rem/var(--f_size));
     margin-right: calc(15rem/var(--f_size));
+  }
+}
+
+@media (--w_phone_only) {
+  .slider_numb {
+    display: none;
   }
 }
