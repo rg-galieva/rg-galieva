@@ -1,13 +1,10 @@
 .row {
   display: flex;
-  flex-direction: row; /* Пункты внутри контейнера будут располагаться горизонтально */
-  align-items: stretch; /* Пункты внутри контейнер будут принимать всю его высоту */
+  flex-direction: row;
+  align-items: stretch;
   flex-wrap: wrap;
   align-content: space-between;
   margin-bottom: calc(100rem/16);
-
-  /*justify-content: center; !* Центр по главной оси *!*/
-  /*align-items: center; !* Центр по вспомогательной оси *!*/
 }
 
 @media (max-width: 1180px) {
