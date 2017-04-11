@@ -1,7 +1,6 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl'
 import LangLink from '../lang-link'
-import s from './_styles.pcss'
 
 const LangMenu = (props) => {
     return (

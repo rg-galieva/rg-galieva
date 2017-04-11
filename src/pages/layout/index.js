@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {findDOMNode} from 'react-dom'
 import {Link} from 'react-router-dom'
 import Menu from '../../components/menu'
 import LangMenu from '../../components/lang-menu'
@@ -7,10 +8,15 @@ require('../../assets/styles/common.gcss')
 import s from './_styles.pcss'
 
 const logo = require('./svg/logo.svg');
+const nav = require('./svg/menu.svg');
 
 class Layout extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+
+        this.state = {
+            nav_is_act: false
+        }
     }
 
     componentDidMount() {
@@ -23,17 +29,35 @@ class Layout extends Component {
 
     handleScroll = (ev) => {
         if (window.scrollY > 50) {
-            this.refs.header.className = "is_sticky";
+            this.refs.head.className = "is_sticky";
         } else {
-            this.refs.header.className = "";
+            this.refs.head.className = "";
         }
+    }
+
+    toggleNav = (ev) => {
+        if (ev) ev.preventDefault();
+
+        this.setState({
+                nav_is_act: !this.state.nav_is_act
+            },
+            () => {
+                if(this.state.nav_is_act) {
+                    findDOMNode(this.refs.head).classList.add('is_act');
+                } else {
+                    findDOMNode(this.refs.head).classList.remove('is_act');
+                }
+            }
+        )
     }
 
     render() {
         return (
             <div className={s.wrap}>
-                <header ref="header">
+                <header ref="head">
                     <section className="clearfix">
+                        <div dangerouslySetInnerHTML={{__html: nav}} className={s.nav_btn} ref="nav_btn"
+                             onClick={this.toggleNav}></div>
                         <LangMenu css={s.lang_nav}/>
                         <Link to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
                         <Menu />
@@ -51,7 +75,7 @@ class Layout extends Component {
                     </ReactCSSTransitionGroup>
                 </main>
 
-                <footer>
+                <footer className={s.footer}>
                     <nav>
                         <a href="https://www.facebook.com/rg.galieva">Facebook</a>
                         <a href="https://www.instagram.com/rg.galieva">Instagram</a>

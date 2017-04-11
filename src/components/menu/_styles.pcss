@@ -49,6 +49,46 @@
   @apply --nav;
 }
 
+@media (--w_phone_only) {
+  .nav {
+    position: fixed;
+    top:0; left: 0;
+    padding: 20% 6.25% 10%;
+    width: 90%;
+    height: 100%;
+    background: color(var(--c_bg) alpha(95%));
+    transform: translateX(-1000px);
+    transition: all .5s ease-in-out;
+    font-weight: normal;
+    z-index: -1;
+
+    & a {
+      display: block;
+      line-height: 3.4rem;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      padding-bottom: 0;
+
+      &::after {
+        display: none;
+      }
+
+      &:global(.is_act) {
+        box-shadow: 0 1px 0px 0px var(--c_link_vis);
+      }
+    }
+  }
+
+  :global(header.is_act) {
+    & .nav {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (min-width: 901px) {
+
+}
 
 
 
