@@ -1,69 +1,14 @@
 import React, {Component} from 'react'
-import {findDOMNode} from 'react-dom'
-import {Link} from 'react-router-dom'
-import Menu from '../../components/menu'
-import LangMenu from '../../components/lang-menu'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import isMobile from '../../utils/useragent-check'
+import Header from '../../components/header'
 require('../../assets/styles/common.gcss')
 import s from './_styles.pcss'
 
-const logo = require('./svg/logo.svg');
-const nav = require('./svg/menu.svg');
-
 class Layout extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            nav_is_act: false
-        }
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
-
-    handleScroll = (ev) => {
-        if (window.scrollY > 50) {
-            this.refs.head.className = "is_sticky";
-        } else {
-            this.refs.head.className = "";
-        }
-    }
-
-    toggleNav = (ev) => {
-        if (ev) ev.preventDefault();
-
-        this.setState({
-                nav_is_act: !this.state.nav_is_act
-            },
-            () => {
-                if (this.state.nav_is_act) {
-                    findDOMNode(this.refs.head).classList.add('is_act');
-                } else {
-                    findDOMNode(this.refs.head).classList.remove('is_act');
-                }
-            }
-        )
-    }
-
     render() {
         return (
             <div className={s.wrap}>
-                <header ref="head">
-                    <section className="clearfix">
-                        <div dangerouslySetInnerHTML={{__html: nav}} className={s.nav_btn} ref="nav_btn"
-                             onClick={this.toggleNav}></div>
-                        <LangMenu css={s.lang_nav}/>
-                        <Link to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
-                        <Menu />
-                    </section>
-                </header>
+                <Header/>
 
                 <main className={s.cont}>
                     <ReactCSSTransitionGroup
