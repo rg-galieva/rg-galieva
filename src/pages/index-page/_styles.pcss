@@ -46,16 +46,14 @@
 .photo {
   position: fixed;
   right: 3rem;
-  bottom: -6rem;
-  background: url("./img/index_bg.png") no-repeat 0 0;
-  background-size: contain;
+  bottom: 0;
   width: calc(600rem / var(--f_size));
-  height: calc(600rem / var(--f_size));
   z-index: var(--z-cont);
 }
 
 @media (--w_phone_only) {
   .title {
+    margin-top: 2vh;
     font-size: 3.3rem;
     line-height: 4rem;
     max-width: 100%;
@@ -64,9 +62,7 @@
 
   .photo {
     right: 1rem;
-    bottom: -6rem;
-    width: 90vw;
-    height: 57vh;
+    width: 80vw;
   }
 
   .bg {
@@ -94,9 +90,7 @@
 
   .photo {
     right: 1rem;
-    bottom: -6rem;
     width: 90vw;
-    height: 57vh;
   }
 }
 
