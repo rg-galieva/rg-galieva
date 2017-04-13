@@ -15,8 +15,32 @@
       bottom: 0;
       left: 0;
       height: 70%;
-      animation: pulse 10s alternate infinite;
     }
+}
+
+:global(.animate_fill) {
+  & svg {
+    animation: pulse 10s alternate infinite;
+  }
+}
+
+:global(.animate_stroke) {
+  & svg {
+    fill: none;
+    animation: pulseStroke 10s alternate infinite;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .35;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes pulse {
@@ -31,14 +55,14 @@
   }
 }
 
-@keyframes appear {
+@keyframes pulseStroke {
   0% {
-    opacity: 0;
+    stroke: color(var(--c_obj) alpha(-60%));
   }
   50% {
-    opacity: .35;
+    stroke: rgba(207, 236, 109, .4);
   }
   100% {
-    opacity: 1;
+    stroke: rgba(236, 166, 109, .4);
   }
 }

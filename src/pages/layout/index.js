@@ -71,9 +71,6 @@ class Layout extends Component {
                         transitionEnterTimeout={350}
                         transitionLeave={false}
                         component="section">
-
-                        <p>this.isMobile(): {isMobile.toString()}</p>
-
                         {this.props.children}
                     </ReactCSSTransitionGroup>
                 </main>

@@ -1,29 +1,5 @@
 @import "../../assets/styles/vars.gcss";
 
-.bg_svg {
-  position: fixed;
-  top: 20rem;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-
-  &:global(.is_act) {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-  }
-
-  & svg {
-    position: fixed;
-    bottom:  -5rem;
-    left: -5rem;
-    height: 80%;
-    fill: none;
-    animation: pulse 10s alternate infinite;
-  }
-}
-
 .row {
   display: flex;
   flex-direction: row;
@@ -39,18 +15,6 @@
 
 .col_right {
   flex: 9;
-}
-
-@keyframes pulse {
-  0% {
-    stroke: color(var(--c_obj) alpha(-60%));
-  }
-  50% {
-    stroke: rgba(207, 236, 109, .4);
-  }
-  100% {
-    stroke: rgba(236, 166, 109, .4);
-  }
 }
 
 .cont {
@@ -84,6 +48,13 @@
   }
 }
 
+:global(.contact_bg) {
+  & svg {
+    bottom:  -5rem;
+    left: -5rem;
+    height: 80%;
+  }
+}
 
 @media (max-width: 1300px) {
   .col_left {

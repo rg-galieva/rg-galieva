@@ -6,7 +6,9 @@ import s from './_styles.pcss'
 class PageBg extends Component {
     componentDidMount() {
         if (!isMobile) {
-            const bg = () => { return <div dangerouslySetInnerHTML={{__html: require(`./svg/${this.props.bg}.svg`)}} className={s.svg_bg}></div> }
+            const css = [s.svg_bg, this.props.css].join(' ');
+
+            const bg = () => { return <div dangerouslySetInnerHTML={{__html: require(`./svg/${this.props.bg}.svg`)}} className={css}></div> }
 
             setTimeout(() => {
                     render(bg(), document.getElementById(this.props.page_node))
