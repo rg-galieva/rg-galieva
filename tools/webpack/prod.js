@@ -37,11 +37,11 @@ module.exports = function (env) {
                     to: './'
                 },
                 {
-                    from: resolve(__dirname, './../manifest.json'),
+                    from: resolve(__dirname, './../../manifest.json'),
                     to: './'
                 },
                 {
-                    from: resolve(__dirname, './../browserconfig.xml'),
+                    from: resolve(__dirname, './../../browserconfig.xml'),
                     to: './'
                 }
             ]),
