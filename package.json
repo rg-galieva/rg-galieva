@@ -50,7 +50,6 @@
   },
   "dependencies": {
     "cloudinary-react": "^1.0.2",
-    "gsap": "^1.19.1",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "^15.4.2",

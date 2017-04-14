@@ -9,7 +9,7 @@ module.exports = function () {
         context: resolve(__dirname, './../../src'),
 
         entry: {
-            vendor: ['react', 'react-dom'],
+            vendor: ['react', 'react-dom', 'redux', 'react-redux', 'react-router-dom', 'react-router-redux', 'react-intl'],
             app: './app.js'
         },
 
