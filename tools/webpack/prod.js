@@ -35,6 +35,14 @@ module.exports = function (env) {
                 {
                     from: resolve(__dirname, './../../CNAME'),
                     to: './'
+                },
+                {
+                    from: resolve(__dirname, './../manifest.json'),
+                    to: './'
+                },
+                {
+                    from: resolve(__dirname, './../browserconfig.xml'),
+                    to: './'
                 }
             ]),
             new webpack.LoaderOptionsPlugin({
