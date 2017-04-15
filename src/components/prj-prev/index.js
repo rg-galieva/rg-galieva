@@ -5,11 +5,10 @@ import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
 
-const numb_0 = require('../../assets/svg/numbers/0.svg');
+const numbs = require('../../assets/svg/numbers.svg');
 
 const ProjectPrev = (props) => {
     const {id, title, pic, url} = props;
-    const numb = require(`../../assets/svg/numbers/${id}.svg`);
 
     return (
         <div className={s.page}>
@@ -21,7 +20,14 @@ const ProjectPrev = (props) => {
             </div>
 
             <div className={s.slider}>
-                <div dangerouslySetInnerHTML={{__html: `${numb_0} ${numb}`}} className={s.slider_numb}></div>
+                <div className={s.slider_numb}>
+                    <svg viewBox="0 0 64.24 163.45">
+                        <use xlinkHref={`${numbs}#_0`}/>
+                    </svg>
+                    <svg viewBox="0 0 132.55 172.84">
+                        <use xlinkHref={`${numbs}#_${id}`}/>
+                    </svg>
+                </div>
             </div>
         </div>
     )

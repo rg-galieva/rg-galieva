@@ -3,13 +3,7 @@ import {FormattedMessage} from 'react-intl';
 import PageBg from '../../components/page-bg'
 import s from './_styles.pcss'
 
-const phone = require('./svg/phone.svg'),
-    github = require('./svg/github.svg'),
-    fb = require('./svg/facebook.svg'),
-    inst = require('./svg/instagram.svg'),
-    linkedin = require('./svg/linkedin.svg'),
-    vk = require('./svg/vk.svg'),
-    inbox = require('./svg/inbox.svg');
+const icons = require('../../assets/svg/icons.svg');
 
 const Contact = () => {
     return (
@@ -22,28 +16,40 @@ const Contact = () => {
                 <div className={s.col_right}>
                     <div className={s.desc}>
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: phone}}
-                                 className={[s.phone, s.logo].join(" ")}></div>
+                            <div className={[s.phone, s.logo].join(" ")}>
+                                <svg viewBox="0 0 55 55">
+                                    <use xlinkHref={`${icons}#phone`}/>
+                                </svg>
+                            </div>
                             <p>917-302-87-14</p>
                         </div>
 
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: inbox}}
-                                 className={[s.mail, s.logo].join(" ")}></div>
+                            <div className={[s.mail, s.logo].join(" ")}>
+                                <svg viewBox="0 0 55 55">
+                                    <use xlinkHref={`${icons}#inbox`}/>
+                                </svg>
+                            </div>
                             <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%67%2E%67%61%6C%69%65%76%61%40%67%6D%61%69%6C%2E%63%6F%6D"
                                target="_blank">rg.galieva@gmail.com</a>
                         </div>
 
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: linkedin}}
-                                 className={[s.linkedin, s.logo].join(" ")}></div>
+                            <div className={[s.linkedin, s.logo].join(" ")}>
+                                <svg viewBox="0 0 455 455">
+                                    <use xlinkHref={`${icons}#linkedin`}/>
+                                </svg>
+                            </div>
                             <a href="https://www.linkedin.com/in/rg-galieva"
                                target="_blank">linkedin.com/in/rg-galieva</a>
                         </div>
 
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: github}}
-                                 className={[s.github, s.logo].join(" ")}></div>
+                            <div className={[s.github, s.logo].join(" ")}>
+                                <svg viewBox="0 0 568.034 568.034">
+                                    <use xlinkHref={`${icons}#github`}/>
+                                </svg>
+                            </div>
                             <a href="https://github.com/rg-galieva/rg-galieva" target="_blank">github.com/rg-galieva/rg-galieva</a>
                         </div>
                     </div>
@@ -58,20 +64,29 @@ const Contact = () => {
                 <div className={s.col_right}>
                     <div className={s.desc}>
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: fb}}
-                                 className={[s.fb, s.logo].join(" ")}></div>
+                            <div className={[s.fb, s.logo].join(" ")}>
+                                <svg viewBox="0 0 455.73 455.73">
+                                    <use xlinkHref={`${icons}#fb`}/>
+                                </svg>
+                            </div>
                             <a href="https://www.facebook.com/rg.galieva" target="_blank">facebook.com/rg.galieva</a>
                         </div>
 
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: inst}}
-                                 className={[s.inst, s.logo].join(" ")}></div>
+                            <div className={[s.inst, s.logo].join(" ")}>
+                                <svg viewBox="0 0 455.73 455.73">
+                                    <use xlinkHref={`${icons}#inst`} />
+                                </svg>
+                            </div>
                             <a href="https://www.instagram.com/rg.galieva" target="_blank">instagram.com/rg.galieva</a>
                         </div>
 
                         <div className={s.row}>
-                            <div dangerouslySetInnerHTML={{__html: vk}}
-                                 className={[s.vk, s.logo].join(" ")}></div>
+                            <div className={[s.vk, s.logo].join(" ")}>
+                                <svg viewBox="0 0 455 455">
+                                    <use xlinkHref={`${icons}#vk`} />
+                                </svg>
+                            </div>
                             <a href="https://vk.com/rg.galieva" target="_blank">vk.com/rg.galieva</a>
                         </div>
                     </div>

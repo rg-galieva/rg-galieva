@@ -2,9 +2,7 @@ import React from 'react'
 import {FormattedMessage} from 'react-intl';
 import s from './_styles.pcss'
 
-const alx_logo = require('./svg/adluxe.svg'),
-    mail_logo = require('./svg/mail.svg'),
-    simai_logo = require('./svg/simai.svg');
+const icons = require('../../assets/svg/icons.svg');
 
 const Resume = () => {
     return (
@@ -101,7 +99,11 @@ const Resume = () => {
                         </div>
 
                         <fiqure className="col_3">
-                            <div dangerouslySetInnerHTML={{__html: alx_logo}} className={s.logo_alx}></div>
+                            <div className={s.logo_alx}>
+                                <svg viewBox="0 0 138.49 121.7">
+                                    <use xlinkHref={`${icons}#adluxe`}/>
+                                </svg>
+                            </div>
 
                             <figcaption>
                                 <p><FormattedMessage id="alx_about"/></p>
@@ -125,7 +127,11 @@ const Resume = () => {
                         </div>
 
                         <fiqure className="col_3">
-                            <div dangerouslySetInnerHTML={{__html: mail_logo}} className={s.logo_mail}></div>
+                            <div className={s.logo_mail}>
+                                <svg viewBox="0 0 351.33 73.01">
+                                    <use xlinkHref={`${icons}#mail`}/>
+                                </svg>
+                            </div>
 
                             <figcaption>
                                 <p><FormattedMessage id="mail_about"/></p>
@@ -169,7 +175,11 @@ const Resume = () => {
                         </div>
 
                         <fiqure className="col_3">
-                            <div dangerouslySetInnerHTML={{__html: simai_logo}} className={s.logo_simai}></div>
+                            <div className={s.logo_simai}>
+                                <svg viewBox="0 0 344.25 99">
+                                    <use xlinkHref={`${icons}#simai`}/>
+                                </svg>
+                            </div>
 
                             <figcaption>
                                 <p><FormattedMessage id="simai_about"/></p>
@@ -227,7 +237,7 @@ const Resume = () => {
                     </div>
 
                     <div className={s.edu}>
-                        <h5></h5>
+                        <h5><FormattedMessage id="design.academy.title"/></h5>
 
                         <p className="is-emph">[2015] <FormattedMessage id="moscow"/></p>
                         <ul>

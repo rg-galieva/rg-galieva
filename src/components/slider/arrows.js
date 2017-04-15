@@ -1,12 +1,16 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl';
 import s from './_styles.pcss'
-const arrow_right = require('../../assets/svg/arrow.svg');
+const icons = require('../../assets/svg/icons.svg');
 
 export const NextArrow = (props) => {
     return (
         <div {...props} className="next">
-            <div dangerouslySetInnerHTML={{__html: arrow_right}} className={s.arrow_right}></div>
+            <div className={s.arrow_right}>
+                <svg viewBox="0 0 493.36 219.25">
+                    <use xlinkHref={`${icons}#arrow`}/>
+                </svg>
+            </div>
             <FormattedMessage id="next"/>
         </div>
     )
@@ -15,7 +19,11 @@ export const NextArrow = (props) => {
 export const PrevArrow = (props) => {
     return (
         <div {...props} className="prev">
-            <div dangerouslySetInnerHTML={{__html: arrow_right}} className={s.arrow_left}></div>
+            <div className={s.arrow_left}>
+                <svg viewBox="0 0 493.36 219.25">
+                    <use xlinkHref={`${icons}#arrow`}/>
+                </svg>
+            </div>
             <FormattedMessage id="prev"/>
         </div>
     )

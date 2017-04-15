@@ -9,18 +9,10 @@ import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
 import s from './_styles.pcss'
 
-const close_svg = require('../../assets/svg/close.svg');
+const icons = require('../../assets/svg/icons.svg');
 
 
 class Project extends Component {
-    // componentWillMount() {
-    //     document.getElementById('body').style.backgroundColor = this.props.active_project.bg_color;
-    // }
-    //
-    // componentWillUnmount() {
-    //     document.getElementById('body').style.backgroundColor = "";
-    // }
-
     getImage = (src) => {
         return require("../../assets/img/projects/" + src);
     };
@@ -35,7 +27,11 @@ class Project extends Component {
         return (
             <div className={s.page} >
                 <div className={s.head} style={this.getBgImg(pic_full)}>
-                    <div dangerouslySetInnerHTML={{__html: close_svg}} className={s.back_btn} onClick={history.goBack}></div>
+                    <div className={s.back_btn} onClick={history.goBack}>
+                        <svg viewBox="0 0 60 60">
+                            <use xlinkHref={`${icons}#close`}/>
+                        </svg>
+                    </div>
 
                     <h1><FormattedMessage id={title}/></h1>
                 </div>
