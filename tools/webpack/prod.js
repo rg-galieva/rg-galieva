@@ -47,6 +47,10 @@ module.exports = function (env) {
                 {
                     from: resolve(__dirname, './../../browserconfig.xml'),
                     to: './'
+                },
+                {
+                    from: resolve(__dirname, './../../offline.html'),
+                    to: './'
                 }
             ]),
             new webpack.optimize.UglifyJsPlugin({
