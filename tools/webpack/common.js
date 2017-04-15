@@ -94,18 +94,20 @@ module.exports = function () {
                     use: [
                         {
                             loader: 'file-loader?name=svg/[name].[ext]'
+                        },
+                        {
+                            loader: 'svgo-loader',
+                            options: {
+                                plugins: [
+                                    {removeTitle: true},
+                                    {removeUselessDefs: false},
+                                    {convertPathData: false},
+                                    {removeAttrs: false},
+                                    {cleanupIDs: false},
+                                    {removeHiddenElems: false}
+                                ]
+                            }
                         }
-                        // {
-                        //     loader: 'svgo-loader',
-                        //     options: {
-                        //         plugins: [
-                        //             {removeTitle: true},
-                        //             {convertColors: {shorthex: false}},
-                        //             {convertPathData: false},
-                        //             {cleanupIDs: false}
-                        //         ]
-                        //     }
-                        // }
                     ]
                 },
                 {
