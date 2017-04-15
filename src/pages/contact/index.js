@@ -78,7 +78,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <PageBg bg="contact_bg" page_node="contact_bg" css="animate_stroke contact_bg"/>
+            <PageBg bg="contact_bg" page_node="contact_bg" css="animate_stroke contact_bg" viewBox="0 0 1103.86 1196.42"/>
         </div>
     )
 }

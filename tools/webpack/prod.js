@@ -17,6 +17,10 @@ module.exports = function (env) {
         },
 
         plugins: [
+            new webpack.LoaderOptionsPlugin({
+                minimize: true,
+                debug: false
+            }),
             new webpack.DefinePlugin({
                 "process.env": {
                     NODE_ENV: JSON.stringify("production")
@@ -45,10 +49,6 @@ module.exports = function (env) {
                     to: './'
                 }
             ]),
-            new webpack.LoaderOptionsPlugin({
-                minimize: true,
-                debug: false
-            }),
             new webpack.optimize.UglifyJsPlugin({
                 beautify: false,
                 mangle: false,

@@ -85,9 +85,28 @@ module.exports = function () {
                     test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
                     use: 'file-loader?name=img/[name]_[hash:5].[ext]'
                 },
+                // {
+                //     test: /\.svg$/,
+                //     use: 'raw-loader'
+                // },
                 {
                     test: /\.svg$/,
-                    use: 'raw-loader'
+                    use: [
+                        {
+                            loader: 'file-loader?name=svg/[name].[ext]'
+                        }
+                        // {
+                        //     loader: 'svgo-loader',
+                        //     options: {
+                        //         plugins: [
+                        //             {removeTitle: true},
+                        //             {convertColors: {shorthex: false}},
+                        //             {convertPathData: false},
+                        //             {cleanupIDs: false}
+                        //         ]
+                        //     }
+                        // }
+                    ]
                 },
                 {
                     test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,

@@ -3,9 +3,10 @@ import {findDOMNode} from 'react-dom'
 import {Link} from 'react-router-dom'
 import Menu from '../../menu'
 import LangMenu from '../../lang-menu'
+import {SVG_ICONS} from '../../../constants'
 import s from './_styles.pcss'
 
-const logo = require('../svg/logo.svg');
+const icons = require('../../../assets/svg/icons.svg');
 
 class DesktopHeader extends Component {
     componentDidMount() {
@@ -29,7 +30,11 @@ class DesktopHeader extends Component {
             <header ref="head" className={s.header}>
                 <section className="clearfix">
                     <LangMenu css={s.lang_nav}/>
-                    <Link to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
+                    <Link to="/" className={s.logo}>
+                        <svg viewBox="0 0 202.87 29.94">
+                            <use xlinkHref={`${SVG_ICONS}#logo`}></use>
+                        </svg>
+                    </Link>
                     <Menu />
                 </section>
             </header>

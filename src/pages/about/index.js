@@ -29,7 +29,7 @@ const About = () => {
                 </div>
             </section>
 
-            <PageBg bg="about_bg" page_node="about_bg" css="animate_fill"/>
+            <PageBg bg="about_bg" page_node="about_bg" css="animate_fill" viewBox="0 0 261.4 192.65"/>
         </div>
     )
 }

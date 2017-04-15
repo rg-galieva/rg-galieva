@@ -5,9 +5,7 @@ import Menu from '../../menu'
 import LangMenu from '../../lang-menu'
 import s from './_styles.pcss'
 
-const logo = require('../svg/logo.svg');
-const nav = require('./svg/menu.svg');
-const back = require('../../../assets/svg/arrow.svg');
+const icons = require('../../../assets/svg/icons.svg');
 
 class MobileHeader extends Component {
     constructor(props) {
@@ -40,17 +38,27 @@ class MobileHeader extends Component {
         return (
             <header ref="head" className={s.header}>
                 <section className="clearfix">
-                    <div dangerouslySetInnerHTML={{__html: nav}} className={s.nav_btn} ref="nav_btn"
-                         onClick={this.toggleNav}></div>
-                    <Link to="/" className={s.logo} dangerouslySetInnerHTML={{__html: logo}}/>
+                    <div className={s.nav_btn} ref="nav_btn" onClick={this.toggleNav}>
+                        <svg viewBox="0 0 92.833 92.833">
+                            <use xlinkHref={`${icons}#nav_btn`}/>
+                        </svg>
+                    </div>
+                    <Link to="/" className={s.logo}>
+                        <svg viewBox="0 0 202.87 29.94">
+                            <use xlinkHref={`${icons}#logo`}/>
+                        </svg>
+                    </Link>
                 </section>
                 <div className={s.menu} ref="nav" onClick={this.toggleNav}>
                     <div className={s.menu_inner}>
                         <Menu />
                         <LangMenu css={s.lang_nav}/>
                     </div>
-                    <div dangerouslySetInnerHTML={{__html: back}} className={s.close_btn}
-                         onClick={this.toggleNav}></div>
+                    <div className={s.close_btn} onClick={this.toggleNav}>
+                        <svg viewBox="0 0 493.36 219.25">
+                            <use xlinkHref={`${icons}#back`}/>
+                        </svg>
+                    </div>
                 </div>
             </header>
         )

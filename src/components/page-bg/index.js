@@ -7,8 +7,16 @@ class PageBg extends Component {
     componentDidMount() {
         if (!isMobile) {
             const css = [s.svg_bg, this.props.css].join(' ');
+            let svg = require(`./svg/${this.props.bg}.svg`);
 
-            const bg = () => { return <div dangerouslySetInnerHTML={{__html: require(`./svg/${this.props.bg}.svg`)}} className={css}></div> }
+            const bg = () => { return (
+                <div className={css}>
+                    <svg viewBox={this.props.viewBox}>
+                        <use xlinkHref={`${svg}#${this.props.bg}`}/>
+                    </svg>
+                </div>
+
+            )}
 
             setTimeout(() => {
                     render(bg(), document.getElementById(this.props.page_node))
@@ -19,7 +27,7 @@ class PageBg extends Component {
 
     render() {
         return (
-            <div id={this.props.page_node}></div>
+            <div id={this.props.page_node}/>
         );
     }
 }
