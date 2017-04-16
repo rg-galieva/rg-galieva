@@ -30,27 +30,10 @@
   flex: 5;
 }
 
-@media (max-width: 800px) {
-  .experiment {
-    flex-direction: column;
-  }
-
-  .experiment_info {
-    flex: 1 100%;
-    order: 2;
-  }
-
-  .experiment_image {
-    flex: 1 100%;
-    order: 1;
-    margin-bottom: 1rem;
-  }
-}
-
 .experiment_image_bg {
   position: relative;
   width: 100%;
-  height: calc(300rem/16);
+//height: calc(300rem/16);
 }
 
 .desc {
@@ -60,5 +43,27 @@
   }
 }
 
-.link_full_experiment {
+@media (max-width: 800px) {
+  .experiment {
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    & h2 {
+      margin-bottom: .1rem;
+    }
+  }
+
+  .desc {
+    margin: .5rem 0;
+  }
+
+  .experiment_info {
+    order: 2;
+    padding: 0;
+  }
+
+  .experiment_image {
+    order: 1;
+    margin-bottom: 1rem;
+  }
 }

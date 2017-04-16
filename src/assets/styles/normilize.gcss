@@ -188,8 +188,8 @@ svg:not(:root) {
   }
 
   h2 {
-    font-size: calc(40rem / var(--f_size));
-    line-height: calc(40rem / var(--f_size));
+    font-size: calc(35rem / var(--f_size));
+    line-height: calc(35rem / var(--f_size));
   }
 
   h3 {

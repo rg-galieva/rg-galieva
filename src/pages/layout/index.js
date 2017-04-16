@@ -12,7 +12,7 @@ class Layout extends Component {
     }
 
     isMobile = () => {
-        this.props.dispatch(switchVersion(window.innerWidth <= 800 && window.innerHeight <= 600))
+        this.props.dispatch(switchVersion(window.innerWidth <= 800))
     }
 
     render() {
