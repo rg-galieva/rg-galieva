@@ -1,9 +1,11 @@
 import React from 'react'
 import {FormattedHTMLMessage, FormattedMessage} from 'react-intl';
+import {connect} from 'react-redux'
 import PageBg from '../../components/page-bg'
 import s from './_styles.pcss'
 
-const About = () => {
+const About = (props) => {
+    const bg = (props.isMobile) ? null :  <PageBg bg="about_bg" page_node="about_bg" css="animate_fill" viewBox="0 0 261.4 192.65"/>
 
     return (
         <div className={s.wrap}>
@@ -29,9 +31,15 @@ const About = () => {
                 </div>
             </section>
 
-            <PageBg bg="about_bg" page_node="about_bg" css="animate_fill" viewBox="0 0 261.4 192.65"/>
+            {bg}
         </div>
     )
 }
 
-export default About
+const mapStateToProps = (state) => {
+    return {
+        isMobile: state.switchVersion.isMobile
+    }
+};
+
+export default connect(mapStateToProps)(About)

@@ -4,6 +4,7 @@ const webpackMerge = require('webpack-merge');
 const commonConfig = require('./common.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 const PUBLIC_PATH = '/';
 
 module.exports = function (env) {
@@ -60,6 +61,16 @@ module.exports = function (env) {
                     warnings: false
                 },
                 comments: false
+            }),
+            new OfflinePlugin({
+                ServiceWorker: {
+                    navigateFallbackURL: '/'
+                },
+                AppCache: {
+                    FALLBACK: {
+                        '/': '/offline.html'
+                    }
+                }
             })
         ]
     })

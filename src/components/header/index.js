@@ -1,8 +1,21 @@
 import React from 'react'
-import isMobile from '../../utils/useragent-check'
+import {connect} from 'react-redux'
 import MobileHeader from './mobile'
 import DesktopHeader from './desktop'
 
-const Header = (isMobile) ? MobileHeader : DesktopHeader
+const Header = (props) => {
+    const Header = (props.isMobile) ? MobileHeader : DesktopHeader
 
-export default Header
+    return (
+        <Header/>
+    )
+}
+
+
+const mapStateToProps = (state) => {
+    return {
+        isMobile: state.switchVersion.isMobile
+    }
+};
+
+export default connect(mapStateToProps)(Header)

@@ -9,7 +9,7 @@ const bg = require('./svg/bg.svg');
 
 class MainPage extends Component {
     componentDidMount() {
-        const photo = <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/index_bg`} className={s.photo}/>
+        const photo = <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/index_bg`} className={s.photo} alt="background"/>
 
         setTimeout(() => {
                 findDOMNode(this.refs.bg_svg).className += " is_act";

@@ -3,7 +3,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cssSettings = require('./../../src/assets/styles/vars.js');
-const OfflinePlugin = require('offline-plugin');
 
 module.exports = function () {
     return {
@@ -121,16 +120,9 @@ module.exports = function () {
         plugins: [
             new ExtractTextPlugin({filename: '[name].styles.css'}),
             new HtmlWebpackPlugin({
-                title: 'RG Portfolio',
+                title: 'Regina Galieva',
                 favicon: '',
                 template: __dirname + '/template.html'
-            }),
-            new OfflinePlugin({
-                AppCache: {
-                    FALLBACK: {
-                        '/': '/offline.html'
-                    }
-                }
             })
         ]
     }

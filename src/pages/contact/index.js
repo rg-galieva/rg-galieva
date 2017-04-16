@@ -1,11 +1,14 @@
 import React from 'react'
 import {FormattedMessage} from 'react-intl';
 import PageBg from '../../components/page-bg'
+import {connect} from 'react-redux'
 import s from './_styles.pcss'
 
 const icons = require('../../assets/svg/icons.svg');
 
-const Contact = () => {
+const Contact = (props) => {
+    const bg = (props.isMobile) ? null :  <PageBg bg="contact_bg" page_node="contact_bg" css="animate_stroke contact_bg" viewBox="0 0 1103.86 1196.42"/>
+
     return (
         <div className={s.wrap}>
             <section className={[s.row, s.cont].join(' ')}>
@@ -93,11 +96,17 @@ const Contact = () => {
                 </div>
             </section>
 
-            <PageBg bg="contact_bg" page_node="contact_bg" css="animate_stroke contact_bg" viewBox="0 0 1103.86 1196.42"/>
+            {bg}
         </div>
     )
 }
 
 
-export default Contact;
+const mapStateToProps = (state) => {
+    return {
+        isMobile: state.switchVersion.isMobile
+    }
+};
+
+export default connect(mapStateToProps)(Contact)
 
