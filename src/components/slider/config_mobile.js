@@ -9,6 +9,7 @@ const settings = {
     slidesToShow: 1,
     autoplay: true,
     swipeToSlide: true,
+    pauseOnHover: true,
     lazyLoad: true
 }
 

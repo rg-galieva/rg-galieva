@@ -3,7 +3,8 @@ import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux'
 import history from '../../history'
 import {getProjectById} from '../../actions/projects'
-import config from '../slider/config_alt'
+import configDesktop from '../slider/config_alt'
+import configMobile from '../slider/config_mobile'
 import ImageListSlider from '../image-list-slider'
 import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
@@ -21,8 +22,11 @@ class Project extends Component {
         return {backgroundImage: 'url(' + this.getImage(src) + ')'}
     };
 
+    config = (this.props.isMobile) ? configMobile : configDesktop;
+
     render() {
         const {title, about_prj, prj_link, year, pic_full, slider_desktop, slider_mobile} = this.props.active_project;
+        const head_style = (this.props.isMobile) ? null : this.getBgImg(pic_full);
 
         return (
             <div className={s.page} >
@@ -62,12 +66,12 @@ class Project extends Component {
 
                 <h2><FormattedMessage id="desktop"/></h2>
                 <div className={s.screens}>
-                    <ImageListSlider images={slider_desktop} config={config}/>
+                    <ImageListSlider images={slider_desktop} config={this.config}/>
                 </div>
 
                 <h2><FormattedMessage id="mobile"/></h2>
                 <div className={s.screens}>
-                    <ImageListSlider images={slider_desktop} config={config}/>
+                    <ImageListSlider images={slider_desktop} config={this.config}/>
                 </div>
             </div>
         )
@@ -86,6 +90,12 @@ Project.PropTypes = {
 const mapDispatchToProps = (dispatch, props) => {
     const id = props.match.params.id;
     return dispatch(getProjectById(id))
-};
+}
 
-export default connect(null, mapDispatchToProps)(Project)
+const mapStateToProps = (state) => {
+    return {
+        isMobile: state.switchVersion.isMobile
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Project)

@@ -18,9 +18,14 @@
   width: 100%;
   padding: 0 1rem;
   text-align: center;
+  height: calc(200rem / var(--f_size));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
 
   & h1 {
-    line-height: calc(200rem / var(--f_size));
     margin: 0;
   }
 }
@@ -76,5 +81,32 @@
 
   & :global(.prev) {
     left: calc(-100rem/var(--f_size));
+  }
+}
+
+@media (--w_phone_only) {
+  .head {
+    height: calc(150rem / var(--f_size));
+  }
+
+  .cont {
+    margin-top: 1rem;
+
+    & :global(.col_4) {
+      order: 1;
+      text-align: left;
+
+      & > a {
+        margin: 0 0 2rem 0;
+      }
+
+      & > h5 {
+        margin-bottom: .2rem;
+      }
+    }
+
+    & :global(.col_8) {
+      order: 2;
+    }
   }
 }
