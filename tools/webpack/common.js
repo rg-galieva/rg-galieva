@@ -2,7 +2,6 @@ const {resolve} = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
 const cssSettings = require('./../../src/assets/styles/vars.js');
 
 module.exports = function () {
@@ -86,10 +85,6 @@ module.exports = function () {
                     test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
                     use: 'file-loader?name=img/[name]_[hash:5].[ext]'
                 },
-                // {
-                //     test: /\.svg$/,
-                //     use: 'raw-loader'
-                // },
                 {
                     test: /\.svg$/,
                     use: [
@@ -124,16 +119,6 @@ module.exports = function () {
                 title: 'Regina Galieva',
                 favicon: '',
                 template: __dirname + '/template.html'
-            }),
-            new OfflinePlugin({
-                ServiceWorker: {
-                    navigateFallbackURL: '/'
-                },
-                AppCache: {
-                    FALLBACK: {
-                        '/': '/offline.html'
-                    }
-                }
             })
         ]
     }

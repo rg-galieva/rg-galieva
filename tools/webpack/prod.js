@@ -4,6 +4,7 @@ const webpackMerge = require('webpack-merge');
 const commonConfig = require('./common.js');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 const PUBLIC_PATH = '/';
 
 module.exports = function (env) {
@@ -33,23 +34,7 @@ module.exports = function (env) {
             }),
             new CopyWebpackPlugin([
                 {
-                    from: resolve(__dirname, './../../_redirects'),
-                    to: './'
-                },
-                {
-                    from: resolve(__dirname, './../../CNAME'),
-                    to: './'
-                },
-                {
-                    from: resolve(__dirname, './../../manifest.json'),
-                    to: './'
-                },
-                {
-                    from: resolve(__dirname, './../../browserconfig.xml'),
-                    to: './'
-                },
-                {
-                    from: resolve(__dirname, './../../offline.html'),
+                    from: resolve(__dirname, './../deploy_files/'),
                     to: './'
                 }
             ]),
@@ -60,6 +45,16 @@ module.exports = function (env) {
                     warnings: false
                 },
                 comments: false
+            }),
+            new OfflinePlugin({
+                ServiceWorker: {
+                    navigateFallbackURL: '/'
+                },
+                AppCache: {
+                    FALLBACK: {
+                        '/': '/offline.html'
+                    }
+                }
             })
         ]
     })
