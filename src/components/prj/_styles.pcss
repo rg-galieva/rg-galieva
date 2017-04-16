@@ -8,6 +8,7 @@
 
   & h2 {
     margin-top: 3rem;
+    text-align: center;
   }
 }
 
@@ -74,6 +75,21 @@
   position: relative;
   margin: 2rem auto;
   max-width: calc(1000rem / var(--f_size));
+
+  & :global(.next) {
+    right: calc(-100rem/var(--f_size));
+  }
+
+  & :global(.prev) {
+    left: calc(-100rem/var(--f_size));
+  }
+}
+
+.screens_mobile {
+  text-align: center;
+  position: relative;
+  margin: 2rem auto;
+  max-width: calc(320rem / var(--f_size));
 
   & :global(.next) {
     right: calc(-100rem/var(--f_size));

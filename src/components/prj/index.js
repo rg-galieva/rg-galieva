@@ -70,8 +70,8 @@ class Project extends Component {
                 </div>
 
                 <h2><FormattedMessage id="mobile"/></h2>
-                <div className={s.screens}>
-                    <ImageListSlider images={slider_desktop} config={this.config}/>
+                <div className={s.screens_mobile}>
+                    <ImageListSlider images={slider_mobile} config={this.config}/>
                 </div>
             </div>
         )
