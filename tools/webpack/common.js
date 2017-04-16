@@ -2,6 +2,7 @@ const {resolve} = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 const cssSettings = require('./../../src/assets/styles/vars.js');
 
 module.exports = function () {
@@ -117,8 +118,17 @@ module.exports = function () {
             new ExtractTextPlugin({filename: '[name].styles.css'}),
             new HtmlWebpackPlugin({
                 title: 'Regina Galieva',
-                favicon: '',
                 template: __dirname + '/template.html'
+            }),
+            new OfflinePlugin({
+                ServiceWorker: {
+                    navigateFallbackURL: '/'
+                },
+                AppCache: {
+                    FALLBACK: {
+                        '/': '/offline.html'
+                    }
+                }
             })
         ]
     }
