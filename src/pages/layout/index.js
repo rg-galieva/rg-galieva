@@ -18,7 +18,7 @@ export class Layout extends Component {
     render() {
         return (
             <div className={s.wrap}>
-                <Header/>
+                <Header isMobile={this.props.isMobile}/>
 
                 <main className={s.cont}>
                     <ReactCSSTransitionGroup
@@ -44,4 +44,10 @@ export class Layout extends Component {
     }
 }
 
-export default connect()(Layout);
+const mapStateToProps = (state) => {
+    return {
+        isMobile: state.switchVersion.isMobile
+    }
+};
+
+export default connect(mapStateToProps)(Layout);
