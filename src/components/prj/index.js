@@ -32,11 +32,11 @@ class Project extends Component {
                 <div>
                     <h2><FormattedMessage id="desktop"/></h2>
                     <div className={s.screens}>
-                        <Image images={img_list} config={this.config}/>
+                        <ImageListSlider images={img_list} config={this.config}/>
                     </div>
                 </div>
             )
-        } else {
+        } else if (img_list.length === 1) {
             return (
                 <div>
                     <h2><FormattedMessage id="desktop"/></h2>
@@ -60,7 +60,7 @@ class Project extends Component {
                     </div>
                 </div>
             )
-        } else {
+        } else if (img_list.length === 1)  {
             return (
                 <div>
                     <h2><FormattedMessage id="mobile"/></h2>

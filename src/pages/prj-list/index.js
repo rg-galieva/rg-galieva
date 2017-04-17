@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react'
 import {connect} from 'react-redux'
-import {ProjectPrev} from '../../components/prj-prev'
+import ProjectPrev from '../../components/prj-prev'
 import Slider from 'react-slick'
 import configDesktop from '../../components/slider/config_main'
 import configMobile from '../../components/slider/config_mobile'

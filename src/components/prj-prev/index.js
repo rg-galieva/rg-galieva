@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import DesktopPrjPrev from './desktop'
 import MobilePrjPrev from './mobile'
 
-export const ProjectPrev = (props) => {
+const ProjectPrev = (props) => {
     const ProjectPrev = (props.isMobile) ? MobilePrjPrev : DesktopPrjPrev
 
     return (

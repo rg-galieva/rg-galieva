@@ -65,11 +65,11 @@ const projects = [
         isVisible: true
     },
     {
-        id: 6,
+        id: 8,
         title: "zombie.title",
         about_prj: "zombie.about",
         pic: "zombie",
-        url: "6",
+        url: "8",
         prj_link: "",
         year: "2012",
         pic_full: "bg/zombie_prev.jpg",
@@ -78,11 +78,11 @@ const projects = [
         isVisible: false
     },
     {
-        id: 7,
+        id: 6,
         title: "daosulta.title",
         about_prj: "daosulta.about",
         pic: "daosulta",
-        url: "7",
+        url: "6",
         prj_link: "http://daosulta.herokuapp.com/",
         year: "2013",
         pic_full: "bg/daosulta_prev.jpg",
@@ -90,6 +90,19 @@ const projects = [
         slider_mobile: ['daosulta_mobile_1', 'daosulta_mobile_2'],
         isVisible: true
     },
+    {
+        id: 7,
+        title: "rg.title",
+        about_prj: "rg.about",
+        pic: "rg",
+        url: "7",
+        prj_link: "https://rg-galieva.com/",
+        year: "2017",
+        pic_full: "bg/rg_prev.jpg",
+        slider_desktop: ['rg_full', 'rg_screen_1', 'rg_screen_2', 'rg_screen_3', 'rg_screen_4'],
+        slider_mobile: ['rg_mobile', 'rg_mobile_1', 'rg_mobile_2','rg_mobile_3'],
+        isVisible: true
+    }
 ]
 
 export default projects
