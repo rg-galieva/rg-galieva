@@ -7,7 +7,7 @@ const Header = (props) => {
     const Header = (props.isMobile) ? MobileHeader : DesktopHeader
 
     return (
-        <Header/>
+        <Header {...props}/>
     )
 }
 

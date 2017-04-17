@@ -24,12 +24,61 @@ class Project extends Component {
 
     config = (this.props.isMobile) ? configMobile : configDesktop;
 
+    sliderDesktop = () => {
+        const img_list = this.props.active_project.slider_desktop;
+
+        if (img_list.length > 1) {
+            return (
+                <div>
+                    <h2><FormattedMessage id="desktop"/></h2>
+                    <div className={s.screens}>
+                        <Image images={img_list} config={this.config}/>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <h2><FormattedMessage id="desktop"/></h2>
+                    <div className={s.screens}>
+                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${img_list[0]}`}/>
+                    </div>
+                </div>
+            )
+        }
+    }
+
+    sliderMobile = () => {
+        const img_list = this.props.active_project.slider_mobile;
+
+        if (img_list.length > 1) {
+            return (
+                <div>
+                    <h2><FormattedMessage id="mobile"/></h2>
+                    <div className={s.screens_mobile}>
+                        <ImageListSlider images={img_list} config={this.config}/>
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <h2><FormattedMessage id="mobile"/></h2>
+                    <div className={s.screens_mobile}>
+                        <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${img_list[0]}`}/>
+                    </div>
+                </div>
+            )
+        }
+    }
+
+
     render() {
-        const {title, about_prj, prj_link, year, pic_full, slider_desktop, slider_mobile} = this.props.active_project;
+        const {title, about_prj, prj_link, year, pic_full, slider_desktop} = this.props.active_project;
         const head_style = (this.props.isMobile) ? null : this.getBgImg(pic_full);
 
         return (
-            <div className={s.page} >
+            <div className={s.page}>
                 <div className={s.head} style={this.getBgImg(pic_full)}>
                     <div className={s.back_btn} onClick={history.goBack}>
                         <svg viewBox="0 0 60 60">
@@ -64,15 +113,8 @@ class Project extends Component {
                     </div>
                 </div>
 
-                <h2><FormattedMessage id="desktop"/></h2>
-                <div className={s.screens}>
-                    <ImageListSlider images={slider_desktop} config={this.config}/>
-                </div>
-
-                <h2><FormattedMessage id="mobile"/></h2>
-                <div className={s.screens_mobile}>
-                    <ImageListSlider images={slider_mobile} config={this.config}/>
-                </div>
+                {this.sliderDesktop()}
+                {this.sliderMobile()}
             </div>
         )
     }

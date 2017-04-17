@@ -6,8 +6,8 @@ require('../../assets/styles/slick/slick.gcss');
 const settings = {
     dots: true,
     infinite: true,
-    speed: 4000,
-    fade: true,
+    speed: 2000,
+    // fade: true,
     slidesToShow: 1,
     autoplay: true,
     pauseOnHover: true,

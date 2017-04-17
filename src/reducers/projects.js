@@ -1,8 +1,10 @@
 import {GET_PROJECTS, GET_PROJECT_BY_ID} from '../constants'
 import projectsDB from '../assets/db/projects'
 
+const projects = projectsDB.filter((project) => { return project.isVisible })
+
 const initialState = {
-    all: projectsDB
+    all: projects
 }
 
 export default (state = initialState, action) => {

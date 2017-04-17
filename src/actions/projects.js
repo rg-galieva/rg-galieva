@@ -8,7 +8,6 @@ const findProjectById = (id, projects) => {
 }
 
 export const getProjectById = (id, projects = projectsDB) => {
-    console.log("---", id);
     return {
         type: GET_PROJECT_BY_ID,
         active_project: findProjectById(id, projects)
