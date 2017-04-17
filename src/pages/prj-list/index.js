@@ -6,7 +6,14 @@ import configDesktop from '../../components/slider/config_main'
 import configMobile from '../../components/slider/config_mobile'
 
 const ProjectList = (props) => {
-    const projects = props.projects.map((project) => <div key={project.id}><ProjectPrev {...project}/></div>)
+    const projects = props.projects.map(
+        (project) => {
+            return <div key={project.id}>
+                <ProjectPrev {...project} isMobile={props.isMobile}/>
+            </div>
+        }
+    )
+
     const config = (props.isMobile) ? configMobile : configDesktop;
 
     return (
@@ -17,13 +24,14 @@ const ProjectList = (props) => {
 }
 
 ProjectList.PropTypes = {
-    projects: PropTypes.array.isRequired
+    projects: PropTypes.array.isRequired,
+    isMobile: ProjectList.bool
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({projects, switchVersion}) => {
     return {
-        projects: state.projects.all,
-        isMobile: state.switchVersion.isMobile
+        projects: projects.all,
+        isMobile: switchVersion.isMobile
     }
 };
 

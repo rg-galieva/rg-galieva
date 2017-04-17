@@ -3,10 +3,10 @@ import MobileHeader from './mobile'
 import DesktopHeader from './desktop'
 
 export const Header = (props) => {
-    const Header = (props.isMobile) ? MobileHeader : DesktopHeader
+    const HeaderFinal = (props.isMobile) ? MobileHeader : DesktopHeader
 
     return (
-        <Header {...props}/>
+        <HeaderFinal {...props}/>
     )
 }
 
