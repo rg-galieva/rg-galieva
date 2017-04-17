@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import Header from '../../components/header'
+import {Header} from '../../components/header'
 import {connect} from 'react-redux'
 import switchVersion from '../../actions/switch-version'
 require('../../assets/styles/common.gcss')
