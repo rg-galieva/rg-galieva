@@ -12,8 +12,8 @@ import routes from './routes'
 const middleware = routerMiddleware(history);
 const store = createStore(reducers, applyMiddleware(middleware));
 
-// import * as OfflinePluginRuntime from 'offline-plugin/runtime';
-// OfflinePluginRuntime.install();
+import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+OfflinePluginRuntime.install();
 
 render(
     <Provider store={store}>
