@@ -86,7 +86,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="hp"/></h5>
 
-                            <p className="is-emph">[2016 - <FormattedMessage id="resume.to_present"/>]</p>
+                            <p className="is-emph">[2015 - <FormattedMessage id="resume.to_present"/>]</p>
                             <ul>
                                 <li><FormattedMessage id="alx_1"/></li>
                                 <li><FormattedMessage id="alx_2"/></li>
@@ -112,7 +112,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="frontend_developer"/></h5>
 
-                            <p className="is-emph">[2013 - 2016]</p>
+                            <p className="is-emph">[2013 - 2015]</p>
                             <ul>
                                 <li><FormattedMessage id="mail_1"/></li>
                                 <li><FormattedMessage id="mail_2"/></li>
