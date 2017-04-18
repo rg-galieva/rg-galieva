@@ -53,7 +53,7 @@ const Contact = (props) => {
                                     <use xlinkHref={`${icons}#github`}/>
                                 </svg>
                             </div>
-                            <a href="https://github.com/rg-galieva/rg-galieva" target="_blank">github.com/rg-galieva/rg-galieva</a>
+                            <a href="https://github.com/rg-galieva" target="_blank">github.com/rg-galieva</a>
                         </div>
                     </div>
                 </div>
