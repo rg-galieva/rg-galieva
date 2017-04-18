@@ -19,27 +19,21 @@ const Resume = () => {
                         </div>
                         <div>
                             <h6>JS</h6>
-                            <p>ES2016</p>
                             <p>react</p>
-                            <p>redux</p>
-                            <p>flux</p>
+                            <p>redux, flux</p>
                             <p>jquery</p>
                         </div>
                         <div>
                             <h6>Styles</h6>
-                            <p>CSS3</p>
-                            <p>LESS, SASS, PostCSS</p>
-                            <p>css-modules, css-next</p>
-                        </div>
-                        <div>
-                            <h6>DevTools</h6>
-                            <p>webpack (v1, v2)</p>
-                            <p>babel</p>
-                            <p>grunt</p>
+                            <p>postcss, css-next</p>
+                            <p>sass, less</p>
+                            <p>css-modules</p>
                         </div>
                         <div>
                             <h6>Testing</h6>
+                            <p>chai</p>
                             <p>mocha</p>
+                            <p>enzyme</p>
                         </div>
                         <div>
                             <h6>Server</h6>
@@ -48,15 +42,23 @@ const Resume = () => {
                         </div>
                         <div>
                             <h6>DB</h6>
-                            <p>MongoDB</p>
-                            <p>PostgreSQL</p>
+                            <p>mongo</p>
+                            <p>postgres</p>
+                        </div>
+                        <div>
+                            <h6>Java</h6>
+                            <p>tapestry</p>
+                            <p>Java EE</p>
+                        </div>
+                        <div>
+                            <h6>DevTools</h6>
+                            <p>webpack</p>
+                            <p>gulp, grunt</p>
                         </div>
                         <div>
                             <h6>DevDeploy</h6>
-                            <p>heroku</p>
-                            <p>netlify</p>
-                            <p>surge</p>
-                            <p>firebase</p>
+                            <p>heroku, firebase</p>
+                            <p>surge, netlify</p>
                         </div>
                         <div>
                             <h6>Package Managers</h6>
@@ -65,18 +67,13 @@ const Resume = () => {
                         </div>
                         <div>
                             <h6>Version Control</h6>
-                            <p>git / GitHub</p>
+                            <p>git</p>
                             <p>svn</p>
                         </div>
                         <div>
                             <h6>PM</h6>
-                            <p>Jira, RedMind, Asana, Trello</p>
+                            <p>Jira, Asana, Gitlub</p>
                             <p>Agile: Scrum, Kanban</p>
-                        </div>
-                        <div>
-                            <h6>Other Tools</h6>
-                            <p>Photoshop, Illustrator</p>
-                            <p>Webstorm, Atom</p>
                         </div>
                     </div>
                 </div>
