@@ -13,9 +13,9 @@ const Resume = () => {
                     <div className={s.skills}>
                         <div>
                             <h6>Core</h6>
-                            <p>JS</p>
-                            <p>HTML5</p>
-                            <p>CSS</p>
+                            <p>js</p>
+                            <p>html</p>
+                            <p>css</p>
                         </div>
                         <div>
                             <h6>JS</h6>
@@ -36,6 +36,16 @@ const Resume = () => {
                             <p>enzyme</p>
                         </div>
                         <div>
+                            <h6>Java</h6>
+                            <p>tapestry</p>
+                            <p>java ee</p>
+                        </div>
+                        <div>
+                            <h6>Familiar with</h6>
+                            <p>ruby</p>
+                            <p>php</p>
+                        </div>
+                        <div>
                             <h6>Server</h6>
                             <p>node.js</p>
                             <p>express</p>
@@ -44,11 +54,6 @@ const Resume = () => {
                             <h6>DB</h6>
                             <p>mongo</p>
                             <p>postgres</p>
-                        </div>
-                        <div>
-                            <h6>Java</h6>
-                            <p>tapestry</p>
-                            <p>Java EE</p>
                         </div>
                         <div>
                             <h6>DevTools</h6>
@@ -61,19 +66,14 @@ const Resume = () => {
                             <p>surge, netlify</p>
                         </div>
                         <div>
-                            <h6>Package Managers</h6>
-                            <p>npm</p>
-                            <p>yarn</p>
-                        </div>
-                        <div>
                             <h6>Version Control</h6>
                             <p>git</p>
                             <p>svn</p>
                         </div>
                         <div>
                             <h6>PM</h6>
-                            <p>Jira, Asana, Gitlub</p>
-                            <p>Agile: Scrum, Kanban</p>
+                            <p>jira, asana, gitlub</p>
+                            <p>agile: scrum, kanban</p>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="hp"/></h5>
 
-                            <p className="is-emph">[2016 - <FormattedMessage id="resume.to_present"/>] <FormattedMessage id="moscow"/></p>
+                            <p className="is-emph">[2016 - <FormattedMessage id="resume.to_present"/>]</p>
                             <ul>
                                 <li><FormattedMessage id="alx_1"/></li>
                                 <li><FormattedMessage id="alx_2"/></li>
@@ -112,7 +112,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="frontend_developer"/></h5>
 
-                            <p className="is-emph">[2013 - 2016] <FormattedMessage id="moscow"/></p>
+                            <p className="is-emph">[2013 - 2016]</p>
                             <ul>
                                 <li><FormattedMessage id="mail_1"/></li>
                                 <li><FormattedMessage id="mail_2"/></li>
@@ -140,7 +140,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="web_developer"/></h5>
 
-                            <p className="is-emph">[2011 - 2013] <FormattedMessage id="spb"/></p>
+                            <p className="is-emph">[2011 - 2013]</p>
                             <ul>
                                 <li><FormattedMessage id="ifree_1"/></li>
                                 <li><FormattedMessage id="ifree_2"/></li>
@@ -164,7 +164,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="html_developer"/></h5>
 
-                            <p className="is-emph">[2008 - 2011] <FormattedMessage id="ufa"/></p>
+                            <p className="is-emph">[2008 - 2011]</p>
                             <ul>
                                 <li><FormattedMessage id="simai_1"/></li>
                                 <li><FormattedMessage id="simai_2"/></li>
@@ -193,7 +193,7 @@ const Resume = () => {
                         <div className={[s.position, 'col_10'].join(' ')}>
                             <h5><FormattedMessage id="usatu"/></h5>
 
-                            <p className="is-emph">[2005 - 2010] <FormattedMessage id="ufa"/></p>
+                            <p className="is-emph">[2005 - 2010]</p>
 
                             <ul>
                                 <li><FormattedMessage id="usatu.edu"/></li>
@@ -215,7 +215,7 @@ const Resume = () => {
                     <div className={s.edu}>
                         <h5><FormattedMessage id="cisco.title"/></h5>
 
-                        <p className="is-emph">[2009 - 2010] <FormattedMessage id="ufa"/></p>
+                        <p className="is-emph">[2009 - 2010]</p>
                         <ul>
                             <li><FormattedMessage id="cisco.part1"/></li>
                             <li><FormattedMessage id="cisco.part2"/></li>
@@ -225,7 +225,7 @@ const Resume = () => {
                     <div className={s.edu}>
                         <h5><FormattedMessage id="ifree.academy.title"/></h5>
 
-                        <p className="is-emph">[2013] <FormattedMessage id="spb"/></p>
+                        <p className="is-emph">[2013]</p>
                         <ul>
                             <li><FormattedMessage id="ifree.academy.part1"/></li>
                             <li><FormattedMessage id="ifree.academy.part2"/></li>
@@ -236,7 +236,7 @@ const Resume = () => {
                     <div className={s.edu}>
                         <h5><FormattedMessage id="design.academy.title"/></h5>
 
-                        <p className="is-emph">[2015] <FormattedMessage id="moscow"/></p>
+                        <p className="is-emph">[2015]</p>
                         <ul>
                             <li><FormattedMessage id="design.academy.part1"/></li>
                             <li><FormattedMessage id="design.academy.part2"/></li>

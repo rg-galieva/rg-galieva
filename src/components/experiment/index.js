@@ -26,17 +26,16 @@ const Experiment = (props) => {
                 <p className="is-emph">{date}</p>
 
                 <div className={s.desc}>
-                    <p><FormattedMessage id={about_prj}/></p>
                     <p><FormattedMessage id="techstack"/>: {tech_stack}</p>
+                    <p><FormattedMessage id={about_prj}/></p>
                 </div>
 
-                <p><FormattedMessage id="live_preview"/>:
-                    <a href={link} className={s.link_full_experiment} target="_blank">{link}</a></p>
-                <p>GitHub: <a href={github} className={s.link_full_experiment} target="_blank">{github}</a></p>
+                <p><b><FormattedMessage id="live_preview"/>:</b> <a href={link} className={s.link_full_experiment} target="_blank">{link}</a></p>
+                <p><b>GitHub:</b> <a href={github} className={s.link_full_experiment} target="_blank">{github}</a></p>
             </div>
 
             <div className={s.experiment_image}>
-                <a href={link}>
+                <a href={link} target="_blank">
                     <div className={s.experiment_image_bg}>
                         <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${img_prev}`}/>
                     </div>
