@@ -1,5 +1,5 @@
 import React, {PropTypes, Component} from 'react'
-import {FormattedMessage} from 'react-intl';
+import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
 import {connect} from 'react-redux'
 import history from '../../history'
 import {getProjectById} from '../../actions/projects'
@@ -74,8 +74,9 @@ class Project extends Component {
 
 
     render() {
-        const {title, about_prj, prj_link, year, pic_full, slider_desktop} = this.props.active_project;
-        const head_style = (this.props.isMobile) ? null : this.getBgImg(pic_full);
+        const {title, about_prj, prj_link, year, pic_full, place, stack, description} = this.props.active_project;
+
+        const descr_html = (description).map((d) => <li key={d}><FormattedMessage id={d}/></li>)
 
         return (
             <div className={s.page}>
@@ -93,21 +94,17 @@ class Project extends Component {
                     <div className="row">
                         <div className="col_8">
                             <div className={s.about}>
-                                <p><FormattedMessage id={about_prj}/></p>
+                                <p><FormattedMessage id={about_prj}/></p><br />
+                                <p className="is-emph"><FormattedMessage id="techstack_2"/>: {stack}</p>
                             </div>
 
                             <ul>
-                                <li><FormattedMessage id="mail_1"/></li>
-                                <li><FormattedMessage id="mail_2"/></li>
-                                <li><FormattedMessage id="mail_3"/></li>
-                                <li><FormattedMessage id="mail_4"/></li>
-                                <li><FormattedMessage id="mail_5"/></li>
-                                <li><FormattedMessage id="mail_6"/></li>
+                                {descr_html}
                             </ul>
                         </div>
                         <div className="col_4">
                             <h5><FormattedMessage id="frontend_developer"/></h5>
-                            <p className="is-emph">{year} <FormattedMessage id="moscow"/></p>
+                            <p className="is-emph">{year} <FormattedMessage id={place}/></p>
                             <a href={prj_link} target="_blank">{prj_link}</a>
                         </div>
                     </div>
