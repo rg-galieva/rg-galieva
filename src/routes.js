@@ -17,8 +17,8 @@ export default (
                 <Route path="/" component={IndexPage} exact/>
                 <Route path="/about" component={About} />
                 <Route path="/resume" component={Resume}/>
-                <Route path="/projects" component={ProjectList} exact/>
-                <Route path="/projects/:id" component={Project}/>
+                <Route path="/projects/:id?" component={ProjectList} />
+                <Route path="/project/:id" component={Project}/>
                 <Route path="/experiments" component={Experiments}/>
                 <Route path="/contact" component={Contact}/>
                 <Route component={NoMatch}/>

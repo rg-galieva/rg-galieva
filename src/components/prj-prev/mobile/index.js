@@ -12,14 +12,14 @@ const ProjectPrevMobile = (props) => {
         <div className={s.page}>
             <div className={s.pic_wrap}>
                 <div className={s.pic}>
-                    <Link to={`/projects/${url}`}>
+                    <Link to={`/project/${url}`}>
                         <Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${pic}`}>
                             <Transformation width="600" crop="scale"/>
                         </Image>
                     </Link>
                 </div>
 
-                <h1><Link to={`/projects/${url}`}><FormattedMessage id={title}/></Link></h1>
+                <h1><Link to={`/project/${url}`}><FormattedMessage id={title}/></Link></h1>
             </div>
         </div>
     )

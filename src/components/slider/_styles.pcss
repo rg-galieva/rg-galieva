@@ -1,7 +1,8 @@
 @import "../../assets/styles/vars.gcss";
 
 .pager {
-  height: calc(2rem/var(--f_size));
+  cursor: pointer;
+  height: calc(4rem/var(--f_size));
   width: calc(50rem/var(--f_size));
   background-color: var(--c_link);
 }
@@ -21,12 +22,6 @@
   & li {
     display: inline-block;
     margin-right: calc(15rem/var(--f_size));
-  }
-}
-
-:global(.slick-active) {
-  & .pager {
-    background-color: var(--c_txt);
   }
 }
 
@@ -74,7 +69,7 @@
 
 :global(.slick-active) {
   & .pager {
-    background-color: var(--c_txt);
+    background-color: var(--c_emph);
   }
 }
 

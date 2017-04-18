@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react'
-import {FormattedMessage, FormattedHTMLMessage} from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux'
-import history from '../../history'
+import {Link} from 'react-router-dom'
 import {getProjectById} from '../../actions/projects'
 import configDesktop from '../slider/config_alt'
 import configMobile from '../slider/config_mobile'
@@ -74,18 +74,18 @@ class Project extends Component {
 
 
     render() {
-        const {title, about_prj, prj_link, year, pic_full, place, stack, description} = this.props.active_project;
+        const {id, title, about_prj, prj_link, year, pic_full, place, stack, description} = this.props.active_project;
 
         const descr_html = (description).map((d) => <li key={d}><FormattedMessage id={d}/></li>)
 
         return (
             <div className={s.page}>
                 <div className={s.head} style={this.getBgImg(pic_full)}>
-                    <div className={s.back_btn} onClick={history.goBack}>
+                    <Link className={s.back_btn} to={`/projects/${id}`}>
                         <svg viewBox="0 0 60 60">
                             <use xlinkHref={`${icons}#close`}/>
                         </svg>
-                    </div>
+                    </Link>
 
                     <h1><FormattedMessage id={title}/></h1>
                 </div>

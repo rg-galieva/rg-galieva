@@ -1,26 +1,36 @@
-import React, {PropTypes} from 'react'
+import React, {PropTypes, Component} from 'react'
 import {connect} from 'react-redux'
 import ProjectPrev from '../../components/prj-prev'
 import Slider from 'react-slick'
 import configDesktop from '../../components/slider/config_main'
 import configMobile from '../../components/slider/config_mobile'
 
-const ProjectList = (props) => {
-    const projects = props.projects.map(
+class ProjectList extends Component {
+    getProjects = () => this.props.projects.map(
         (project) => {
             return <div key={project.id}>
-                <ProjectPrev {...project} isMobile={props.isMobile}/>
+                <ProjectPrev {...project} isMobile={this.props.isMobile}/>
             </div>
         }
     )
 
-    const config = (props.isMobile) ? configMobile : configDesktop;
+    getConfig = () => {
+        let config = (this.props.isMobile) ? configMobile : configDesktop;
+        if (this.props.match.params.id) {
+            config.initialSlide = +(this.props.match.params.id) - 1
+        }
 
-    return (
-        <Slider {...config}>
-            { projects }
-        </Slider>
-    )
+        return config
+    }
+
+
+    render() {
+        return (
+            <Slider {...this.getConfig()} ref='slider'>
+                { this.getProjects() }
+            </Slider>
+        )
+    }
 }
 
 ProjectList.PropTypes = {

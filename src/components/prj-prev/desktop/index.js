@@ -14,9 +14,9 @@ const ProjectPrevDesktop = (props) => {
         <div className={s.page}>
             <div className={s.pic_wrap}>
                 <div className={s.pic}>
-                    <Link to={`/projects/${url}`}><Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${pic}`}/></Link>
+                    <Link to={`/project/${url}`}><Image cloudName={CLOUD_PATH} publicId={`${CLOUD_PATH}/${pic}`}/></Link>
                 </div>
-                <h1><Link to={`/projects/${url}`}><FormattedMessage id={title}/></Link></h1>
+                <h1><Link to={`/project/${url}`}><FormattedMessage id={title}/></Link></h1>
             </div>
 
             <div className={s.slider}>

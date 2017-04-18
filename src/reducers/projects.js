@@ -4,7 +4,8 @@ import projectsDB from '../assets/db/projects'
 const projects = projectsDB.filter((project) => { return project.isVisible })
 
 const initialState = {
-    all: projects
+    all: projects,
+    active_project: projects[0]
 }
 
 export default (state = initialState, action) => {
@@ -18,7 +19,7 @@ export default (state = initialState, action) => {
         case GET_PROJECT_BY_ID:
             return {
                 ...state,
-                active_project: action.project
+                active_project: action.active_project
             }
 
         default:
