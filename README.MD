@@ -1,5 +1,6 @@
 Single page application. Personal portfolio project. Place for experiments, spending evenings and weekends.
 
+
 ### Tech Stack
 - react
 - redux, react-redux
@@ -23,15 +24,15 @@ Single page application. Personal portfolio project. Place for experiments, spen
 - Local component styles with CSS modules 
 
 
-###Syntax
+#### Syntax
 ES-2015 (without modules, because webpack2 supports them by default), features >= stage2 (for example, arrow func in react components)
 
-###Styles
+#### Styles
 [.pcss] - local styles. With css-modules option for incapsulate component's styles
 [.gcss] - global styles. Have special rule in webpack config. No need to use :global identifier in gcss files.
 
 
-### Getting started
+#### Getting started
 ```
 $ yarn install
 // install all dependencies
