@@ -84,7 +84,7 @@ const Resume = () => {
                 <div className="col_10">
                     <div className={s.company}>
                         <div className={[s.position, 'col_10'].join(' ')}>
-                            <h5><FormattedMessage id="pm"/></h5>
+                            <h5><FormattedMessage id="hp"/></h5>
 
                             <p className="is-emph">[2016 - <FormattedMessage id="resume.to_present"/>] <FormattedMessage id="moscow"/></p>
                             <ul>
