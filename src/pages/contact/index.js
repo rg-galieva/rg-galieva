@@ -19,15 +19,6 @@ const Contact = (props) => {
                 <div className={s.col_right}>
                     <div className={s.desc}>
                         <div className={s.row}>
-                            <div className={[s.phone, s.logo].join(" ")}>
-                                <svg viewBox="0 0 55 55">
-                                    <use xlinkHref={`${icons}#phone`}/>
-                                </svg>
-                            </div>
-                            <p>917-302-87-14</p>
-                        </div>
-
-                        <div className={s.row}>
                             <div className={[s.mail, s.logo].join(" ")}>
                                 <svg viewBox="0 0 55 55">
                                     <use xlinkHref={`${icons}#inbox`}/>
