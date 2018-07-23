@@ -42,7 +42,7 @@
   display: flex;
   flex-direction: row;
   align-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 4rem;
 
   & :global(figcaption) {
@@ -60,6 +60,16 @@
 
 .position {
   padding-right: 3rem;
+}
+
+.logo_fr8 {
+  text-align: center;
+
+  & svg {
+    width: calc(100rem/var(--f_size));
+    margin: 0 auto .3rem;
+    fill: var(--c_txt);
+  }
 }
 
 .logo_alx {
