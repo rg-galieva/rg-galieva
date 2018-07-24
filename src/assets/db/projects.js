@@ -29,8 +29,8 @@ const projects = [
         stack: "JS, REACT, MOBX, LESS, WEBPACK",
         description: ['fr8_shipper_flow.1', 'fr8_shipper_flow.2', 'fr8_shipper_flow.3', 'fr8_shipper_flow.4', 'fr8_shipper_flow.5', 'fr8_shipper_flow.6', 'fr8_shipper_flow.7', 'fr8_shipper_flow.8'],
         pic_full: "fr8_shipper_flow_prev.jpg",
-        slider_desktop: ['fr8_shipper_1', 'fr8_shipper_2', 'fr8_shipper_2_1', 'fr8_shipper_3', 'fr8_shipper_4', 'fr8_shipper_widget'],
-        slider_mobile: ['fr8_shipper_m_2', 'fr8_shipper_m_2_1', 'fr8_shipper_m_3', 'fr8_shipper_m_4'],
+        slider_desktop: ['fr8_shipper_1', 'fr8_shipper_2', 'fr8_shipper_2_1', 'fr8_shipper_registration', 'fr8_shipper_3', 'fr8_shipper_4', 'fr8_shipper_widget'],
+        slider_mobile: ['fr8_shipper_m_2', 'fr8_shipper_m_2_1', 'fr8_shipper_m_3', 'fr8_shipper_m_4', 'fr8_shipper_m_registration'],
         isVisible: true
     },
     {
