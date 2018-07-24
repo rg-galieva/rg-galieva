@@ -4,7 +4,7 @@
   align-items: stretch;
   flex-wrap: wrap;
   align-content: space-between;
-  margin-bottom: calc(100rem/16);
+  margin-bottom: calc(40rem/16);
 }
 
 @media (max-width: 1180px) {

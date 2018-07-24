@@ -82,8 +82,6 @@ const Resume = () => {
                                     <li>- <FormattedMessage id="fr8_1_1"/></li>
                                     <li>- <FormattedMessage id="fr8_1_2"/></li>
                                     <li>- <FormattedMessage id="fr8_1_3"/></li>
-                                    <li>- <FormattedMessage id="fr8_1_4"/></li>
-                                    <li>- <FormattedMessage id="fr8_1_5"/></li>
                                   </ul>
                               </li>
                               <li><FormattedMessage id="fr8_2"/></li>
