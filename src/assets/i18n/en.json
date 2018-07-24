@@ -37,7 +37,7 @@
   "resume.to_present": "to present",
   "moscow": "Moscow, Russia",
   "spb": "Saint-Petersburg, Russia",
-  "sf": "San Francisco, USA",
+  "sf": "SF Bay Area, CA",
   "ufa": "Ufa, Russia",
   "fr8_1": "Feature owner (front end):",
   "fr8_1_1": "request-for-quote flow (entry point for shippers)",
@@ -124,5 +124,17 @@
   "rg.6": "Responsive components (on init and on resize)",
   "rg.7": "Flexbox for layout instead of grid libraries",
   "rg.8": "px free styles. Only relative units: rem & vw, vh",
-  "rg.9": "Local component styles with CSS modules"
+  "rg.9": "Local component styles with CSS modules",
+  "load_scanner.title": "FR8Star Freight Finder",
+  "load_scanner.about": "FR8Star’s freight finder, also known as a Load Scanner, is a comprehensive tool empowering smaller trucking companies to help them find available truck loads for their fleet.",
+  "fr8_shipper_flow.title": "FR8Star RFQ",
+  "fr8_shipper_flow.about": "Request for quote flow for shippers - an instant freight rate based on live market data including all permits and third-party costs. This flow is an entry point for shippers.",
+  "fr8_shipper_flow.1": "Multiple entry points support: from rate calculator widget (marketing site), from equipment dealers sites (partners), from email campaigns, from ads. The same flow is used for edit flow.",
+  "fr8_shipper_flow.2": "Each screen can work independently, has a URL and is accessible directly from the address bar",
+  "fr8_shipper_flow.3": "Map interactions: custom route (drag the route), select pickup/dropoff both from the map and address autocomplete component",
+  "fr8_shipper_flow.4": "Smart Feet&Inches component: converts a decimal value into the correct format and auto-populates inches input, gives a warning for unsupported values, returns a decimal result",
+  "fr8_shipper_flow.5": "Different layouts for each shipment type on screen 2 (load details)",
+  "fr8_shipper_flow.6": "Custom warnings for oversized (superloads), international shipping",
+  "fr8_shipper_flow.7": "Custom rate cards for partial loads, instantly bookable loads and loads with discount",
+  "fr8_shipper_flow.8": "Smart navigation system: based on rfq params UI dispatcher redirects users to a specific screen. For example, for partial legal loads screen 3 (trailer selection) can be skipped since The Dispatcher knows that the best trailer for this configuration is a hotshot."
 }
