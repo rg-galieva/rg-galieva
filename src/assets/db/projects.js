@@ -69,27 +69,10 @@ const projects = [
     },
     {
         id: 5,
-        title: "madcall.title",
-        about_prj: "madcall.about",
-        pic: "madcall",
-        url: "5",
-        role: "frontend_developer",
-        prj_link: "http://madcall.me/",
-        year: "2013",
-        place: "spb",
-        stack: "JS, JQUERY, LESS, HTML5",
-        description: ["madcall.1", "madcall.2", "madcall.3"],
-        pic_full: "madcall_prev.jpg",
-        slider_desktop: ['madcall_full'],
-        slider_mobile: false,
-        isVisible: true
-    },
-    {
-        id: 6,
         title: "lumene.title",
         about_prj: "lumene.about",
         pic: "lumene",
-        url: "6",
+        url: "5",
         role: "frontend_developer",
         prj_link: "",
         year: "2012",
@@ -99,6 +82,23 @@ const projects = [
         pic_full: "lumene_prev.jpg",
         slider_desktop: ['lumene_full'],
         slider_mobile: false,
+        isVisible: true
+    },
+    {
+        id: 6,
+        title: "rg.title",
+        about_prj: "rg.about",
+        pic: "rg",
+        url: "6",
+        role: "frontend_developer",
+        prj_link: "https://rg-galieva.com/",
+        year: "2017",
+        place: "sf",
+        stack: "JS, REACT, REDUX, REACT-ROUTER (v4), WEBPACK (v2), POSTCSS, CLOUDINARY, INTL, NETLIFY, SVG",
+        description: ["rg.1", "rg.2", "rg.3", "rg.4", "rg.5", "rg.6", "rg.7", "rg.8", "rg.9"],
+        pic_full: "rg_prev.jpg",
+        slider_desktop: ['rg_full', 'rg_screen_1', 'rg_screen_2', 'rg_screen_3', 'rg_screen_4'],
+        slider_mobile: ['rg_mobile', 'rg_mobile_1', 'rg_mobile_2', 'rg_mobile_3'],
         isVisible: true
     },
     {
@@ -133,25 +133,25 @@ const projects = [
         pic_full: "daosulta_prev.jpg",
         slider_desktop: ['daosulta_full'],
         slider_mobile: ['daosulta_mobile_1', 'daosulta_mobile_2'],
-        isVisible: true
+        isVisible: false
     },
     {
         id: 9,
-        title: "rg.title",
-        about_prj: "rg.about",
-        pic: "rg",
+        title: "madcall.title",
+        about_prj: "madcall.about",
+        pic: "madcall",
         url: "9",
         role: "frontend_developer",
-        prj_link: "https://rg-galieva.com/",
-        year: "2017",
-        place: "sf",
-        stack: "JS, REACT, REDUX, REACT-ROUTER (v4), WEBPACK (v2), POSTCSS, CLOUDINARY, INTL, NETLIFY, SVG",
-        description: ["rg.1", "rg.2", "rg.3", "rg.4", "rg.5", "rg.6", "rg.7", "rg.8", "rg.9"],
-        pic_full: "rg_prev.jpg",
-        slider_desktop: ['rg_full', 'rg_screen_1', 'rg_screen_2', 'rg_screen_3', 'rg_screen_4'],
-        slider_mobile: ['rg_mobile', 'rg_mobile_1', 'rg_mobile_2', 'rg_mobile_3'],
-        isVisible: true
-    }
+        prj_link: "http://madcall.me/",
+        year: "2013",
+        place: "spb",
+        stack: "JS, JQUERY, LESS, HTML5",
+        description: ["madcall.1", "madcall.2", "madcall.3"],
+        pic_full: "madcall_prev.jpg",
+        slider_desktop: ['madcall_full'],
+        slider_mobile: false,
+        isVisible: false
+    },
 ]
 
 export default projects
