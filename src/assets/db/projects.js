@@ -1,27 +1,10 @@
 const projects = [
     {
         id: 1,
-        title: "load_scanner.title",
-        about_prj: "load_scanner.about",
-        pic: "fr8_load_scanner",
-        url: "1",
-        role: "senior_frontend_developer",
-        prj_link: "https://fr8star.com/info/freight-finder/",
-        year: "2017",
-        place: "sf",
-        stack: "JS, REACT, MOBX, LESS, WEBPACK",
-        description: ['fr8_shipper_flow.1', 'fr8_shipper_flow.2', 'fr8_shipper_flow.3', 'fr8_shipper_flow.4', 'fr8_shipper_flow.5', 'fr8_shipper_flow.6', 'fr8_shipper_flow.7', 'fr8_shipper_flow.8'],
-        pic_full: "fr8_load_scanner_prev.jpg",
-        slider_desktop: ['sf_screen_1', 'sf_screen_2', 'sf_screen_3', 'sf_screen_4', 'sf_screen_5', 'sf_screen_6', 'sf_screen_7', 'sf_screen_8', 'sf_screen_9', 'sf_screen_10'],
-        slider_mobile: ['sf_mob_5', 'sf_mob_1', 'sf_mob_6', 'sf_mob_2', 'sf_mob_3', 'sf_mob_4'],
-        isVisible: true
-    },
-    {
-        id: 2,
         title: "fr8_shipper_flow.title",
         about_prj: "fr8_shipper_flow.about",
         pic: "fr8_shipper_flow",
-        url: "2",
+        url: "1",
         role: "senior_frontend_developer",
         prj_link: "https://fr8star.com/freight-rate",
         year: "2017 - 2018",
@@ -31,6 +14,23 @@ const projects = [
         pic_full: "fr8_shipper_flow_prev.jpg",
         slider_desktop: ['fr8_shipper_1', 'fr8_shipper_2', 'fr8_shipper_2_1', 'fr8_shipper_registration', 'fr8_shipper_3', 'fr8_shipper_4', 'fr8_shipper_widget'],
         slider_mobile: ['fr8_shipper_m_2', 'fr8_shipper_m_2_1', 'fr8_shipper_m_3', 'fr8_shipper_m_4', 'fr8_shipper_m_registration'],
+        isVisible: true
+    },
+    {
+        id: 2,
+        title: "load_scanner.title",
+        about_prj: "load_scanner.about",
+        pic: "fr8_load_scanner",
+        url: "2",
+        role: "senior_frontend_developer",
+        prj_link: "https://fr8star.com/info/freight-finder/",
+        year: "2017",
+        place: "sf",
+        stack: "JS, REACT, MOBX, LESS, WEBPACK",
+        description: ['fr8_shipper_flow.1', 'fr8_shipper_flow.2', 'fr8_shipper_flow.3', 'fr8_shipper_flow.4', 'fr8_shipper_flow.5', 'fr8_shipper_flow.6', 'fr8_shipper_flow.7', 'fr8_shipper_flow.8'],
+        pic_full: "fr8_load_scanner_prev.jpg",
+        slider_desktop: ['fr8_ls_1', 'fr8_ls_2', 'fr8_ls_3', 'fr8_ls_4'],
+        slider_mobile: ['fr8_ls_m_1', 'fr8_ls_m_2'],
         isVisible: true
     },
     {
