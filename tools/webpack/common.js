@@ -1,5 +1,5 @@
 const {resolve} = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -26,98 +26,100 @@ module.exports = function () {
 
                 {
                     test: /\.pcss$/,
-                    use: ExtractTextPlugin.extract({
-                          fallback: 'style-loader',
-                          use: [
-                              {
-                                  loader: 'css-loader',
-                                  options: {
-                                      modules: true,
-                                      localIdentName: '[local]_[hash:base64:5]',
-                                      importLoaders: 1
-                                  }
-                              },
-                              {
-                                  loader: 'postcss-loader',
-                                  options: {
-                                      sourceMap: 'inline',
-                                      plugins: function () {
-                                          return [
-                                              require('postcss-import'),
-                                              require('postcss-mixins'),
-                                              require('postcss-cssnext')({
-                                                  features: cssSettings
-                                              })
-                                          ]
-                                      }
-                                  }
-                              }
-                          ]
-                      }
-                    )
-                },
-                {
-                    test: /\.gcss$/,
-                    use: ExtractTextPlugin.extract({
-                        fallback: 'style-loader',
-                        use: [
-                            {
-                                loader: 'css-loader'
-                            },
-                            {
-                                loader: 'postcss-loader',
-                                options: {
-                                    sourceMap: 'inline',
-                                    plugins: function () {
-                                        return [
-                                            require('postcss-import'),
-                                            require('postcss-mixins'),
-                                            require('postcss-cssnext')({
-                                                features: cssSettings
-                                            })
-                                        ]
-                                    }
-                                }
-                            }
-
-                        ]
-                    })
-                },
-                {
-                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-                    use: 'file-loader?name=img/[name]_[hash:5].[ext]'
-                },
-                {
-                    test: /\.svg$/,
                     use: [
                         {
-                            loader: 'file-loader?name=svg/[name].[ext]'
+                            loader: MiniCssExtractPlugin.loader,
                         },
                         {
-                            loader: 'svgo-loader',
+                            loader: 'css-loader',
                             options: {
-                                plugins: [
-                                    {removeTitle: true},
-                                    {removeUselessDefs: false},
-                                    {convertPathData: false},
-                                    {removeAttrs: false},
-                                    {cleanupIDs: false},
-                                    {removeHiddenElems: false}
-                                ]
+                                modules: true,
+                                localIdentName: '[local]_[hash:base64:5]',
+                                importLoaders: 1
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: 'inline',
+                                plugins: function () {
+                                    return [
+                                        require('postcss-import'),
+                                        require('postcss-mixins'),
+                                        require('postcss-cssnext')({
+                                            features: cssSettings
+                                        })
+                                    ]
+                                }
                             }
                         }
                     ]
                 },
                 {
+                    test: /\.gcss$/,
+                    use: [
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                        },
+                        {
+                            loader: 'css-loader'
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                sourceMap: 'inline',
+                                plugins: function () {
+                                    return [
+                                        require('postcss-import'),
+                                        require('postcss-mixins'),
+                                        require('postcss-cssnext')({
+                                            features: cssSettings
+                                        })
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
+                    use:
+                      'file-loader?name=img/[name]_[hash:5].[ext]'
+                },
+                {
+                    test: /\.svg$/,
+                    use:
+                      [
+                          {
+                              loader: 'file-loader?name=svg/[name].[ext]'
+                          },
+                          {
+                              loader: 'svgo-loader',
+                              options: {
+                                  plugins: [
+                                      {removeTitle: true},
+                                      {removeUselessDefs: false},
+                                      {convertPathData: false},
+                                      {removeAttrs: false},
+                                      {cleanupIDs: false},
+                                      {removeHiddenElems: false}
+                                  ]
+                              }
+                          }
+                      ]
+                }
+                ,
+                {
                     test: /\.(mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
-                    use: 'url-loader?limit=100000'
+                    use:
+                      'url-loader?limit=100000'
                 }
             ]
         },
 
         plugins: [
             new CleanWebpackPlugin(['../../dist']),
-            new ExtractTextPlugin({filename: '[name].styles.css'}),
+            new MiniCssExtractPlugin({filename: '[name].styles.css', chunkFilename: "[id].styles.css"}),
             new HtmlWebpackPlugin({
                 title: 'Regina Galieva',
                 template: __dirname + '/template.html'
