@@ -9,10 +9,10 @@
     "type": "git"
   },
   "scripts": {
-    "dev": "webpack-dev-server --env=dev --hot --inline",
-    "dev:mobile": "webpack-dev-server --env=dev --hot --inline --host 0.0.0.0",
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:prod": "webpack --env=prod --progress --profile --colors --mode=production",
+    "dev": "webpack-dev-server --env=development --hot --inline",
+    "dev:mobile": "webpack-dev-server --env=development --hot --inline --host 0.0.0.0",
+    "build:dev": "webpack --mode=development --progress --profile --colors",
+    "build:prod": "webpack --mode=production --progress --profile --colors",
     "deploy:surge": "yarn build:prod && cd dist && mv index.html 200.html && surge ./",
     "translate": "babel-node tools/i18n/translate.js | node"
   },

@@ -1,6 +1,7 @@
 const {resolve} = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
 const cssSettings = require('./../../src/assets/styles/vars.js');
@@ -26,33 +27,33 @@ module.exports = function () {
                 {
                     test: /\.pcss$/,
                     use: ExtractTextPlugin.extract({
-                            fallback: 'style-loader',
-                            use: [
-                                {
-                                    loader: 'css-loader',
-                                    options: {
-                                        modules: true,
-                                        localIdentName: '[local]_[hash:base64:5]',
-                                        importLoaders: 1
-                                    }
-                                },
-                                {
-                                    loader: 'postcss-loader',
-                                    options: {
-                                        sourceMap: 'inline',
-                                        plugins: function () {
-                                            return [
-                                                require('postcss-import'),
-                                                require('postcss-mixins'),
-                                                require('postcss-cssnext')({
-                                                    features: cssSettings
-                                                })
-                                            ]
-                                        }
-                                    }
-                                }
-                            ]
-                        }
+                          fallback: 'style-loader',
+                          use: [
+                              {
+                                  loader: 'css-loader',
+                                  options: {
+                                      modules: true,
+                                      localIdentName: '[local]_[hash:base64:5]',
+                                      importLoaders: 1
+                                  }
+                              },
+                              {
+                                  loader: 'postcss-loader',
+                                  options: {
+                                      sourceMap: 'inline',
+                                      plugins: function () {
+                                          return [
+                                              require('postcss-import'),
+                                              require('postcss-mixins'),
+                                              require('postcss-cssnext')({
+                                                  features: cssSettings
+                                              })
+                                          ]
+                                      }
+                                  }
+                              }
+                          ]
+                      }
                     )
                 },
                 {
@@ -115,6 +116,7 @@ module.exports = function () {
         },
 
         plugins: [
+            new CleanWebpackPlugin(['../../dist']),
             new ExtractTextPlugin({filename: '[name].styles.css'}),
             new HtmlWebpackPlugin({
                 title: 'Regina Galieva',
