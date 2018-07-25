@@ -111,7 +111,6 @@ class Project extends Component {
                           </ul>
                       </div>
                       <div className="col_4">
-                          <h5><FormattedMessage id={role}/></h5>
                           <p className="is-emph">{year} <FormattedMessage id={place}/></p>
                           <a href={prj_link} target="_blank">{prj_link}</a>
                       </div>
