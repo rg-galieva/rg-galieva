@@ -126,7 +126,7 @@ class Project extends Component {
     }
 }
 
-Project.PropTypes = {
+Project.propTypes = {
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
     prj_link: PropTypes.string,
     year: PropTypes.string,

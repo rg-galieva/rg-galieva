@@ -32,7 +32,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-LangLink.PropTypes = {
+LangLink.propTypes = {
     title: PropTypes.string.isRequired,
     locale: PropTypes.string.isRequired
 }

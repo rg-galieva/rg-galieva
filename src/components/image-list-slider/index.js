@@ -15,7 +15,7 @@ const ImageListSlider = (props) => {
     )
 }
 
-ImageListSlider.PropTypes = {
+ImageListSlider.propTypes = {
     images: PropTypes.array.isRequired,
     config: PropTypes.object.isRequired
 }

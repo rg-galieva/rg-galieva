@@ -46,7 +46,7 @@ const Experiment = (props) => {
     );
 }
 
-Experiment.PropTypes = {
+Experiment.propTypes = {
     experiment: PropTypes.shape({
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,

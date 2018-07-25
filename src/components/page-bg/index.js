@@ -32,7 +32,7 @@ class PageBg extends Component {
     }
 }
 
-PageBg.PropTypes = {
+PageBg.propTypes = {
     page_node: PropTypes.string.isRequired,
     bg: PropTypes.string.isRequired
 }

@@ -34,7 +34,7 @@ const ProjectPrevDesktop = (props) => {
     )
 }
 
-ProjectPrevDesktop.PropTypes = {
+ProjectPrevDesktop.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
     pic: PropTypes.string.isRequired,

@@ -26,7 +26,7 @@ const ProjectPrevMobile = (props) => {
     )
 }
 
-ProjectPrevMobile.PropTypes = {
+ProjectPrevMobile.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
     pic: PropTypes.string.isRequired,

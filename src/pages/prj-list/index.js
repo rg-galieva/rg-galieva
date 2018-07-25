@@ -34,7 +34,7 @@ class ProjectList extends Component {
     }
 }
 
-ProjectList.PropTypes = {
+ProjectList.propTypes = {
     projects: PropTypes.array.isRequired,
     isMobile: ProjectList.bool
 }
