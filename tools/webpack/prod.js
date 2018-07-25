@@ -15,7 +15,6 @@ module.exports = function (env) {
             path: resolve(__dirname, './../../dist'),
             publicPath: PUBLIC_PATH
         },
-
         plugins: [
             new webpack.LoaderOptionsPlugin({
                 minimize: true,
@@ -37,14 +36,6 @@ module.exports = function (env) {
                     to: './'
                 }
             ]),
-            new webpack.optimize.UglifyJsPlugin({
-                beautify: false,
-                mangle: false,
-                compress: {
-                    warnings: false
-                },
-                comments: false
-            })
         ]
     })
 }
