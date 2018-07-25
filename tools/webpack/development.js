@@ -6,10 +6,10 @@ module.exports = function (env) {
     return webpackMerge(commonConfig(), {
         output: {
             filename: '[name].build.js',
-            path: resolve(__dirname, './../../dist/dev'),
+            path: resolve(__dirname, './../../dist/development'),
             publicPath: '/assets/'
         },
-
+        devtool: 'inline-source-map',
         devServer: {
             historyApiFallback: true,
             compress: true,

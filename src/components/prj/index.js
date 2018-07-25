@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
@@ -125,7 +126,7 @@ class Project extends Component {
     }
 }
 
-Project.PropTypes = {
+Project.propTypes = {
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
     prj_link: PropTypes.string,
     year: PropTypes.string,

@@ -8,9 +8,8 @@ Single page application. Personal portfolio project. Place for experiments, spen
 - react-intl (internationalization)
 - cloudinary
 - offline-plugin
-- webpack v2: separate sets for development & production
+- webpack v4: separate sets for development & production
 - postcss/cssnext, css modules
-- yarn (package manager) as alternative to npm 
 
 
 ### Features
@@ -21,11 +20,11 @@ Single page application. Personal portfolio project. Place for experiments, spen
 - Responsive components (on init and on resize)
 - Flexbox for layout instead of grid libraries
 - px free styles. Only relative units: rem & vw, vh
-- Local component styles with CSS modules 
+- Encapsulated component styles with CSS modules
 
 
 #### Syntax
-ES-2015 (without modules, because webpack2 supports them by default), features >= stage2 (for example, arrow func in react components)
+ES-2016, features >= stage2 (for example, arrow func in react components)
 
 #### Styles
 [.pcss] - local styles. With css-modules option for incapsulate component's styles

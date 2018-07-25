@@ -1,7 +1,7 @@
 @import "../../assets/styles/vars.gcss";
 
-:root {
-  --nav: {
+:global(.nav),
+.nav {
     font-size: calc(14rem/var(--f_size));
     font-weight: var(--f_bold);
 
@@ -38,13 +38,4 @@
         }
       }
     }
-  }
-}
-
-.nav {
-  @apply --nav;
-}
-
-:global(.nav) {
-  @apply --nav;
 }

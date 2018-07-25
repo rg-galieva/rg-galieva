@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom'
 import {FormattedMessage} from 'react-intl';
 import {Image, Transformation} from 'cloudinary-react';
@@ -25,7 +26,7 @@ const ProjectPrevMobile = (props) => {
     )
 }
 
-ProjectPrevMobile.PropTypes = {
+ProjectPrevMobile.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired, // id for react-intl FormattedMessage
     pic: PropTypes.string.isRequired,

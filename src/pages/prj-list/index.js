@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
 import ProjectPrev from '../../components/prj-prev'
 import Slider from 'react-slick'
@@ -33,7 +34,7 @@ class ProjectList extends Component {
     }
 }
 
-ProjectList.PropTypes = {
+ProjectList.propTypes = {
     projects: PropTypes.array.isRequired,
     isMobile: ProjectList.bool
 }

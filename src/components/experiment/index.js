@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import {Image} from 'cloudinary-react';
 import {CLOUD_PATH} from '../../constants'
@@ -45,16 +46,16 @@ const Experiment = (props) => {
     );
 }
 
-Experiment.propTypes = {
-    experiment: PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string,
-        img: PropTypes.string,
-        link: PropTypes.string,
-        isVisible: PropTypes.bool.isRequired
-    })
-};
+// Experiment.propTypes = {
+//     experiment: PropTypes.shape({
+//         id: PropTypes.number.isRequired,
+//         title: PropTypes.string.isRequired,
+//         description: PropTypes.string,
+//         img: PropTypes.string,
+//         link: PropTypes.string,
+//         isVisible: PropTypes.bool.isRequired
+//     })
+// };
 
 export default Experiment;
 

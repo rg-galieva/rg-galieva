@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
 import switchLang from '../../actions/switch-lang'
 
@@ -31,7 +32,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-LangLink.PropTypes = {
+LangLink.propTypes = {
     title: PropTypes.string.isRequired,
     locale: PropTypes.string.isRequired
 }
