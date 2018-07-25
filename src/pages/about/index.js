@@ -27,6 +27,8 @@ const About = (props) => {
                         <p><FormattedMessage id="about.part5"/></p>
 
                         <p><FormattedMessage id="about.part6"/></p>
+
+                        <p><FormattedMessage id="about.part7"/></p>
                     </div>
                 </div>
             </section>

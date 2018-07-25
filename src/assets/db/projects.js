@@ -94,7 +94,7 @@ const projects = [
         prj_link: "https://rg-galieva.com/",
         year: "2017",
         place: "sf",
-        stack: "JS, REACT, REDUX, REACT-ROUTER (v4), WEBPACK (v2), POSTCSS, CLOUDINARY, INTL, NETLIFY, SVG",
+        stack: "JS, REACT, REDUX, REACT-ROUTER, WEBPACK, POSTCSS, CLOUDINARY, INTL, NETLIFY, SVG",
         description: ["rg.1", "rg.2", "rg.3", "rg.4", "rg.5", "rg.6", "rg.7", "rg.8", "rg.9"],
         pic_full: "rg_prev.jpg",
         slider_desktop: ['rg_full', 'rg_screen_1', 'rg_screen_2', 'rg_screen_3', 'rg_screen_4'],
