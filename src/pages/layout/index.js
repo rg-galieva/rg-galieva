@@ -37,6 +37,7 @@ export class Layout extends Component {
                         <a href="https://github.com/rg-galieva/rg-galieva">Github</a>
                         <a href="https://www.linkedin.com/in/rg-galieva">LinkedIn</a>
                         <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%67%2E%67%61%6C%69%65%76%61%40%67%6D%61%69%6C%2E%63%6F%6D">Mail</a>
+                        <a href="https://cdn.rg-galieva.com/cloud/[frontend]_Regina_Galieva.pdf" target="_blank">PDF-Resume</a>
                     </nav>
                 </footer>
             </div>
