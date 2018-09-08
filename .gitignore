@@ -6,3 +6,4 @@ npm-debug.log
 .DS_Store
 #CNAME
 /i18n/
+package-lock.json
