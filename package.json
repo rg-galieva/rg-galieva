@@ -27,7 +27,7 @@
   "scripts": {
     "dev": "webpack-dev-server --env=development --hot --inline --progress --profile --colors",
     "dev:mobile": "webpack-dev-server --env=development --hot --inline --host 0.0.0.0",
-    "build": "webpack --env=production --progress --profile --colors",
+    "build:prod": "webpack --env=production --progress --profile --colors",
     "deploy:surge": "build:prod && cd dist && mv index.html 200.html && surge ./",
     "lint:fix": "./node_modules/.bin/eslint . --fix",
     "test:jest": "jest --watch",

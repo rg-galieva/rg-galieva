@@ -6,8 +6,6 @@ import ProjectPrev from 'client/components/prjPrev/prjPrev';
 import configDesktop from 'client/components/slider/configMain';
 import configMobile from 'client/components/slider/configMobile';
 
-// import 'client/assets/styles/slick/slick.scss';
-
 class ProjectList extends Component {
     getProjects = (projects, isMobile) => projects.map(
       project => (
