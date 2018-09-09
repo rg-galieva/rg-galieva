@@ -51,12 +51,14 @@ class Project extends Component {
     }
 
     sliderMobile = (imgList) => {
+      const { isMobile } = this.props;
+
       if (imgList.length > 1) {
         return (
           <div>
             <h2><FormattedMessage id="mobile" /></h2>
             <div className={s.screens_mobile}>
-              <ImageListSlider images={imgList} config={this.config} />
+              <ImageListSlider images={imgList} config={isMobile ? configMobile : configDesktop} />
             </div>
           </div>
         );

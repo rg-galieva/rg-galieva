@@ -6,6 +6,8 @@ import ProjectPrev from 'client/components/prjPrev/prjPrev';
 import configDesktop from 'client/components/slider/configMain';
 import configMobile from 'client/components/slider/configMobile';
 
+// import 'client/assets/styles/slick/slick.scss';
+
 class ProjectList extends Component {
     getProjects = (projects, isMobile) => projects.map(
       project => (
@@ -18,7 +20,6 @@ class ProjectList extends Component {
     getConfig = (id, isMobile) => {
       const config = isMobile ? configMobile : configDesktop;
       if (id) config.initialSlide = +id - 1;
-
       return config;
     };
 
@@ -28,7 +29,7 @@ class ProjectList extends Component {
 
       return (
         <Slider {...this.getConfig(id, isMobile)}>
-          { this.getProjects(projects, isMobile) }
+          {this.getProjects(projects, isMobile)}
         </Slider>
       );
     }
@@ -36,7 +37,7 @@ class ProjectList extends Component {
 
 ProjectList.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.object).isRequired,
-  isMobile: ProjectList.bool,
+  isMobile: PropTypes.bool,
 };
 
 const mapStateToProps = ({ projects, switchVersion }) => ({

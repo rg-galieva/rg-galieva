@@ -4,8 +4,8 @@ import icons from 'client/assets/svg/icons.svg';
 import s from './slider.scss';
 
 
-export const NextArrow = props => (
-  <div {...props} className="next">
+export const NextArrow = ({ onClick, className }) => (
+  <div onClick={onClick} className={`next ${className}`}>
     <div className={s.arrow_right}>
       <svg viewBox="0 0 493.36 219.25">
         <use xlinkHref={`${icons}#arrow`} />
@@ -15,8 +15,8 @@ export const NextArrow = props => (
   </div>
 );
 
-export const PrevArrow = props => (
-  <div {...props} className="prev">
+export const PrevArrow = ({ onClick, className }) => (
+  <div onClick={onClick} className={`prev ${className}`}>
     <div className={s.arrow_left}>
       <svg viewBox="0 0 493.36 219.25">
         <use xlinkHref={`${icons}#arrow`} />

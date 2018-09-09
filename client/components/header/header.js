@@ -2,7 +2,7 @@ import React from 'react';
 import MobileHeader from 'client/components/header/headerMobile/headerMobile';
 import DesktopHeader from 'client/components/header/headerDesktop/headerDesktop';
 
-export const Header = (props) => {
+const Header = (props) => {
   const { isMobile } = props;
   const HeaderFinal = isMobile ? MobileHeader : DesktopHeader;
 
