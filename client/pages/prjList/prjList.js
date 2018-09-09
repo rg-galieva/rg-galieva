@@ -28,9 +28,11 @@ class ProjectList extends Component {
       const { projects, isMobile, match: { params: { id } = {} } } = this.props;
 
       return (
-        <Slider {...this.getConfig(id, isMobile)}>
-          {this.getProjects(projects, isMobile)}
-        </Slider>
+        <div style={{ width: '100%' }}>
+          <Slider {...this.getConfig(id, isMobile)}>
+            {this.getProjects(projects, isMobile)}
+          </Slider>
+        </div>
       );
     }
 }
