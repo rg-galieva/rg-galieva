@@ -1,10 +1,8 @@
-import {SWICTH_VERSION} from '../constants'
+import { SWICTH_VERSION } from '../constants';
 
-const switchVersion = (isMobile) => {
-    return {
-        type: SWICTH_VERSION,
-        isMobile: isMobile
-    }
-};
+const switchVersion = isMobile => ({
+  type: SWICTH_VERSION,
+  isMobile,
+});
 
-export default switchVersion
+export default switchVersion;

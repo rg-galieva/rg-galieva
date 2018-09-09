@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const {resolve} = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const OfflinePlugin = require('offline-plugin');
@@ -41,6 +41,16 @@ module.exports = function () {
                                 localIdentName: '[local]_[hash:base64:5]',
                                 importLoaders: 1,
                             },
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: [
+                                    require('autoprefixer')(),
+
+                                ]
+                            }
                         },
                         {
                             loader: 'sass-loader',

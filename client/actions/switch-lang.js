@@ -1,10 +1,8 @@
-import {SWITCH_LANG} from '../constants'
+import { SWITCH_LANG } from '../constants';
 
-const switchLang = (lang) => {
-    return {
-        type: SWITCH_LANG,
-        lang: lang
-    }
-};
+const switchLang = lang => ({
+  type: SWITCH_LANG,
+  lang,
+});
 
-export default switchLang
+export default switchLang;

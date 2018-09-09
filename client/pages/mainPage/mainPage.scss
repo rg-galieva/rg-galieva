@@ -1,0 +1,157 @@
+@import "../../assets/styles/vars.scss";
+
+.page {
+  position: relative;
+  text-align: right;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: -10rem;
+  width: 80%;
+  bottom: 0;
+  z-index: $z-bg;
+  opacity: 0;
+
+  &:global(.is_act) {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+}
+
+.bg_svg_1 {
+  all: inherit;
+  opacity: .2;
+  animation: pulse_a 10s alternate infinite;
+}
+
+.bg_svg_2 {
+  all: inherit;
+  opacity: 1;
+  animation: pulse_b 10s alternate infinite;
+}
+
+.title {
+  position: relative;
+  margin: 3vh auto 0;
+  max-width: 40%;
+  text-transform: uppercase;
+  font-size: calc(90rem / #{$f_size});
+  line-height: calc(100rem / #{$f_size});
+  animation: pulseShadow 10s alternate infinite;
+  z-index: $z-cont;
+}
+
+.photo {
+  position: fixed;
+  right: 3rem;
+  bottom: 0;
+  width: calc(600rem / #{$f_size});
+  z-index: $z-cont;
+}
+
+@media ($w_phone_only) {
+  .title {
+    margin-top: 2vh;
+    font-size: 3.3rem;
+    line-height: 4rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .photo {
+    right: 1rem;
+    width: 80vw;
+  }
+
+  .bg {
+    top: inherit;
+    left: -3rem;
+    width: 120%;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 810px) {
+  .bg {
+    top: inherit;
+    left: -3rem;
+    width: 120%;
+    bottom: 0;
+  }
+
+  .title {
+    font-size: 5rem;
+    line-height: 6rem;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .photo {
+    right: 1rem;
+    width: 90vw;
+  }
+}
+
+@media ($w_desktop_up) {
+  .bg {
+    top: 0;
+    left: -10rem;
+    width: 80%;
+    bottom: 0;
+  }
+}
+
+@keyframes pulse_a {
+  0% {
+    opacity: .2;
+    fill: rgba($c_obj, .4)
+  }
+  30% {
+    opacity: .3;
+    fill: rgba($c_alt, .6)
+  }
+  60% {
+    opacity: .2;
+    fill: rgba($c_pulse_1, .6);
+  }
+  100% {
+    opacity: .1;
+    fill: rgba($c_pulse_2, .6);
+  }
+}
+
+@keyframes pulse_b {
+  0% {
+    opacity: 1;
+    fill: rgba($c_alt, .6);
+  }
+  30% {
+    opacity: .9;
+    fill: rgba($c_obj, .4)
+  }
+  60% {
+    opacity: .8;
+    fill: rgba($c_pulse_2, .6);
+  }
+  100% {
+    opacity: .9;
+    fill: rgba($c_pulse_1, .6);
+  }
+}
+
+@keyframes pulseShadow {
+  0% {
+    text-shadow: 3px 4px 1px rgba($c_obj, .4);
+  }
+  30% {
+    text-shadow: 3px 4px 1px rgba($c_alt, .4);
+  }
+  60% {
+    text-shadow: 3px 4px 1px rgba($c_pulse_1, .6);
+  }
+  100% {
+    text-shadow: 3px 4px 1px rgba($c_pulse_2, .6);
+  }
+}

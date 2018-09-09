@@ -1,12 +1,10 @@
 import { combineReducers } from 'redux';
-import {routerReducer} from 'react-router-redux'
-import switchLang from './switch-lang'
-import switchVersion from './switch-version'
-import projects from './projects'
+import switchLang from './switchLang';
+import switchVersion from './switchVersion';
+import projects from './projects';
 
 export default combineReducers({
-    switchLang,
-    projects,
-    switchVersion,
-    router: routerReducer
+  switchLang,
+  projects,
+  switchVersion,
 });

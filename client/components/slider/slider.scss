@@ -1,0 +1,90 @@
+@import "../../assets/styles/vars.scss";
+
+.pager {
+  cursor: pointer;
+  height: calc(4rem / #{$f_size});
+  width: calc(50rem / #{$f_size});
+  background-color: $c_link;
+}
+
+.slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+:global(.slick-dots) {
+  position: absolute;
+  left: 0;
+  bottom: calc(-60rem / #{$f_size});
+  list-style: none;
+  margin: 0;
+
+  & li {
+    display: inline-block;
+    margin-right: calc(15rem / #{$f_size});
+  }
+}
+
+:global(.next),
+:global(.prev) {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+  transition: all .3s ease-in;
+
+  & svg {
+    transition: all .3s ease-in;
+  }
+
+  &:hover {
+    color: $c_emph;
+
+    & svg {
+      fill: $c_emph;
+    }
+  }
+}
+
+:global(.next) {
+  right: 0;
+  text-align: right;
+}
+
+:global(.prev) {
+  left: 0;
+}
+
+:global(.slick-dots) {
+  position: absolute;
+  left: 0;
+  bottom: calc(-60rem / #{$f_size});
+  list-style: none;
+  margin: 0;
+
+  & li {
+    display: inline-block;
+    margin-right: calc(15rem / #{$f_size});
+  }
+}
+
+:global(.slick-active) {
+  & .pager {
+    background-color: $c_emph;
+  }
+}
+
+.arrow_right,
+.arrow_left {
+  & svg {
+    fill: $c_txt;
+    width: calc(35rem / #{$f_size});
+  }
+}
+
+.arrow_left {
+  & svg {
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../assets/styles/vars.scss";
+
+.svg_bg {
+    position: fixed;
+    top: 20rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: appear .4s;
+    z-index: -1;
+
+    & svg {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 70%;
+    }
+}
+
+:global(.animate_fill) {
+  & svg {
+    animation: pulse 10s alternate infinite;
+  }
+}
+
+:global(.animate_stroke) {
+  & svg {
+    fill: none;
+    animation: pulseStroke 10s alternate infinite;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .35;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    fill: rgba($c_obj, .4);
+  }
+  50% {
+    fill: rgba(207, 236, 109, .4);
+  }
+  100% {
+    fill: rgba(236, 166, 109, .4);
+  }
+}
+
+@keyframes pulseStroke {
+  0% {
+    stroke: rgba($c_obj, .4);
+  }
+  50% {
+    stroke: rgba(207, 236, 109, .4);
+  }
+  100% {
+    stroke: rgba(236, 166, 109, .4);
+  }
+}

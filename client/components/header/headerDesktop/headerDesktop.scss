@@ -1,0 +1,46 @@
+@import "../../../assets/styles/vars.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  height: calc(60rem / #{$f_size});
+  transition: all .5s ease-in;
+  z-index: $z-layout;
+
+  & > section {
+    position: relative;
+    max-width: 1600px;
+    margin: calc(20rem / #{$f_size}) auto;
+    padding: 0 calc(100% / #{$f_size});
+  }
+
+  &:global(.is_sticky) {
+    background-color: $c_thead;
+  }
+}
+
+.lang_nav {
+  float: right;
+  text-transform: uppercase;
+}
+
+.logo {
+  float: left;
+  margin-right: 2rem;
+  text-decoration: none;
+
+  & svg {
+    fill: $c_txt;
+    height: calc(26rem / #{$f_size});
+    transition: all .2s ease-out;
+  }
+
+  &:hover {
+    & svg {
+      fill: $c_emph;
+    }
+  }
+}

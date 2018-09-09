@@ -1,0 +1,166 @@
+@import "../../assets/styles/vars.scss";
+
+.wrap {
+  & h5 {
+    margin-bottom: 0;
+  }
+
+  & ul {
+    margin-top: 1rem;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & > div {
+    flex-basis: calc(250%*100/1000);
+    flex-shrink: 1;
+    margin-bottom: calc(40rem/#{$f_size});
+  }
+
+  & h6 {
+    color: $c_emph;
+    font-size: calc(14rem/#{$f_size});
+    margin-bottom: calc(10rem/#{$f_size});
+  }
+
+  & p {
+    color: $c_sub;
+  }
+}
+
+.sub {
+  margin: calc(30rem/#{$f_size}) 0 calc(10rem/#{$f_size});
+}
+
+.company {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+
+  & :global(figcaption) {
+    text-align: center;
+
+    & p {
+      font-size: calc(12rem/#{$f_size});
+    }
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.position {
+  padding-right: 3rem;
+}
+
+.logo_fr8 {
+  text-align: center;
+
+  & svg {
+    width: calc(100rem/#{$f_size});
+    margin: 0 auto .3rem;
+    fill: $c_txt;
+  }
+}
+
+.logo_alx {
+  text-align: center;
+
+  & svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 auto .3rem;
+    fill: $c_txt;
+  }
+}
+
+.logo_mail {
+  text-align: center;
+
+  & svg {
+    width: calc(100rem/#{$f_size});
+    margin: 0 auto .3rem;
+    fill: $c_txt;
+  }
+}
+
+.logo_ifree {
+  width: 4rem;
+  margin: 0 auto;
+}
+
+.logo_simai {
+  text-align: center;
+
+  & svg {
+    width: calc(60rem/#{$f_size});
+    margin: 0 auto .3rem;
+    fill: $c_txt;
+  }
+}
+
+.edu_row {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: stretch;
+  margin-bottom: 1rem;
+
+  & :global(figcaption) {
+    text-align: center;
+
+    & p {
+      font-size: calc(12rem/#{$f_size});
+    }
+  }
+}
+
+.edu {
+  margin-bottom: 3rem;
+}
+
+.logo_usatu {
+  width: 3rem;
+  margin: 0 auto 1rem;
+}
+
+@media (max-width: 700px) {
+  .skills {
+    & > div {
+      flex-basis: calc(100% / 3);
+    }
+  }
+
+  .company {
+    flex-direction: column;
+
+    & :global(.col_3) {
+      display: none;
+    }
+  }
+
+  .edu_row {
+    flex-direction: column;
+
+    & :global(.col_3) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .skills {
+    & > div {
+      flex-basis: 50%;
+    }
+  }
+}
