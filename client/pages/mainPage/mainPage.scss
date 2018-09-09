@@ -51,7 +51,7 @@
   z-index: $z-cont;
 }
 
-@media ($w_phone_only) {
+@media #{$w_phone_only} {
   .title {
     margin-top: 2vh;
     font-size: 3.3rem;
@@ -94,7 +94,7 @@
   }
 }
 
-@media ($w_desktop_up) {
+@media #{$w_desktop_up} {
   .bg {
     top: 0;
     left: -10rem;

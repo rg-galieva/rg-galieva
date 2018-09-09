@@ -29,6 +29,11 @@
   width: 100%;
   height: 100%;
 
+  & > * {
+    flex: 1;
+    max-width: 100%;
+  }
+
   & > :global(section) {
     position: relative;
     flex: 1;
@@ -53,7 +58,7 @@
   }
 }
 
-@media ($w_phone_only) {
+@media #{$w_phone_only} {
   .footer {
     display: none;
   }

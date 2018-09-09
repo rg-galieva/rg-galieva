@@ -16,7 +16,7 @@
     }
   }
 
-  @media ($w_phone_only) {
+  @media #{$w_phone_only} {
     .row {
       margin-bottom: 2rem;
     }

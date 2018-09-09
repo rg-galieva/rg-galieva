@@ -100,7 +100,7 @@
   }
 }
 
-@media (--w_phone_only) {
+@media #{$w_phone_only} {
   .head {
     height: calc(150rem / #{$f_size});
   }

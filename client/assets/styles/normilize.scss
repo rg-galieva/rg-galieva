@@ -188,7 +188,7 @@
     overflow: hidden;
   }
 
-  @media ($w_phone_only) {
+  @media #{$w_phone_only} {
     h1 {
       font-size: calc(53rem / #{$f_size});
       line-height: calc(50rem / #{$f_size});
