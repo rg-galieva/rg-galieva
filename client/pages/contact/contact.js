@@ -19,7 +19,7 @@ const Contact = ({ isMobile }) => {
 
   return (
     <div className={s.wrap}>
-      <section className={[s.row, s.cont].join(' ')}>
+      <section className={`${s.row} ${s.cont}`}>
         <header className={s.col_left}>
           <h2><FormattedMessage id="contact_work" /></h2>
         </header>

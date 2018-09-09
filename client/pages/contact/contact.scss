@@ -1,5 +1,9 @@
 @import "../../assets/styles/vars.scss";
 
+.wrap {
+  width: 100%;
+}
+
 .row {
   display: flex;
   flex-direction: row;
