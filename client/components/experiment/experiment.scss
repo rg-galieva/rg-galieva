@@ -1,0 +1,69 @@
+@import "../../assets/styles/vars.scss";
+
+.experiment {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: stretch;
+  margin-bottom: calc(80rem / 16);
+}
+
+.experiment_info {
+  flex: 5;
+  padding-right: calc(100% / 14);
+
+  & > a {
+    color: $c_txt;
+    text-decoration: none;
+  }
+
+  & > a:hover {
+    color: $c_link;
+  }
+
+  & > h4 {
+    font-weight: $f_bold;
+  }
+}
+
+.experiment_image {
+  flex: 5;
+}
+
+.experiment_image_bg {
+  position: relative;
+  width: 100%;
+}
+
+.desc {
+  margin: calc(20rem / 16) 0 calc(40rem / 16);
+
+  & > p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .experiment {
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    & h2 {
+      margin-bottom: .1rem;
+    }
+  }
+
+  .desc {
+    margin: .5rem 0;
+  }
+
+  .experiment_info {
+    order: 2;
+    padding: 0;
+  }
+
+  .experiment_image {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+}

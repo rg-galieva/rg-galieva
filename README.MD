@@ -2,15 +2,16 @@ Single page application. Personal portfolio project. Place for experiments, spen
 
 
 ### Tech Stack
-- react
-- redux, react-redux
+- react (v16)
+- redux (v4) 
 - react-router-dom (v4)
 - react-intl (internationalization)
 - cloudinary
 - offline-plugin
-- webpack v2: separate sets for development & production
-- postcss/cssnext, css modules
-- yarn (package manager) as alternative to npm 
+- webpack v4: separate sets for development & production
+- sass, css modules
+- eslint
+- jest + enzyme
 
 
 ### Features
@@ -25,27 +26,23 @@ Single page application. Personal portfolio project. Place for experiments, spen
 
 
 #### Syntax
-ES-2015 (without modules, because webpack2 supports them by default), features >= stage2 (for example, arrow func in react components)
-
-#### Styles
-[.pcss] - local styles. With css-modules option for incapsulate component's styles
-[.gcss] - global styles. Have special rule in webpack config. No need to use :global identifier in gcss files.
+ES-2015, features >= stage2 (babel)
 
 
 #### Getting started
 ```
-$ yarn install
+$ npm i
 // install all dependencies
 ```
 ```
-$ yarn dev
+$ npm run dev
 // start development with webpack-dev-server
 ```
 ```
-$ yarn dev:mobile
+$ npm run dev:mobile
 // allows to debug app on multiple connected devices
 ```
 ```
-$ yarn translate
+$ npm run translate
 // combine separate translation-jsons into one (en.json) - for translators
 ```

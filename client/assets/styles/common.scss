@@ -1,0 +1,104 @@
+@import "vars.scss";
+@import "normilize.scss";
+@import "button.scss";
+@import "form.scss";
+@import "grid.scss";
+
+:global {
+  html {
+    color: $c_txt;
+    font-family: sans-serif;
+    font-weight: $f_regular;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $f_bold;
+    margin-bottom: 1rem;
+  }
+
+  .txt {
+    & p {
+      margin-bottom: calc(20rem / 16);
+    }
+
+    & a {
+      color: $c_txt;
+
+      &:visited {
+        color: $c_link_vis;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $c_sub;
+      }
+    }
+  }
+
+  th {
+    background-color: $c_thead;
+    line-height: calc(53rem / 16);
+    font-weight: $f_bold;
+    text-transform: capitalize;
+    padding: 0 calc(20rem / 16);
+  }
+
+  tbody {
+    color: $c_sub;
+    border-left: 1px solid $c_thead;
+    border-right: 1px solid $c_thead;
+  }
+
+  td {
+    padding: calc(10rem / 16) calc(20rem / 16);
+  }
+
+  tr {
+    border-bottom: 1px solid $c_thead;
+  }
+
+  blockquote {
+    border-left: 2px solid $c_txt;
+    padding-left: 15px;
+  }
+
+  q {
+    display: inline;
+
+    &:before {
+      content: open-quote;
+    }
+
+    &:after {
+      content: close-quote;
+    }
+  }
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .is-emph {
+    color: $c_emph;
+  }
+
+  .app_wrap {
+    height: 100%;
+  }
+
+  .sliding-enter {
+    transform: translate3d(0, 1rem, 0);
+
+    &.sliding-enter-active {
+      transform: translate3d(0, 0, 0);
+      transition: all .2s ease-out;
+    }
+  }
+}

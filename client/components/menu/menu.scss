@@ -1,0 +1,48 @@
+@import "../../assets/styles/vars.scss";
+
+%nav {
+  font-size: calc(14rem / #{$f_size});
+  font-weight: $f_bold;
+
+  & a {
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+    color: $c_link;
+    text-decoration: none;
+    padding-bottom: .5rem;
+
+    &::after {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      width: 100%;
+      height: calc(.75rem / #{$f_size});
+      background: $c_txt;
+      content: '';
+      opacity: 0;
+      transition: height 0.3s, opacity 0.4s, transform 0.3s;
+      transform: translateY(-1rem);
+    }
+
+    &:global(.is_act),
+    &:hover,
+    &:focus {
+      color: $c_txt;
+
+      &::after {
+        height: calc(1rem / #{$f_size});
+        opacity: 1;
+        transform: translateY(-.3rem);
+      }
+    }
+  }
+}
+
+.nav {
+  @extend %nav;
+}
+
+:global(.nav) {
+  @extend %nav;
+}

@@ -1,0 +1,20 @@
+@import "../../assets/styles/vars.scss";
+
+.cont {
+  position: relative;
+  z-index: $z-cont;
+}
+
+.desc {
+  max-width: 80%;
+
+  & p {
+    margin-bottom: .8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .desc {
+    max-width: 95%;
+  }
+}
