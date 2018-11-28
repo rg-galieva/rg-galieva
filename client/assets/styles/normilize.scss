@@ -132,7 +132,7 @@
     }
 
     & ul {
-      list-style-type: none;
+      list-style-type: disclosure-closed;
       margin: 0 0 0 calc(20rem / #{$f_size}) !important
     }
   }

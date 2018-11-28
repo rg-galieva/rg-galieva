@@ -1,6 +1,8 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import icons from 'client/assets/svg/icons.svg';
+import ifreeLogo from './img/ifree.png';
+import usatuLogo from './img/usatu.png';
 import s from './resume.scss';
 
 
@@ -69,33 +71,69 @@ const Resume = () => (
     <section className="row">
       <header className="col_4"><h2><FormattedMessage id="experience" /></h2></header>
       <div className="col_10">
+
+        <div className={s.company}>
+          <div className={`${s.position} col_10`}>
+            <h5>
+              <FormattedMessage id="senior_frontend_developer" />
+              {' & Project Lead'}
+            </h5>
+
+            <p className="is-emph">
+              <FormattedMessage id="contract" />
+              {',  '}
+              <FormattedMessage id="month.september" />
+              {' 2018 - '}
+              <FormattedMessage id="resume.to_present" />
+            </p>
+
+            <ul>
+              <li><FormattedMessage id="presence_1" /></li>
+              <li>
+                <FormattedMessage id="presence_2" />
+                <ul>
+                  <li><FormattedMessage id="presence_2_1" /></li>
+                  <li><FormattedMessage id="presence_2_2" /></li>
+                  <li><FormattedMessage id="presence_2_3" /></li>
+                  <li><FormattedMessage id="presence_2_4" /></li>
+                </ul>
+              </li>
+              <li><FormattedMessage id="presence_3" /></li>
+            </ul>
+          </div>
+
+          <figure className="col_3">
+            <div className={s.logo_presence}>
+              <a href="https://presencepg.com/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 138.49 121.7">
+                  <use xlinkHref={`${icons}#presence`} />
+                </svg>
+              </a>
+            </div>
+
+            <figcaption>
+              <p><FormattedMessage id="presence_about" /></p>
+            </figcaption>
+          </figure>
+        </div>
+
         <div className={s.company}>
           <div className={[s.position, 'col_10'].join(' ')}>
             <h5><FormattedMessage id="senior_frontend_developer" /></h5>
 
             <p className="is-emph">
               <FormattedMessage id="month.may" />
-              {' '}
-2017 -
-              {' '}
-              <FormattedMessage id="resume.to_present" />
+              {' 2017 - '}
+              <FormattedMessage id="month.august" />
+              {' 2018'}
             </p>
             <ul>
               <li>
                 <FormattedMessage id="fr8_1" />
                 <ul>
-                  <li>
--
-                    <FormattedMessage id="fr8_1_1" />
-                  </li>
-                  <li>
--
-                    <FormattedMessage id="fr8_1_2" />
-                  </li>
-                  <li>
--
-                    <FormattedMessage id="fr8_1_3" />
-                  </li>
+                  <li><FormattedMessage id="fr8_1_1" /></li>
+                  <li><FormattedMessage id="fr8_1_2" /></li>
+                  <li><FormattedMessage id="fr8_1_3" /></li>
                 </ul>
               </li>
               <li><FormattedMessage id="fr8_2" /></li>
@@ -106,9 +144,11 @@ const Resume = () => (
 
           <figure className="col_3">
             <div className={s.logo_fr8}>
-              <svg viewBox="0 0 124 32">
-                <use xlinkHref={`${icons}#fr8`} />
-              </svg>
+              <a href="https://fr8star.com/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 124 32">
+                  <use xlinkHref={`${icons}#fr8`} />
+                </svg>
+              </a>
             </div>
 
             <figcaption>
@@ -134,9 +174,11 @@ const Resume = () => (
 
           <figure className="col_3">
             <div className={s.logo_alx}>
-              <svg viewBox="0 0 138.49 121.7">
-                <use xlinkHref={`${icons}#adluxe`} />
-              </svg>
+              <a href="https://adluxe.ru/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 138.49 121.7">
+                  <use xlinkHref={`${icons}#adluxe`} />
+                </svg>
+              </a>
             </div>
 
             <figcaption>
@@ -161,9 +203,11 @@ const Resume = () => (
 
           <figure className="col_3">
             <div className={s.logo_mail}>
-              <svg viewBox="0 0 351.33 73.01">
-                <use xlinkHref={`${icons}#mail`} />
-              </svg>
+              <a href="https://mail.ru/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 351.33 73.01">
+                  <use xlinkHref={`${icons}#mail`} />
+                </svg>
+              </a>
             </div>
 
             <figcaption>
@@ -186,9 +230,9 @@ const Resume = () => (
 
           <figure className="col_3">
             <div className={s.logo_ifree}>
-              <a href="http://ifree.com/" target="_blank">
+              <a href="https://www.i-free.com/en" target="_blank" rel="noopener noreferrer">
                 <img
-                  src={require('./img/ifree.png')}
+                  src={ifreeLogo}
                   alt=""
                 />
               </a>
@@ -212,9 +256,11 @@ const Resume = () => (
 
           <figure className="col_3">
             <div className={s.logo_simai}>
-              <svg viewBox="0 0 344.25 99">
-                <use xlinkHref={`${icons}#simai`} />
-              </svg>
+              <a href="https://simai.studio/" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 344.25 99">
+                  <use xlinkHref={`${icons}#simai`} />
+                </svg>
+              </a>
             </div>
 
             <figcaption>
@@ -241,9 +287,9 @@ const Resume = () => (
 
           <figure className="col_3">
             <div className={s.logo_usatu}>
-              <a href="http://ugatu.su/" target="_blank">
+              <a href="http://ugatu.su/" target="_blank" rel="noopener noreferrer">
                 <img
-                  src={require('./img/usatu.png')}
+                  src={usatuLogo}
                   alt=""
                 />
               </a>
