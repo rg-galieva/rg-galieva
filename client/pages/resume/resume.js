@@ -84,7 +84,8 @@ const Resume = () => (
               {',  '}
               <FormattedMessage id="month.september" />
               {' 2018 - '}
-              <FormattedMessage id="resume.to_present" />
+              <FormattedMessage id="month.december" />
+              {' 2018'}
             </p>
 
             <ul>

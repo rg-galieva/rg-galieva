@@ -27,7 +27,7 @@ const Contact = ({ isMobile }) => {
         <div className={s.col_right}>
           <div className={s.desc}>
             <div className={s.row}>
-              <div className={[s.mail, s.logo].join(' ')}>
+              <div className={`${s.mail} ${s.logo}`}>
                 <svg viewBox="0 0 55 55">
                   <use xlinkHref={`${icons}#inbox`} />
                 </svg>
@@ -42,22 +42,7 @@ const Contact = ({ isMobile }) => {
             </div>
 
             <div className={s.row}>
-              <div className={[s.linkedin, s.logo].join(' ')}>
-                <svg viewBox="0 0 455 455">
-                  <use xlinkHref={`${icons}#linkedin`} />
-                </svg>
-              </div>
-              <a
-                href="https://www.linkedin.com/in/rg-galieva"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                              linkedin.com/in/rg-galieva
-              </a>
-            </div>
-
-            <div className={s.row}>
-              <div className={[s.github, s.logo].join(' ')}>
+              <div className={`${s.github} ${s.logo}`}>
                 <svg viewBox="0 0 568.034 568.034">
                   <use xlinkHref={`${icons}#github`} />
                 </svg>
@@ -74,7 +59,7 @@ github.com/rg-galieva
         </div>
       </section>
 
-      <section className={[s.row, s.cont].join(' ')}>
+      <section className={`${s.row} ${s.cont}`}>
         <header className={s.col_left}>
           <h2><FormattedMessage id="contact_friends" /></h2>
         </header>
@@ -82,47 +67,17 @@ github.com/rg-galieva
         <div className={s.col_right}>
           <div className={s.desc}>
             <div className={s.row}>
-              <div className={[s.fb, s.logo].join(' ')}>
-                <svg viewBox="0 0 455.73 455.73">
-                  <use xlinkHref={`${icons}#fb`} />
-                </svg>
-              </div>
-              <a
-                href="https://www.facebook.com/rg.galieva"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-facebook.com/rg.galieva
-              </a>
-            </div>
-
-            <div className={s.row}>
-              <div className={[s.inst, s.logo].join(' ')}>
-                <svg viewBox="0 0 455.73 455.73">
-                  <use xlinkHref={`${icons}#inst`} />
-                </svg>
-              </div>
-              <a
-                href="https://www.instagram.com/rg.galieva"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-instagram.com/rg.galieva
-              </a>
-            </div>
-
-            <div className={s.row}>
-              <div className={[s.vk, s.logo].join(' ')}>
+              <div className={`${s.linkedin} ${s.logo}`}>
                 <svg viewBox="0 0 455 455">
-                  <use xlinkHref={`${icons}#vk`} />
+                  <use xlinkHref={`${icons}#linkedin`} />
                 </svg>
               </div>
               <a
-                href="https://vk.com/rg.galieva"
+                href="https://www.linkedin.com/in/rg-galieva"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-vk.com/rg.galieva
+                linkedin.com/in/rg-galieva
               </a>
             </div>
           </div>
